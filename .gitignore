@@ -1,0 +1,7 @@
+.env
+*.rbxl
+*.rbxlx
+work/
+tools/lune
+tools/lune10
+__pycache__/
