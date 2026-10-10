@@ -4,6 +4,7 @@
 # usage: tools/rig/publish.sh <place.rbxl>
 # env:   ROBLOX_API_KEY (Open Cloud key, scope universe-places:write, restricted to this universe), UNIVERSE_ID, PLACE_ID
 #        VERSION_TYPE=Published (default; live for players) | Saved (uploads a version without making it live)
+#        OPEN_CLOUD_BASE (default https://apis.roblox.com; only for pointing the rig at a local mock server)
 # Retries HTTP 409 (another publish/save in progress) up to 3 times with backoff. Prints versionNumber.
 # Never hardcode the key in this file, a hook, a log, a commit or a chat message.
 #        DRY_RUN=1 prints what would be sent (no network, no key needed) - use it to test the rig.
@@ -11,7 +12,7 @@ HERE=$(cd "$(dirname "$0")" && pwd); source "$HERE/config.sh"
 P=${1:?usage: publish.sh <place.rbxl>}
 [ -f "$P" ] || { echo "publish.sh: no place $P"; exit 2; }
 if [ "${DRY_RUN:-0}" = 1 ]; then
-  echo "DRY_RUN: would POST $(wc -c < "$P") bytes of $P to https://apis.roblox.com/universes/v1/${UNIVERSE_ID:-<UNIVERSE_ID>}/places/${PLACE_ID:-<PLACE_ID>}/versions?versionType=${VERSION_TYPE:-Published} (x-api-key: $([ -n "${ROBLOX_API_KEY:-}" ] && echo set || echo MISSING)) and copy it to $CANON"
+  echo "DRY_RUN: would POST $(wc -c < "$P") bytes of $P to ${OPEN_CLOUD_BASE:-https://apis.roblox.com}/universes/v1/${UNIVERSE_ID:-<UNIVERSE_ID>}/places/${PLACE_ID:-<PLACE_ID>}/versions?versionType=${VERSION_TYPE:-Published} (x-api-key: $([ -n "${ROBLOX_API_KEY:-}" ] && echo set || echo MISSING)) and copy it to $CANON"
   exit 0
 fi
 : "${ROBLOX_API_KEY:?set ROBLOX_API_KEY (Open Cloud API key) in the environment}"
@@ -20,7 +21,7 @@ VT=${VERSION_TYPE:-Published}
 case "$P" in *.rbxlx) CT=application/xml;; *) CT=application/octet-stream;; esac
 mkdir -p "$(dirname "$CANON")"
 [ "$(realpath "$P")" = "$(realpath -m "$CANON")" ] || cp "$P" "$CANON"
-URL="https://apis.roblox.com/universes/v1/$UNIVERSE_ID/places/$PLACE_ID/versions?versionType=$VT"
+URL="${OPEN_CLOUD_BASE:-https://apis.roblox.com}/universes/v1/$UNIVERSE_ID/places/$PLACE_ID/versions?versionType=$VT"
 TMP=$(mktemp)
 for try in 1 2 3 4; do
   code=$(curl -sS -o "$TMP" -w '%{http_code}' -X POST "$URL" -H "x-api-key: $ROBLOX_API_KEY" \
