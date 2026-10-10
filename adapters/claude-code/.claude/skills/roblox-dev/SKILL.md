@@ -20,3 +20,6 @@ description: Roblox game engineering the owner's way - Studio-editable instances
 Reference docs (open on demand): docs/studio-first-rule.md · build-pipeline-lune.md · testing.md ·
 publishing-open-cloud.md · studio-mcp-bridge.md · ui-conventions.md · monetization.md · security.md ·
 launch-checklist.md · lessons-learned.md · thinking.md · examples/
+
+Windows (PowerShell, docs/windows.md): `.\tools\rig\go.ps1 <name> open=<Menu>`, `.\tools\rig\run_all.ps1 <place> <logdir>`,
+`.\tools\rig\compare_runs.ps1 <base logs> <new logs>`; env vars as `$env:NOPUBLISH='1'`.
