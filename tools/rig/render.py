@@ -4,16 +4,51 @@
 # outlined text with alignment/wrap, Rotation, ClipsDescendants/CanvasGroup/ScrollingFrame clipping),
 # in Roblox Sibling draw order (DisplayOrder, then ZIndex per level).
 # Asset images (icons) and 3D viewports cannot be fetched offline -> translucent placeholders. NOT Studio.
-# usage: python3 tools/rig/render.py <dump.json> <out.png> [crop x,y,w,h]
-import json, sys, math
+# usage: python3 tools/rig/render.py <dump.json> <out.png> [crop x,y,w,h]      (Windows: py -3 tools\rig\render.py ...)
+# Font: $RIG_FONT if set, else the first bold sans found (Linux DejaVu, Windows Arial/Segoe, macOS Arial),
+# else Pillow's built-in default font (sizes are then approximate).
+import json, sys, math, os
 from PIL import Image, ImageDraw, ImageFont, ImageChops
 
-FB = '/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf'
+_WINFONTS = os.path.join(os.environ.get('WINDIR', r'C:\Windows'), 'Fonts')
+FONT_CANDIDATES = [p for p in (
+    os.environ.get('RIG_FONT'),
+    '/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf',
+    '/usr/share/fonts/dejavu/DejaVuSans-Bold.ttf',
+    os.path.join(_WINFONTS, 'arialbd.ttf'),
+    os.path.join(_WINFONTS, 'segoeuib.ttf'),
+    os.path.join(_WINFONTS, 'calibrib.ttf'),
+    '/Library/Fonts/Arial Bold.ttf',
+    '/System/Library/Fonts/Supplemental/Arial Bold.ttf',
+    'DejaVuSans-Bold.ttf', 'arialbd.ttf',  # bare names: Pillow searches the system font folders
+) if p]
+FB = None
+for _p in FONT_CANDIDATES:
+    try:
+        ImageFont.truetype(_p, 10); FB = _p; break
+    except OSError:
+        continue
 _fonts = {}
 def font(s):
     s = max(5, int(round(s)))
-    if s not in _fonts: _fonts[s] = ImageFont.truetype(FB, s)
+    if s not in _fonts:
+        if FB:
+            _fonts[s] = ImageFont.truetype(FB, s)
+        else:
+            try: _fonts[s] = ImageFont.load_default(size=s)   # Pillow >= 10.1: scalable built-in font
+            except TypeError: _fonts[s] = ImageFont.load_default()  # older Pillow: fixed bitmap font
     return _fonts[s]
+
+def _text(d, xy, line, f, anchor, fill, sw=0, sfill=None):
+    """d.text with a fallback for bitmap fonts that cannot do anchors/strokes (old Pillow default font)"""
+    try:
+        d.text(xy, line, font=f, anchor=anchor, fill=fill, stroke_width=sw, stroke_fill=sfill)
+    except (ValueError, TypeError, NotImplementedError):
+        w = d.textlength(line, font=f) if hasattr(d, 'textlength') else 6 * len(line)
+        x, y = xy; h = 11
+        x = x - w / 2 if anchor[0] == 'm' else x - w if anchor[0] == 'r' else x
+        y = y - h / 2 if anchor[1] == 'm' else y
+        d.text((x, y), line, font=f, fill=fill)
 
 def c255(c): return tuple(max(0, min(255, int(round(v * 255)))) for v in c[:3])
 
@@ -101,7 +136,7 @@ def draw_text(layer, it, ox, oy, gradmul):
         if xa == 'Left': x, anc = x0, 'lm'
         elif xa == 'Right': x, anc = x0 + bw, 'rm'
         else: x, anc = x0 + bw / 2, 'mm'
-        d.text((x, cy), line, font=f, anchor=anc, fill=c255(col) + (a,), stroke_width=sw, stroke_fill=scol)
+        _text(d, (x, cy), line, f, anc, c255(col) + (a,), sw, scol)
 
 def studs(layer, x, y, w, h, ts, alpha):
     """tile texture (STUDS) stand-in: one raised rounded stud per tile"""
@@ -183,14 +218,15 @@ def render_item(im, it):
     im.alpha_composite(layer.crop((sx0, sy0, sx1, sy1)), (ox + sx0, oy + sy0))
 
 def main(js, out, crop=None):
-    d = json.load(open(js)); W, H = d['W'], d['H']
+    with open(js, encoding='utf-8') as fh: d = json.load(fh)
+    W, H = d['W'], d['H']
     im = Image.new('RGBA', (W, H), (70, 22, 18, 255))
     ImageDraw.Draw(im).rectangle([0, 0, W, d.get('inset', 0) - 1], fill=(30, 30, 34, 255))  # Roblox top bar inset
     items = sorted(d['items'], key=lambda it: it.get('k') or [0])
     for it in items:
         render_item(im, it)
     tag = f"rig approx {W}x{H} {d.get('screen','')}{' touch' if d.get('touch') else ''} (rbxsim geometry, baked look; icons/3D = placeholders, NOT Studio)"
-    ImageDraw.Draw(im).text((4, H - 13), tag, font=font(10), fill=(255, 255, 0, 255))
+    _text(ImageDraw.Draw(im), (4, H - 13), tag, font(10), 'la', (255, 255, 0, 255))
     if crop:
         x, y, w, h = crop; im = im.crop((x, y, x + w, y + h))
     im.convert('RGB').save(out)
