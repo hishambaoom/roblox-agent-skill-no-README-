@@ -15,3 +15,4 @@ description: "Apply for any Roblox UI request: screenshots from the owner, phone
 - Popups: never add one that wasn't asked for; removed popups stay as hidden templates with `@Enabled=false`.
 - Report: shots first, "rig shots only, not on a real device" unless Studio/device checked it, and the attribute the
   owner can edit in Studio.
+- Windows (PowerShell): `.\tools\rig\shot.ps1 <place> <name> open=<Menu>` (docs/windows.md).
