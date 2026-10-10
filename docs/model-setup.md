@@ -12,12 +12,21 @@ bash ~/roblox-agent-skill/adapters/install.sh ~/games/my-game claude codex antig
 export ROBLOX_API_KEY=...  UNIVERSE_ID=...  PLACE_ID=...     # in your shell profile or a git-ignored .env
 ```
 
-Common prerequisites: git, bash, Python 3 + Pillow (`pip install pillow`, for rig screenshots), Lune
+On Windows without bash, use the PowerShell twins: `.\adapters\install.ps1 C:\games\my-game claude codex …`, then
+`tools\rig\*.ps1` — full walkthrough in [windows.md](windows.md).
+
+Common prerequisites: git, bash (or PowerShell on Windows), Python 3 + Pillow (`pip install pillow`, for rig screenshots), Lune
 (https://github.com/lune-org/lune/releases), optional Node.js + cloudflared for a remote Studio bridge.
 Smoke test after install (no key needed):
 ```bash
 GAME_DIR=tools/example-game BASE=<your.rbxl> BUILD_OUT=work/x/t1.rbxl tools/lune run tools/example-game/build.luau
 GAME_DIR=tools/example-game BASE=<your.rbxl> DRY_RUN=1 tools/rig/go.sh t2 example_feature_test
+```
+```powershell
+# Windows PowerShell / pwsh (docs/windows.md)
+$env:GAME_DIR='tools\example-game'; $env:BASE='<your.rbxl>'
+$env:BUILD_OUT='work\x\t1.rbxl'; .\tools\lune.exe run tools\example-game\build.luau; Remove-Item Env:BUILD_OUT
+$env:DRY_RUN='1'; .\tools\rig\go.ps1 t2 example_feature_test; Remove-Item Env:DRY_RUN
 ```
 
 ---
@@ -51,7 +60,7 @@ Steps:
 2. Merge the example config: `project_doc_max_bytes` (default 32 KiB is enough for this AGENTS.md),
    `[mcp_servers.Roblox_Studio]` command (or use Studio's *Quick connect → Codex CLI*).
 3. `codex` in the repo → ask *"What are your standing rules for this game?"* — it should quote the TOP RULE and the
-   fast-lane loop. Run tasks with a sandbox mode that allows running `tools/rig/*.sh` and network for publish.
+   fast-lane loop. Run tasks with a sandbox mode that allows running `tools/rig/*.sh` (Windows: `tools\rig\*.ps1`) and network for publish.
 Parallel work: separate Codex sessions in git worktrees, each with the worker brief from docs/subagents.md.
 Docs: https://developers.openai.com/codex/guides/agents-md · https://developers.openai.com/codex/config-reference ·
 https://developers.openai.com/codex/skills
