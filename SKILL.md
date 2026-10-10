@@ -28,9 +28,11 @@ Then open only the doc the task needs:
 | How to reason / talk to the owner | `docs/thinking.md`, `docs/examples/` |
 | Setting up a new project | `docs/project-state-template.md` |
 | Installing this skill in an agent | `docs/model-setup.md`, `adapters/` |
+| Running on Windows (PowerShell, no bash) | `docs/windows.md` |
 | Official references | `docs/resources.md` |
 
-Scripts: `tools/rig/*.sh` (go, shot, fast, run_all, compare_runs, publish, prices, retention), `tools/uimap/`,
+Scripts: `tools/rig/*.sh` (go, shot, fast, run_all, compare_runs, publish, prices, retention) + PowerShell twins
+`tools/rig/*.ps1` for native Windows (docs/windows.md), `tools/uimap/`,
 `tools/mcp/`, `tools/example-game/` (example build.luau, hook, tests, rbxsim).
 
 Non-negotiables (full list in AGENTS.md §1): everything visible is a real Studio instance; scripts only clone/show/fill/
