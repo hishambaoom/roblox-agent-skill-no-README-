@@ -1,0 +1,15 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "instructions": [
+    "docs/workflow.md",
+    "docs/studio-first-rule.md",
+    "docs/thinking.md"
+  ],
+  "mcp": {
+    "Roblox_Studio": {
+      "type": "local",
+      "command": ["cmd.exe", "/c", "%LOCALAPPDATA%\\Roblox\\mcp.bat"],
+      "enabled": true
+    }
+  }
+}
