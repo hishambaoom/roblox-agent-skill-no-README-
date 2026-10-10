@@ -11,3 +11,5 @@
   connected, keep working with the rig and say "NOT playtested".
 - Secrets: `ROBLOX_API_KEY`, `UNIVERSE_ID`, `PLACE_ID` come from the shell environment. Never echo the key.
 - Keep replies short: version, change, screenshots, Verified / Not verified, one "your call".
+
+Windows: run the PowerShell twins `.\tools\rig\*.ps1` (same arguments/output as the `.sh` scripts); see docs/windows.md.
