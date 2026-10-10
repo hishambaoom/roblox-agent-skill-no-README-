@@ -17,3 +17,5 @@ description: "Apply when publishing a Roblox place, changing game pass / develop
 6. Append the QUEUE.md `DONE` line (`LIVE = <file> (version N) = <base> + <patch>. BASE next: <file>`), run
    `tools/rig/retention.sh`.
 7. Prices: `tools/rig/prices.sh pass|product <id> <price>` with the owner's exact number only; report old → new.
+8. Windows (PowerShell, docs/windows.md): `.\tools\rig\publish.ps1 <place>` (rehearse with `$env:DRY_RUN='1'`),
+   `.\tools\rig\retention.ps1`, `.\tools\rig\prices.ps1 pass|product <id> <price>` — same env vars and output.
