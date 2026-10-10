@@ -23,8 +23,9 @@ SKILL.md             Agent-Skills style entry point (name/description frontmatte
 docs/                workflow, studio-first rule, Lune pipeline, testing, publishing, Studio MCP, UI, monetization,
                      security, launch checklist, lessons, state templates, thinking, subagents, model setup, resources
 docs/examples/       5 worked sessions: request → plan → commands → output → report
-adapters/            ready-to-copy files: claude-code/ codex/ antigravity/ cursor/ opencode/ chat-only/ + install.sh
+adapters/            ready-to-copy files: claude-code/ codex/ antigravity/ cursor/ opencode/ chat-only/ + install.sh/.ps1
 tools/rig/           go.sh shot.sh fast.sh run_all.sh compare_runs.sh publish.sh prices.sh retention.sh config.sh
+                     + a PowerShell twin of each (go.ps1, shot.ps1, …) for native Windows - docs/windows.md
                      render.py (rig screenshot renderer) dump.example.luau (layout dumper, adapt boot to your game)
 tools/uimap/         ui-map generator (grep-able map of every UI element and its look)
 tools/mcp/           Studio MCP HTTP client + example UI probe
@@ -37,6 +38,11 @@ tools/example-game/  example build.luau + hook + tests (feature, studio-rule gua
 ```bash
 git clone https://github.com/<you>/roblox-agent-skill ~/roblox-agent-skill
 bash ~/roblox-agent-skill/adapters/install.sh /path/to/your-game claude codex antigravity cursor opencode
+```
+Windows (PowerShell 7 or 5.1):
+```powershell
+git clone https://github.com/<you>/roblox-agent-skill $HOME\roblox-agent-skill
+& $HOME\roblox-agent-skill\adapters\install.ps1 C:\path\to\your-game claude codex antigravity cursor opencode
 ```
 Copies `AGENTS.md`, `SKILL.md`, `docs/`, `tools/` and the adapters you name into your game repo (never overwrites
 unless `FORCE=1`), creates `QUEUE.md`/`PROJECT.md` stubs and `.gitignore` entries.
@@ -52,7 +58,8 @@ unless `FORCE=1`), creates `QUEUE.md`/`PROJECT.md` stubs and `.gitignore` entrie
 
 ### Requirements
 Lune (https://github.com/lune-org/lune/releases) at `tools/lune` (0.8.x) and `tools/lune10` (0.10.x for files from
-recent Studio) · bash · Python 3 + Pillow (screenshots) · for publishing: an Open Cloud API key with
+recent Studio; `tools\lune.exe` / `tools\lune10.exe` on Windows) · bash **or** PowerShell (native Windows: see
+[docs/windows.md](docs/windows.md)) · Python 3 + Pillow (screenshots) · for publishing: an Open Cloud API key with
 `universe-places:write` in `ROBLOX_API_KEY`, plus `UNIVERSE_ID` and `PLACE_ID` · optional: Roblox Studio MCP (built in).
 
 ## Quick start (no key needed)
@@ -62,6 +69,14 @@ BUILD_OUT=work/x/t1.rbxl tools/lune run tools/example-game/build.luau      # bui
 tools/rig/fast.sh work/x/t1.rbxl example_feature_test                      # guard + feature tests
 tools/rig/shot.sh work/x/t1.rbxl t1                                        # work/rig/out/t1_pc.png, t1_phone.png
 DRY_RUN=1 tools/rig/go.sh t2 example_feature_test                          # whole fast lane, publish rehearsed
+```
+Windows PowerShell (details, execution policy, env vars, troubleshooting: [docs/windows.md](docs/windows.md)):
+```powershell
+$env:GAME_DIR = 'tools\example-game'; $env:BASE = 'path\to\your-place.rbxl'
+$env:BUILD_OUT = 'work\x\t1.rbxl'; .\tools\lune.exe run tools\example-game\build.luau; Remove-Item Env:BUILD_OUT
+.\tools\rig\fast.ps1 work\x\t1.rbxl example_feature_test
+.\tools\rig\shot.ps1 work\x\t1.rbxl t1
+$env:DRY_RUN = '1'; .\tools\rig\go.ps1 t2 example_feature_test; Remove-Item Env:DRY_RUN
 ```
 Then point `GAME_DIR` at your own game folder (its `build.luau`, hooks and tests), copy `tools/rig/dump.example.luau`
 to `tools/rig/dump.luau` and adapt its boot section to your client scripts, and set the publish env vars.
