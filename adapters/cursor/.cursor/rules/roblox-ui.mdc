@@ -9,3 +9,4 @@ alwaysApply: false
 - Fast lane: `tools/rig/go.sh <name> open=<Menu>` → look at `work/rig/out/<name>_pc.png` + `_phone.png` (667x375).
 - Avoid thumbstick (bottom-left), jump (bottom-right), menu header/X, notch insets.
 - Report shots first; "rig shots only" unless checked in Studio/on a device; name the Studio attribute to edit.
+- Windows (PowerShell): `.\tools\rig\go.ps1 <name> open=<Menu>` → same PNGs under `work\rig\out\` (docs/windows.md).
