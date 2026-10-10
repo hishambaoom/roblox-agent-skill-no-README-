@@ -14,6 +14,7 @@ Setup (on the owner's PC, where Studio runs; see docs/studio-mcp-bridge.md):
 usage:
   export STUDIO_MCP_URL=https://<random-words>.trycloudflare.com/mcp
   python3 tools/mcp/mcpc.py tools                      # list tools the server offers
+  (Windows PowerShell: $env:STUDIO_MCP_URL='https://.../mcp'; py -3 tools\mcp\mcpc.py tools   - see docs/windows.md)
   python3 tools/mcp/mcpc.py lua probe.luau             # run a Luau file in Studio (Edit datamodel)
   python3 tools/mcp/mcpc.py call list_roblox_studios '{}'   # find the studio_id
   STUDIO_ID=<id> python3 tools/mcp/mcpc.py lua probe.luau Client   # run in the Play client (Server for the Play server)
@@ -38,7 +39,7 @@ def rpc(method, params, i=1, sid=None, timeout=60):
         h["Mcp-Session-Id"] = sid
     req = urllib.request.Request(URL, json.dumps({"jsonrpc": "2.0", "id": i, "method": method, "params": params}).encode(), h)
     r = urllib.request.urlopen(req, timeout=timeout)
-    body = r.read().decode()
+    body = r.read().decode('utf-8', errors='replace')
     for line in body.splitlines():  # SSE framing: keep the last data: line
         if line.startswith("data:"):
             body = line[5:]
@@ -73,11 +74,14 @@ def lua(code, dm="Edit"):
 
 
 if __name__ == "__main__":
+    for _s in (sys.stdout, sys.stderr):  # Windows consoles (cp1252/cp850) cannot print every character Studio returns
+        try: _s.reconfigure(errors="replace")
+        except (AttributeError, ValueError): pass
     if len(sys.argv) >= 2 and sys.argv[1] == "tools":
         print("\n".join(tools()))
     elif len(sys.argv) >= 3 and sys.argv[1] == "call":
         print(call(sys.argv[2], json.loads(sys.argv[3]) if len(sys.argv) > 3 else {}))
     elif len(sys.argv) >= 3 and sys.argv[1] == "lua":
-        print(lua(open(sys.argv[2]).read(), sys.argv[3] if len(sys.argv) > 3 else "Edit"))
+        print(lua(open(sys.argv[2], encoding="utf-8").read(), sys.argv[3] if len(sys.argv) > 3 else "Edit"))
     else:
         print(__doc__)
