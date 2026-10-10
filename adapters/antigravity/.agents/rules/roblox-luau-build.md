@@ -20,3 +20,4 @@ description: "Rules for editing Roblox Luau sources and Lune build hooks (Studio
 - Server-authoritative; validate types/NaN/range/ownership and rate-limit every remote; `pcall` DataStore/ProfileStore;
   idempotent ProcessReceipt.
 - After editing: build → `tools/rig/fast.sh <place> <tests>` → `tools/rig/shot.sh` for UI → report honestly.
+- Windows (PowerShell): `.\tools\rig\fast.ps1 <place> <tests>` → `.\tools\rig\shot.ps1 <place> <name>` (same args/output; docs/windows.md).
