@@ -1,0 +1,17 @@
+---
+description: Core rules for working on this Roblox game (always applied)
+globs:
+alwaysApply: true
+---
+
+Follow `AGENTS.md` at the repo root (Cursor also reads it natively). Key rules, repeated so they survive long chats:
+
+- TOP RULE: everything visible is a real, editable Studio instance; runtime scripts only clone/show/hide/fill/tween.
+- Tunables are attributes (`ReplicatedStorage.Config.GameSettings` or on the instance), seeded only if missing.
+- New UI clones existing styled templates. Phone fixes: fit only — "DON'T CHANGE THE DESIGN".
+- The owner's design numbers are final; list disagreements as "your call", never change them yourself.
+- Loop: read QUEUE.md → plan → smallest change → build → test (new test fails on base) → PC+phone shots → publish per
+  rule → QUEUE `DONE` line → short report with the Roblox version number.
+- Honesty: Verified (real Studio/device) vs Automated-only (Lune tests, rig shots) vs Unverified.
+- No secrets in files. Never publish over Studio-only edits. 409 on publish → retry with backoff.
+- Tools: `tools/rig/go.sh`, `shot.sh`, `fast.sh`, `run_all.sh`, `compare_runs.sh`, `publish.sh`, `prices.sh`.
