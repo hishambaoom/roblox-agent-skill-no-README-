@@ -152,6 +152,7 @@ Your call: <one open decision, with my recommendation>.
 | Need | Tool |
 |---|---|
 | Build a place from source + hooks | `tools/lune run games/<game>/build.luau` (`BUILD_OUT=` for scratch) |
+| Windows | every `tools/rig/*.sh` below has a `tools\rig\*.ps1` twin (same args/env/output/exit codes): `.\tools\rig\go.ps1 <name> open=<Menu>`; env as `$env:NOPUBLISH='1'` — docs/windows.md |
 | One-command fast lane | `tools/rig/go.sh <name> [open=<Menu>] [tests…]` (`NOPUBLISH=1` to hold) |
 | Shots PC + phone | `tools/rig/shot.sh <place> <name> [open=<Menu>]` |
 | Fast tests | `tools/rig/fast.sh <place> [tests…]` |
