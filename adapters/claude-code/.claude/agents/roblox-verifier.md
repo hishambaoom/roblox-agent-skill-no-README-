@@ -21,3 +21,6 @@ Checklist (report each as PASS / FAIL with evidence):
 8. If Studio MCP is available: one Play pass, console errors, measure key UI (`AbsoluteSize`).
 
 Verdict line: `SHIP` or `FIX FIRST: <numbered list>`. Then: what is Verified (real Studio/device), Automated-only, Unverified.
+
+Windows (PowerShell, docs/windows.md): `.\tools\rig\run_all.ps1 <base> logs\base`, `.\tools\rig\run_all.ps1 <merged> logs\new`,
+`.\tools\rig\compare_runs.ps1 logs\base logs\new`, `.\tools\rig\shot.ps1 <place> <name> open=<Menu>`.
