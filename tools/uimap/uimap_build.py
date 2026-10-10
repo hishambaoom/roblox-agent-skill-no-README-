@@ -1,18 +1,23 @@
 # Builds ui-map.md (a searchable, one-line-per-instance map of every UI element and its look) from a BUILT place.
-# usage: python3 tools/uimap/uimap_build.py <place.rbxl> [out=ui-map.md]
+# usage: python3 tools/uimap/uimap_build.py <place.rbxl> [out=ui-map.md]      (Windows: py -3 tools\uimap\uimap_build.py ...)
 # Edit SECTIONS for your game: (instance path, child depth, display name, one-line description of what it is/does).
 # Re-run after every Studio edit or UI build so the map never lies. The agent greps this file BEFORE touching UI:
 #   grep -n "SaleBadge" ui-map.md   -> exact path, colours, strokes, attributes (@{...}) in one line.
 import subprocess, re, sys, os
 PLACE = sys.argv[1] if len(sys.argv) > 1 else 'games/my-game/build/game.rbxl'
 OUT = sys.argv[2] if len(sys.argv) > 2 else 'ui-map.md'
-LUNE = os.environ.get('LUNE', 'tools/lune')
+def _default_lune():
+    for c in (os.path.join('tools', 'lune.exe'), os.path.join('tools', 'lune')):
+        if os.path.isfile(c): return c
+    return os.path.join('tools', 'lune.exe' if os.name == 'nt' else 'lune')
+LUNE = os.environ.get('LUNE') or _default_lune()
+if not os.path.isfile(LUNE) and os.path.isfile(LUNE + '.exe'): LUNE += '.exe'  # LUNE=tools/lune on Windows
 HERE = os.path.dirname(os.path.abspath(__file__))
 M = 'StarterGui.MainUI'; U = 'ReplicatedStorage.UITemplates'
 
 def gen(path, depth, disp):
     out = subprocess.run([LUNE, 'run', os.path.join(HERE, 'uimap_gen.luau'), PLACE, path, str(depth), disp],
-                         capture_output=True, text=True)
+                         capture_output=True, text=True, encoding='utf-8', errors='replace')
     if out.returncode: raise SystemExit(out.stderr)
     return [l for l in out.stdout.splitlines() if l.strip()]
 
@@ -42,5 +47,5 @@ for title, items in SECTIONS:
         m = re.match(r'(`[^`]+` \[[^\]]+\]) ?(.*)', g[0])
         lines.append(f'- {m.group(1)} — **{desc}** · {m.group(2)}'.rstrip(' ·') if m else f'- {g[0]}')
         for l in g[1:]: lines.append('  - ' + l)
-open(OUT, 'w').write('\n'.join(lines) + '\n')
+with open(OUT, 'w', encoding='utf-8', newline='\n') as fh: fh.write('\n'.join(lines) + '\n')
 print('wrote', OUT)
