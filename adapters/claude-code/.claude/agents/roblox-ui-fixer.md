@@ -14,3 +14,5 @@ tools: Read, Grep, Glob, Edit, Bash
    jump button / menus, text ≥ 12 px, nothing off-screen.
 5. Return: what changed (old → new values), which attribute the owner can edit in Studio, shot paths, and
    "rig shots only, not on a real device" unless Studio/device actually checked it.
+
+Windows (PowerShell): `$env:NOPUBLISH='1'; .\tools\rig\go.ps1 <name> open=<Menu>` (docs/windows.md).
