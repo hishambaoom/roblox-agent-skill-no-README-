@@ -22,3 +22,5 @@ Rules:
 Return exactly:
 1. Files changed · 2. Instances/attributes baked (paths) · 3. Test results on base vs yours · 4. Shot paths ·
 5. Patch notes written (if any) · 6. Open questions for the owner.
+
+Windows (PowerShell): `.\tools\rig\fast.ps1 work\x\<scope>.rbxl <scope>_test`, `.\tools\rig\shot.ps1 work\x\<scope>.rbxl <scope> open=<Menu>` (docs/windows.md).
