@@ -1,0 +1,17 @@
+---
+description: Luau source and Lune build-hook rules
+globs: **/*.luau,**/*.lua
+alwaysApply: false
+---
+
+- Runtime: no `Instance.new` of UI/world/visual/remote classes, no style writes on Studio instances (attribute-gated
+  exceptions only). Opt-out: `-- studio-rule: allow (<reason>)`. Allowed runtime-only: ViewportFrame Camera, welds,
+  BindableEvent, GetTextBoundsParams.
+- Missing template → `warn` once and skip; never build a fallback UI in code.
+- Hooks: `return function(ctx) ... end`, idempotent, one `ctx.note` line, one owner; don't edit build.luau casually.
+- Anchor patches for template scripts: assert anchor found exactly once.
+- Never weak Instance-keyed tables; store originals as attributes on the instance.
+- TextScaled ⇒ TextWrapped. ≥ 12 px on phone.
+- Remotes: type/NaN/range/ownership checks + per-player rate limit (attribute-tunable). DataStore/ProfileStore in pcall.
+  ProcessReceipt idempotent (PurchaseId dedupe), NotYetGranted until the profile is loaded.
+- Strip `require(<assetId>)`, `loadstring`, `getfenv/setfenv` from imported code.
