@@ -1,0 +1,11 @@
+---
+description: Apply for Roblox UI requests - owner screenshots, phone layout, menus, toasts, cards, text size
+globs:
+alwaysApply: false
+---
+
+- Fit only, never design: size/position/scale/wrap/Phone* attributes. Not colours, fonts, studs, strokes, art, copy.
+- `grep -n "<Name>" ui-map.md` first; regenerate with `python3 tools/uimap/uimap_build.py <place>` after UI builds.
+- Fast lane: `tools/rig/go.sh <name> open=<Menu>` → look at `work/rig/out/<name>_pc.png` + `_phone.png` (667x375).
+- Avoid thumbstick (bottom-left), jump (bottom-right), menu header/X, notch insets.
+- Report shots first; "rig shots only" unless checked in Studio/on a device; name the Studio attribute to edit.
