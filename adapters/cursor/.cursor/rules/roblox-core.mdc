@@ -15,3 +15,4 @@ Follow `AGENTS.md` at the repo root (Cursor also reads it natively). Key rules, 
 - Honesty: Verified (real Studio/device) vs Automated-only (Lune tests, rig shots) vs Unverified.
 - No secrets in files. Never publish over Studio-only edits. 409 on publish → retry with backoff.
 - Tools: `tools/rig/go.sh`, `shot.sh`, `fast.sh`, `run_all.sh`, `compare_runs.sh`, `publish.sh`, `prices.sh`.
+- Windows (PowerShell): the same tools as `tools\rig\*.ps1` (`go.ps1`, `shot.ps1`, `fast.ps1`, `run_all.ps1`, `compare_runs.ps1`, `publish.ps1`, `prices.ps1`); see docs/windows.md.
