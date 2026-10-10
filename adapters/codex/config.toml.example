@@ -1,0 +1,18 @@
+# ~/.codex/config.toml  (user level)  — or <repo>/.codex/config.toml (project level, loaded only for trusted projects)
+# Merge these keys into your existing config; don't replace your whole file.
+
+# AGENTS.md + nested AGENTS.md files are concatenated up to this many bytes (default 32 KiB).
+# The skill's AGENTS.md is ~12 KB, so the default is enough; raise it if your own project AGENTS.md is large.
+project_doc_max_bytes = 65536
+
+# Also accept CLAUDE.md as instructions in folders that have no AGENTS.md (optional).
+project_doc_fallback_filenames = ["CLAUDE.md"]
+
+# Roblox Studio's built-in MCP server (Studio: Assistant > ... > Manage MCP Servers > Enable Studio as MCP server).
+# Studio's MCP settings also offer one-click "Quick connect" for Codex CLI, which writes an equivalent entry.
+[mcp_servers.Roblox_Studio]
+command = "cmd.exe"
+args = ["/c", "%LOCALAPPDATA%\\Roblox\\mcp.bat"]
+# macOS instead:
+# command = "/Applications/RobloxStudio.app/Contents/MacOS/StudioMCP"
+# args = []
