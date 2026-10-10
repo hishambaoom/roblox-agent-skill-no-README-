@@ -12,3 +12,6 @@ description: Gameplay batch - plan disjoint workers, build, test against base, v
 5. Independent verifier pass (docs/subagents.md checklist), shots of every touched screen.
 6. Publish once (`tools/rig/publish.sh`), QUEUE `DONE` line, `tools/rig/retention.sh`.
 7. Report: version, what changed, Verified / Automated-only / Unverified, "needs your playtest: 1) 2) 3)", one "your call".
+
+Windows (PowerShell, docs/windows.md): `.\tools\rig\run_all.ps1 <base> logs\base`, `.\tools\rig\run_all.ps1 work\x\<name>.rbxl logs\new`,
+`.\tools\rig\compare_runs.ps1 logs\base logs\new`, `.\tools\rig\publish.ps1 <place>`, `.\tools\rig\retention.ps1`.
