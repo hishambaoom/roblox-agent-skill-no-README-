@@ -1,68 +1,50 @@
 # roblox-agent-skill
 
-A portable, agent-agnostic **Roblox game development skill**: the rules, workflow, scripts and worked examples that
-shipped 144 versions of *Don't Wake the Pumpkin King* with AI agents — packaged so any agent (Claude Code, Codex CLI,
-Cursor, OpenCode, Google Antigravity, Gemini CLI, ChatGPT/Claude projects) and any frontier model can work on a Roblox
-game the same way.
+**A drop-in skill that lets any AI coding agent build, test, screenshot and publish a Roblox game that the owner can
+still fully edit in Studio.**
 
-What it gives an agent:
-- **Standing rules** that keep the game owner in control: everything visible is a real, editable Studio instance
-  ("I WANNA BE ABLE TO CHANGE AND EDIT ANYTHING I WANT"), tunables are attributes, UI clones existing templates,
-  "DON'T CHANGE THE DESIGN", the owner's game design is final, never claim a playtest you didn't run.
-- **A fast loop**: edit a build hook → `tools/rig/go.sh` builds the .rbxl with Lune (~2 s), renders PC + phone
-  screenshots (~1 s), runs guard tests (~3 s) and publishes through Open Cloud only if they pass.
-- **A gameplay lane** with tests that must fail on the base build, full-suite comparison, and parallel workers +
+It is the rulebook, scripts and worked examples behind *Don't Wake the Pumpkin King*, a Roblox game built with AI agents
+and shipped through 185 published versions in its first week. It works with Claude Code, Codex CLI, Cursor, OpenCode,
+Google Antigravity, Gemini CLI and chat-only assistants (ChatGPT / Claude projects), on any frontier model.
+
+## What it gives your agent
+- **Owner-first rules.** Everything visible is a real, editable Studio instance (scripts only clone, show, fill and
+  tween), tunables are attributes, UI clones existing templates, "don't change the design", the owner's game design is
+  final, and never claim a playtest you didn't run.
+- **A 5-second loop.** Edit a build hook → `tools/rig/go.sh` builds the `.rbxl` with [Lune](https://github.com/lune-org/lune)
+  (~2 s), renders PC + phone screenshots (~1 s), runs guard tests (~3 s) and publishes through Open Cloud only if they pass.
+- **A gameplay lane.** Tests that must fail on the base build, full-suite comparison against base, parallel workers plus
   an independent verifier.
-- **Lessons** from real bugs (weak Instance-keyed tables, TextScaled without TextWrapped, Lune meshes that don't render,
-  Studio edits wiped by pipeline publishes, …).
+- **Lessons from real bugs**: weak Instance-keyed tables, `TextScaled` without `TextWrapped`, Lune meshes that don't
+  render, `SoundId` writes silently dropped in Lune 0.10, the 31-Highlight cap, Studio edits wiped by pipeline publishes…
+- **Playbooks** for live events, mobile performance, reward "juice", AI-made models and sounds, and launch marketing.
+- **Assets and generators**: thumbnail/icon exporters, a CTR sim, a rebirth-curve designer, prompt packs, original SFX,
+  and a studded UI kit (`assets/`).
 
-## Layout
-```
-AGENTS.md            main instructions (persona, rules, loop, decision table, report format)  ← start here
-SKILL.md             Agent-Skills style entry point (name/description frontmatter) → docs index
-docs/                workflow, studio-first rule, Lune pipeline, testing, publishing, Studio MCP, UI, monetization,
-                     security, launch checklist, lessons, state templates, thinking, subagents, model setup, resources
-docs/examples/       5 worked sessions: request → plan → commands → output → report
-adapters/            ready-to-copy files: claude-code/ codex/ antigravity/ cursor/ opencode/ chat-only/ + install.sh/.ps1
-tools/rig/           go.sh shot.sh fast.sh run_all.sh compare_runs.sh publish.sh prices.sh retention.sh config.sh
-                     + a PowerShell twin of each (go.ps1, shot.ps1, …) for native Windows - docs/windows.md
-                     render.py (rig screenshot renderer) dump.example.luau (layout dumper, adapt boot to your game)
-tools/uimap/         ui-map generator (grep-able map of every UI element and its look)
-tools/mcp/           Studio MCP HTTP client + example UI probe
-tools/example-game/  example build.luau + hook + tests (feature, studio-rule guard, text size) + rbxsim.luau
-```
+## Quick start
 
-## Install
-
-### Any agent, 30 seconds
+### 1. Install into your game repo (30 seconds)
 ```bash
-git clone https://github.com/<you>/roblox-agent-skill ~/roblox-agent-skill
+git clone https://github.com/hishambaoom/roblox-agent-skill-no-README- ~/roblox-agent-skill
 bash ~/roblox-agent-skill/adapters/install.sh /path/to/your-game claude codex antigravity cursor opencode
 ```
 Windows (PowerShell 7 or 5.1):
 ```powershell
-git clone https://github.com/<you>/roblox-agent-skill $HOME\roblox-agent-skill
+git clone https://github.com/hishambaoom/roblox-agent-skill-no-README- $HOME\roblox-agent-skill
 & $HOME\roblox-agent-skill\adapters\install.ps1 C:\path\to\your-game claude codex antigravity cursor opencode
 ```
-Copies `AGENTS.md`, `SKILL.md`, `docs/`, `tools/` and the adapters you name into your game repo (never overwrites
-unless `FORCE=1`), creates `QUEUE.md`/`PROJECT.md` stubs and `.gitignore` entries.
+The installer copies `AGENTS.md`, `SKILL.md`, `docs/`, `tools/` and the adapters you name (never overwrites unless
+`FORCE=1`), and creates `QUEUE.md` / `PROJECT.md` stubs and `.gitignore` entries.
 
-| Agent | What it reads | Details |
-|---|---|---|
-| Claude Code | `CLAUDE.md` (`@AGENTS.md` import), `.claude/skills/roblox-dev/`, `.claude/agents/*`, `.mcp.json` | docs/model-setup.md |
-| Codex CLI | `AGENTS.md`, `.agents/skills/roblox-dev/`, `~/.codex/config.toml` | docs/model-setup.md |
-| Antigravity | `AGENTS.md`, `.agents/rules/*.md` (trigger frontmatter), `.agents/skills/`, `.agents/workflows/` | docs/model-setup.md |
-| Cursor | `AGENTS.md`, `.cursor/rules/*.mdc` | docs/model-setup.md |
-| OpenCode | `AGENTS.md`, `opencode.json` | docs/model-setup.md |
-| Chat-only (ChatGPT, Claude.ai, Gems) | paste `adapters/chat-only/system-prompt.md`, upload AGENTS.md + docs | docs/model-setup.md |
+### 2. Requirements
+- Lune: `tools/lune` (0.8.x) and `tools/lune10` (0.10.x, needed for files saved by current Studio);
+  on Windows `tools\lune.exe` / `tools\lune10.exe`. https://github.com/lune-org/lune/releases
+- bash **or** PowerShell (native Windows: [docs/windows.md](docs/windows.md)) · Python 3 + Pillow (screenshots)
+- Publishing: an Open Cloud API key with `universe-places:write` in `ROBLOX_API_KEY`, plus `UNIVERSE_ID` and `PLACE_ID`
+  in your environment (never in files).
+- Optional: Roblox Studio MCP (built into Studio) for live checks.
 
-### Requirements
-Lune (https://github.com/lune-org/lune/releases) at `tools/lune` (0.8.x) and `tools/lune10` (0.10.x for files from
-recent Studio; `tools\lune.exe` / `tools\lune10.exe` on Windows) · bash **or** PowerShell (native Windows: see
-[docs/windows.md](docs/windows.md)) · Python 3 + Pillow (screenshots) · for publishing: an Open Cloud API key with
-`universe-places:write` in `ROBLOX_API_KEY`, plus `UNIVERSE_ID` and `PLACE_ID` · optional: Roblox Studio MCP (built in).
-
-## Quick start (no key needed)
+### 3. Try the loop (no key needed)
 ```bash
 export GAME_DIR=tools/example-game BASE=path/to/your-place.rbxl
 BUILD_OUT=work/x/t1.rbxl tools/lune run tools/example-game/build.luau      # build: base + example hook
@@ -70,7 +52,7 @@ tools/rig/fast.sh work/x/t1.rbxl example_feature_test                      # gua
 tools/rig/shot.sh work/x/t1.rbxl t1                                        # work/rig/out/t1_pc.png, t1_phone.png
 DRY_RUN=1 tools/rig/go.sh t2 example_feature_test                          # whole fast lane, publish rehearsed
 ```
-Windows PowerShell (details, execution policy, env vars, troubleshooting: [docs/windows.md](docs/windows.md)):
+PowerShell:
 ```powershell
 $env:GAME_DIR = 'tools\example-game'; $env:BASE = 'path\to\your-place.rbxl'
 $env:BUILD_OUT = 'work\x\t1.rbxl'; .\tools\lune.exe run tools\example-game\build.luau; Remove-Item Env:BUILD_OUT
@@ -81,14 +63,72 @@ $env:DRY_RUN = '1'; .\tools\rig\go.ps1 t2 example_feature_test; Remove-Item Env:
 Then point `GAME_DIR` at your own game folder (its `build.luau`, hooks and tests), copy `tools/rig/dump.example.luau`
 to `tools/rig/dump.luau` and adapt its boot section to your client scripts, and set the publish env vars.
 
-## Ask your agent
-- "The shop cards overlap the jump button on phone." → fast lane, shots, version.
-- "Free steal every 120 s, paid cooldown 30 s." → tunable change, test, publish, one "your call" if risky.
-- "Players lose their bag order on rejoin." → gameplay lane: root cause, saved field + migration, test fails on base.
-- "Are we ready to launch?" → read-only audit, verdict, ordered blockers.
+### 4. Which file each agent reads
+| Agent | Reads | Setup |
+|---|---|---|
+| Claude Code | `CLAUDE.md` (`@AGENTS.md`), `.claude/skills/roblox-dev/`, `.claude/agents/*`, `.mcp.json` | docs/model-setup.md |
+| Codex CLI | `AGENTS.md`, `.agents/skills/roblox-dev/`, `~/.codex/config.toml` | docs/model-setup.md |
+| Antigravity | `AGENTS.md`, `.agents/rules/*.md`, `.agents/skills/`, `.agents/workflows/` | docs/model-setup.md |
+| Cursor | `AGENTS.md`, `.cursor/rules/*.mdc` | docs/model-setup.md |
+| OpenCode | `AGENTS.md`, `opencode.json` | docs/model-setup.md |
+| Chat-only (ChatGPT, Claude.ai, Gems) | paste `adapters/chat-only/system-prompt.md`, upload `AGENTS.md` + `docs/` | docs/model-setup.md |
+
+## Folder map
+```
+AGENTS.md              main instructions: persona, standing rules, loop, decision table, report format  ← start here
+SKILL.md               Agent-Skills entry point (frontmatter) → which doc to open for which task
+docs/
+  workflow.md            fast lane vs gameplay lane          studio-first-rule.md   everything editable in Studio
+  build-pipeline-lune.md Lune .rbxl builds and patches        testing.md             rig tests, guard, base comparison
+  publishing-open-cloud.md  publish + version checks          studio-mcp-bridge.md   live Studio via MCP + tunnel fixes
+  ui-conventions.md      phone fit, text, popups              monetization.md        passes, products, receipts
+  live-events.md         timed/admin events, scaled rewards   performance.md         Highlights cap, streaming, low gfx
+  juice.md               reward feedback ("dopamine")          models-and-audio.md    prompt packs, AI rigs, AudioContent
+  marketing-launch.md    discovery, thumbnails, badges, promo security.md            remotes, data, free models
+  launch-checklist.md    readiness audit                      lessons-learned.md     every bug that cost a build
+  subagents.md thinking.md project-state-template.md model-setup.md windows.md resources.md
+  examples/              5 worked sessions: request → plan → commands → output → report
+adapters/              claude-code/ codex/ antigravity/ cursor/ opencode/ chat-only/ + install.sh / install.ps1
+tools/rig/             go, shot, fast, run_all, compare_runs, publish, prices, retention, config (.sh + .ps1 twins),
+                       render.py (screenshot renderer), dump.example.luau (layout dumper)
+tools/uimap/           grep-able map of every UI element and its look
+tools/mcp/             Studio MCP HTTP client + example UI probe
+tools/example-game/    example build.luau + hook + tests (feature, studio-rule guard, text size) + rbxsim.luau
+assets/                icons, thumbnails, badges, CTR sim, rebirth curves, model prompt packs, SFX, UI kit (assets/README.md)
+```
+
+## Examples: what to ask your agent
+| You say | The agent does |
+|---|---|
+| "The shop cards overlap the jump button on phone." | fast lane: fit via `Phone*` attributes, PC + phone shots, publish, 2-line report |
+| "Free steal every 120 s, paid cooldown 30 s." | tunable change in Config attributes, test, publish, one "your call" if risky |
+| "Players lose their bag order on rejoin." | gameplay lane: root cause, saved field + migration, test that fails on base |
+| "Add a meteor shower event I can start from admin." | event playbook: Config, Studio models, scheduler, admin rows that stack ([docs/live-events.md](docs/live-events.md)) |
+| "The game lags on my phone." | read-only perf audit, ranked fixes, owner picks ([docs/performance.md](docs/performance.md)) |
+| "Make the cash popup more dopamine." | juice an existing template: pop, count-up, shine, pitch, shake ([docs/juice.md](docs/juice.md)) |
+| "Make new thumbnails." | thumbnail rules + CTR sim ([docs/marketing-launch.md](docs/marketing-launch.md), `assets/ctr_sim/`) |
+| "Are we ready to launch?" | read-only audit, verdict, ordered blockers ([docs/launch-checklist.md](docs/launch-checklist.md)) |
+Full transcripts: [docs/examples/](docs/examples/).
+
+## Troubleshooting
+| Problem | Fix |
+|---|---|
+| Lune can't open a place/model saved by current Studio | use `tools/lune10` (0.10.x) |
+| New sound ID "set" but the old sound still plays | Lune 0.10: `s.AudioContent = roblox.Content.fromUri("rbxassetid://…")`, not `SoundId`; read it back |
+| Text tiny in game but fine in tests | `TextScaled` needs `TextWrapped = true` + `UITextSizeConstraint` (min ≥ 12) |
+| Mesh placed by Lune invisible in game | keep a primitive fallback visible until checked in Studio |
+| Outlines vanish at random | over 31 Highlights: one shared Highlight per group ([docs/performance.md](docs/performance.md)) |
+| Owner's Studio edits disappeared after a publish | pipeline published over unsynced Studio work: owner saves to file → new BASE |
+| Publish 409 / "server busy" | place open with Collaborative Editing: back off and retry, then ask the owner to close it |
+| Studio MCP tunnel says `Forbidden` / 403 | stale quick-tunnel URL or restarted gateway: restart both, send the new URL ([docs/studio-mcp-bridge.md](docs/studio-mcp-bridge.md)) |
+| `list_roblox_studios` is empty | enable "Studio as MCP server" in Assistant → Manage MCP Servers, reopen the place |
+| Promo posts silently removed, account locked | fresh accounts mass-posting get filtered: one post at a time from aged accounts ([docs/marketing-launch.md](docs/marketing-launch.md)) |
+| PowerShell won't run the scripts | execution policy and env-var notes in [docs/windows.md](docs/windows.md) |
+More: [docs/lessons-learned.md](docs/lessons-learned.md).
 
 ## Safety
-No secrets, keys, emails or place files are included. Keys live in your environment only. Universe/place IDs of the
-reference game appear as public examples.
+No secrets, keys, account details, emails or place files are in this repo. Keys live in your environment only. Example
+Roblox asset IDs (sounds) belong to the reference game and are listed for illustration.
 
-License: MIT.
+## License
+MIT, see [LICENSE](LICENSE). Asset licensing per file: [assets/README.md](assets/README.md).
