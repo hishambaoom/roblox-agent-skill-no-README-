@@ -1,0 +1,23 @@
+DON'T WAKE THE PUMPKIN KING: EVENT MODEL PROMPTS (Oct 11)
+
+Where: Roblox Studio Assistant (Cube 3D), Meshy or Tripo. Paste one at a time.
+Rename each model to the MODEL NAME (exact, no spaces), put them in a folder called EventModels, Save to File > eventmodels.rbxm, hand the file to your agent.
+Keep each under ~3,000 triangles. No glow baked in; the game adds lights.
+
+MODEL NAME: TrickDoor
+Prompt: a spooky standalone wooden Halloween door with an arched top, dark purple wood planks (#3C1E50), orange painted trim (#FF780A), a carved jack-o-lantern face knocker, tiny cobwebs in the corners, a wreath of small pumpkins, standing on its own small stone step, stylized cartoon Roblox game asset, chunky simple shapes, slightly exaggerated proportions, bright saturated Halloween colours, smooth clean surfaces, low poly, single object, centred, no ground, no text
+
+MODEL NAME: Ghost
+Prompt: a cute small cartoon ghost floating, round head and wavy sheet-like tail, pure white (#F5F5FF) with a slight blue tint, big black oval eyes, small open "o" mouth, tiny arms out, stylized cartoon Roblox game asset, chunky simple shapes, slightly exaggerated proportions, smooth clean surfaces, low poly, single object, centred, no base, no ground, no text
+
+MODEL NAME: GoldenGhost
+Prompt: the same cute cartoon floating ghost with round head and wavy tail, shiny gold (#FFC828) with a tiny crown, big black oval eyes, happy smile, stylized cartoon Roblox game asset, chunky simple shapes, smooth glossy surfaces, low poly, single object, centred, no base, no ground, no text
+
+MODEL NAME: GhostCrate
+Prompt: a chunky Halloween treasure crate reward, dark wood box with purple metal corners (#7828B4), a ghost face carved on the front, glowing-green lock (#64FF64), a few candies peeking out of the lid, stylized cartoon Roblox game asset, chunky simple shapes, bright saturated Halloween colours, smooth clean surfaces, low poly, single object, centred, no ground, no text
+
+MODEL NAME: BloodMoon
+Prompt: a big round cartoon full moon, deep blood red (#B41E1E) with darker red craters, a faint sleepy jack-o-lantern face pattern in the craters, stylized cartoon Roblox game asset, simple smooth sphere, low poly, single object, centred, no base, no text
+
+MODEL NAME: MidnightClock
+Prompt: a tall spooky grandfather clock, dark purple wood (#2D1440), round gold clock face (#FFC828) with both hands pointing straight up at twelve, pumpkin-shaped pendulum, small bat wings on top, stylized cartoon Roblox game asset, chunky simple shapes, slightly exaggerated proportions, bright saturated Halloween colours, smooth clean surfaces, low poly, single object, centred, no ground, no text
