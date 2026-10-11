@@ -1,0 +1,119 @@
+DON'T WAKE THE PUMPKIN KING: AI MODEL PROMPTS
+
+Where: Roblox Studio Assistant (Cube 3D), or Meshy / Tripo if you prefer.
+How: paste one prompt at a time. Rename each model to the MODEL NAME shown (exact spelling), put them all in a folder called Models, right-click > Save to File > models.rbxm, and hand the file to your agent. The game swaps them in automatically; anything missing keeps the current block look.
+Style line already included in every prompt, so they all match.
+Tip: keep each candy around 2-3 studs and under ~2,000 triangles so the lair doesn't lag.
+
+STYLE = stylized cartoon Roblox game asset, chunky simple shapes, smooth glossy candy materials, bright saturated Halloween colours, low poly, single object, centred, no base, no text
+
+=================== BOSS ===================
+
+MODEL NAME: PumpkinKingHead
+Prompt: giant menacing cartoon Pumpkin King head, big orange pumpkin (#FF780A) with deep ribs, carved angry jack-o-lantern face with jagged teeth and slanted eyes, warm yellow glow inside the eyes and mouth (#FFE650), thick curly dark green stem (#326E1E), small tilted gold crown with points (#FFCD28) on top, stylized cartoon Roblox game asset, chunky simple shapes, bright Halloween colours, low poly, single object, centred, no body, no text
+
+=================== CANDY (30) ===================
+
+--- COMMON ---
+
+MODEL NAME: CandyCorn   (Candy Corn)
+Prompt: a single big candy corn kernel, three stripes yellow tip, orange middle, white base, glossy, main colour #FFD228, second colour #FF7814, accent #FFFAF0, stylized cartoon Roblox game asset, chunky simple shapes, smooth glossy candy materials, bright saturated Halloween colours, low poly, single object, centred, no base, no text
+
+MODEL NAME: GummyWorms   (Gummy Worms)
+Prompt: two chunky gummy worms twisted together, translucent red and green with yellow bands, sugar dusting, main colour #FF503C, second colour #78E63C, accent #FFDC28, stylized cartoon Roblox game asset, chunky simple shapes, smooth glossy candy materials, bright saturated Halloween colours, low poly, single object, centred, no base, no text
+
+MODEL NAME: Wrapped   (Wrapped Toffee)
+Prompt: a wrapped toffee candy, purple wrapper with orange stripes and twisted white ends, main colour #A03CDC, second colour #FF8C14, accent #FFFFFF, stylized cartoon Roblox game asset, chunky simple shapes, smooth glossy candy materials, bright saturated Halloween colours, low poly, single object, centred, no base, no text
+
+MODEL NAME: AppleSlice   (Candy Apple Slice)
+Prompt: a thick candy apple wedge, shiny red candy shell, cream-white flesh, small brown seeds, main colour #DC1E28, second colour #FAF0D2, accent #5A3C1E, stylized cartoon Roblox game asset, chunky simple shapes, smooth glossy candy materials, bright saturated Halloween colours, low poly, single object, centred, no base, no text
+
+MODEL NAME: LicoriceBat   (Licorice Bat)
+Prompt: a black licorice bat with spread wings, dark red wing details, glowing red eyes, main colour #281E2D, second colour #961E3C, accent #FF3C3C, stylized cartoon Roblox game asset, chunky simple shapes, smooth glossy candy materials, bright saturated Halloween colours, low poly, single object, centred, no base, no text
+
+--- UNCOMMON ---
+
+MODEL NAME: Lollipop   (Swirl Lollipop)
+Prompt: a big round swirl lollipop, pink and white spiral, cream stick, main colour #FF5AA0, second colour #FFFFFF, accent #F0E6D2, stylized cartoon Roblox game asset, chunky simple shapes, smooth glossy candy materials, bright saturated Halloween colours, low poly, single object, centred, no base, no text
+
+MODEL NAME: MarshmallowGhost   (Marshmallow Ghost)
+Prompt: a puffy marshmallow ghost, soft white body with a wavy bottom, cute black eyes and open mouth, main colour #FAFAFF, second colour #1E1E28, accent #FFAAC8, stylized cartoon Roblox game asset, chunky simple shapes, smooth glossy candy materials, bright saturated Halloween colours, low poly, single object, centred, no base, no text
+
+MODEL NAME: CandyCaneBone   (Candy Cane Bone)
+Prompt: a candy cane shaped like a dog bone, red and white stripes, main colour #FAFAF5, second colour #E6283C, accent #FFC8DC, stylized cartoon Roblox game asset, chunky simple shapes, smooth glossy candy materials, bright saturated Halloween colours, low poly, single object, centred, no base, no text
+
+MODEL NAME: Bar   (Chocolate Bar)
+Prompt: a chocolate bar with the wrapper peeled back, square chunks, brown and gold foil, main colour #5A321E, second colour #C82828, accent #DCDCE6, stylized cartoon Roblox game asset, chunky simple shapes, smooth glossy candy materials, bright saturated Halloween colours, low poly, single object, centred, no base, no text
+
+MODEL NAME: GumballSkull   (Gumball Skull)
+Prompt: a gumball machine shaped like a skull, glass dome full of colourful gumballs, main colour #F5F0E6, second colour #50C8FF, accent #FF5AB4, stylized cartoon Roblox game asset, chunky simple shapes, smooth glossy candy materials, bright saturated Halloween colours, low poly, single object, centred, no base, no text
+
+--- RARE ---
+
+MODEL NAME: Apple   (Caramel Apple)
+Prompt: a caramel apple on a wooden stick, glossy caramel drips, nut sprinkles, main colour #C81E1E, second colour #D28C32, accent #E6D2AA, stylized cartoon Roblox game asset, chunky simple shapes, smooth glossy candy materials, bright saturated Halloween colours, low poly, single object, centred, no base, no text
+
+MODEL NAME: CottonCandy   (Cotton Candy Cloud)
+Prompt: a fluffy cotton candy cloud on a paper cone, pink and blue swirls, main colour #FFA0DC, second colour #A0D2FF, accent #FAF0DC, stylized cartoon Roblox game asset, chunky simple shapes, smooth glossy candy materials, bright saturated Halloween colours, low poly, single object, centred, no base, no text
+
+MODEL NAME: JawbreakerEye   (Jawbreaker Eye)
+Prompt: a jawbreaker made to look like an eyeball, white with a coloured iris and red veins, main colour #FAFAFA, second colour #3CC85A, accent #141419, stylized cartoon Roblox game asset, chunky simple shapes, smooth glossy candy materials, bright saturated Halloween colours, low poly, single object, centred, no base, no text
+
+MODEL NAME: Potion   (Witch's Brew)
+Prompt: a witch brew potion bottle, round glass flask with bubbling glowing liquid, cork and label, main colour #78FF50, second colour #AADCFF, accent #8C5A32, stylized cartoon Roblox game asset, chunky simple shapes, smooth glossy candy materials, bright saturated Halloween colours, low poly, single object, centred, no base, no text
+
+MODEL NAME: PieSlice   (Pumpkin Pie Slice)
+Prompt: a slice of pumpkin pie, orange filling, golden crust, whipped cream swirl on top, main colour #E6781E, second colour #D2A05A, accent #FFFAF0, stylized cartoon Roblox game asset, chunky simple shapes, smooth glossy candy materials, bright saturated Halloween colours, low poly, single object, centred, no base, no text
+
+--- EPIC ---
+
+MODEL NAME: Bucket   (Pumpkin Pail)
+Prompt: a jack-o-lantern trick-or-treat pail overflowing with candy, black handle, main colour #FF780A, second colour #141414, accent #FFC83C, stylized cartoon Roblox game asset, chunky simple shapes, smooth glossy candy materials, bright saturated Halloween colours, low poly, single object, centred, no base, no text
+
+MODEL NAME: GhostCupcake   (Ghost Cupcake)
+Prompt: a cupcake with a white frosting ghost on top, purple wrapper, sprinkles, main colour #783CA0, second colour #FAFAFF, accent #FF8C14, stylized cartoon Roblox game asset, chunky simple shapes, smooth glossy candy materials, bright saturated Halloween colours, low poly, single object, centred, no base, no text
+
+MODEL NAME: ChocolateSpider   (Chocolate Spider)
+Prompt: a chocolate spider with eight legs, candy eyes, glossy chocolate body, main colour #502D19, second colour #8C5A32, accent #FF3C28, stylized cartoon Roblox game asset, chunky simple shapes, smooth glossy candy materials, bright saturated Halloween colours, low poly, single object, centred, no base, no text
+
+MODEL NAME: Skull   (Sugar Skull)
+Prompt: a decorated sugar skull, white with colourful flower patterns around the eyes, main colour #FAF5EB, second colour #FF3CA0, accent #3CC8FF, stylized cartoon Roblox game asset, chunky simple shapes, smooth glossy candy materials, bright saturated Halloween colours, low poly, single object, centred, no base, no text
+
+MODEL NAME: JellyBrain   (Jelly Brain)
+Prompt: a wobbly translucent jelly brain on a small plate, glossy, main colour #FF6EAA, second colour #78FF8C, accent #FFDCE6, stylized cartoon Roblox game asset, chunky simple shapes, smooth glossy candy materials, bright saturated Halloween colours, low poly, single object, centred, no base, no text
+
+--- LEGENDARY ---
+
+MODEL NAME: Cauldron   (Bubbling Cauldron)
+Prompt: a bubbling witch cauldron full of glowing candy goo, iron pot on small legs, main colour #232328, second colour #78FF3C, accent #FF961E, stylized cartoon Roblox game asset, chunky simple shapes, smooth glossy candy materials, bright saturated Halloween colours, low poly, single object, centred, no base, no text
+
+MODEL NAME: MummyTruffle   (Mummy Truffle)
+Prompt: a round chocolate truffle wrapped in white mummy bandages with two candy eyes peeking out, main colour #462819, second colour #F0E6D2, accent #78FF5A, stylized cartoon Roblox game asset, chunky simple shapes, smooth glossy candy materials, bright saturated Halloween colours, low poly, single object, centred, no base, no text
+
+MODEL NAME: Chest   (Candy Chest)
+Prompt: a treasure chest overflowing with candy and wrapped sweets, wooden with gold trim, main colour #6E328C, second colour #FFC828, accent #FF5AA0, stylized cartoon Roblox game asset, chunky simple shapes, smooth glossy candy materials, bright saturated Halloween colours, low poly, single object, centred, no base, no text
+
+MODEL NAME: WitchHatCookie   (Witch Hat Cookie)
+Prompt: a cookie shaped like a witch hat, chocolate cookie with purple and orange icing band, main colour #28143C, second colour #FF8C14, accent #C8965A, stylized cartoon Roblox game asset, chunky simple shapes, smooth glossy candy materials, bright saturated Halloween colours, low poly, single object, centred, no base, no text
+
+--- MYTHIC ---
+
+MODEL NAME: Crown   (King's Crown)
+Prompt: a royal king crown made of candy, gold with jewel gumdrops, pumpkin emblem in front, main colour #FFC81E, second colour #FF640A, accent #AA28FF, stylized cartoon Roblox game asset, chunky simple shapes, smooth glossy candy materials, bright saturated Halloween colours, low poly, single object, centred, no base, no text
+
+MODEL NAME: VampireFangs   (Vampire Fang Gummies)
+Prompt: a set of gummy vampire fangs, red gummy gums with white pointed teeth, main colour #C81428, second colour #FAFAF5, accent #FF5064, stylized cartoon Roblox game asset, chunky simple shapes, smooth glossy candy materials, bright saturated Halloween colours, low poly, single object, centred, no base, no text
+
+MODEL NAME: Candelabra   (Haunted Candelabra)
+Prompt: a haunted three-arm candelabra with dripping candy candles and ghostly purple flames, main colour #3C3228, second colour #FFF0DC, accent #78FFDC, stylized cartoon Roblox game asset, chunky simple shapes, smooth glossy candy materials, bright saturated Halloween colours, low poly, single object, centred, no base, no text
+
+MODEL NAME: Lantern   (Soul Lantern)
+Prompt: a glowing soul lantern, old iron frame with a floating blue spirit flame inside, main colour #281E32, second colour #6EFFDC, accent #FFBE28, stylized cartoon Roblox game asset, chunky simple shapes, smooth glossy candy materials, bright saturated Halloween colours, low poly, single object, centred, no base, no text
+
+--- SECRET ---
+
+MODEL NAME: Scepter   (King's Scepter)
+Prompt: a royal king scepter, gold staff topped with a carved jack-o-lantern orb and jewels, main colour #FFC81E, second colour #AA28FF, accent #FF780A, stylized cartoon Roblox game asset, chunky simple shapes, smooth glossy candy materials, bright saturated Halloween colours, low poly, single object, centred, no base, no text
+
+MODEL NAME: GoldenPumpkin   (Golden Pumpkin)
+Prompt: a shiny solid gold pumpkin with a curly gold stem, sparkling, treasure-like, main colour #FFCD28, second colour #FFF096, accent #FF8C14, stylized cartoon Roblox game asset, chunky simple shapes, smooth glossy candy materials, bright saturated Halloween colours, low poly, single object, centred, no base, no text
