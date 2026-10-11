@@ -3,7 +3,7 @@ name: roblox-dev
 description: Build, test, screenshot and publish Roblox games the owner can fully edit in Studio. Use for any Roblox/Luau task - UI tweaks, phone layout fixes, gameplay systems, economy, monetization, DataStores, Lune .rbxl builds, Open Cloud publishing, Studio MCP checks, bug sweeps and launch readiness.
 license: MIT
 metadata:
-  version: "1.0"
+  version: "1.1"
   origin: "Don't Wake the Pumpkin King (Roblox), Oct 2026"
 ---
 
@@ -24,6 +24,12 @@ Then open only the doc the task needs:
 | Remotes, data, free models | `docs/security.md` |
 | "Is it ready to launch?" | `docs/launch-checklist.md` |
 | Weird bug | `docs/lessons-learned.md` |
+| Timed / admin events, event rewards | `docs/live-events.md` |
+| Lag, phones, Highlights, streaming, Low Graphics | `docs/performance.md` |
+| "Make it feel better / more dopamine" | `docs/juice.md` |
+| Models from prompts, AI 3D rigs, sounds | `docs/models-and-audio.md` |
+| Icon, thumbnails, badges, promotion | `docs/marketing-launch.md` |
+| Reusable assets and generators | `assets/README.md` |
 | Splitting work across agents | `docs/subagents.md` |
 | How to reason / talk to the owner | `docs/thinking.md`, `docs/examples/` |
 | Setting up a new project | `docs/project-state-template.md` |
