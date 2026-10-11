@@ -50,6 +50,17 @@ Cloud place key can't download the live place for you).
   (export the instance / read attributes) before the next build overwrites them.
 - If the bridge is down (403, tunnel gone), continue with the rig and label results "NOT playtested".
 
+## Troubleshooting the tunnel
+| Symptom | Likely cause | Fix |
+|---|---|---|
+| `403 Forbidden` / `Forbidden` from the `trycloudflare.com` URL | the link is from an earlier session (quick-tunnel URLs die when `cloudflared` stops), or the gateway behind it restarted | Owner restarts **both** windows (supergateway first, then cloudflared) and sends the new URL; register the new `<url>/mcp`. If a fresh URL still says Forbidden, test locally (`curl -i http://localhost:<port>/mcp`) to see whether the gateway or the tunnel refuses. |
+| `530` / "tunnel not found" | cloudflared window closed or PC asleep | restart cloudflared, new URL |
+| `list_roblox_studios` returns `[]` | Studio open but the MCP plugin/server toggle is off, or Studio restarted | Assistant → Manage MCP Servers → enable; reopen the place |
+| Calls hang ~30 s then fail | long `execute_luau` | smaller probes, return short JSON |
+| Every session needs a new URL | quick tunnels are ephemeral by design | fine for occasional sessions; a named Cloudflare tunnel gives a stable URL (protect it, it can drive Studio) |
+When it stays broken, stop spending the owner's time on it: have him **Save to File**, patch the .rbxl with Lune, publish,
+and list what still needs an in-Studio look.
+
 ## A minimal playtest script (via MCP)
 1. `start_stop_play` (start) → wait for `get_studio_state` = playing.
 2. `execute_luau` Client: probe UI (sizes on screen, element visible, text height).
