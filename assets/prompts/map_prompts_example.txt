@@ -1,0 +1,130 @@
+DON'T WAKE THE PUMPKIN KING: MAP PROP PROMPTS
+
+Where: Roblox Studio Assistant (Cube 3D), Meshy or Tripo.
+How: paste one prompt at a time. Rename each model to the MODEL NAME shown (exact spelling, no spaces). Put them all in a folder called MapModels, right-click > Save to File > mapmodels.rbxm, and hand the file to your agent. Each one replaces the matching block prop on the map; anything missing keeps the current look.
+Style line already included in every prompt, so they all match.
+Tips: props are scenery, so keep each under ~3,000 triangles (big ones like the mausoleum or throne under ~6,000). No glow is baked in; the game adds lights. Make them a bit chunky, because they get scaled up and down on the map.
+
+=================== EVERYWHERE (scattered decor) ===================
+
+MODEL NAME: Pumpkin
+Prompt: a single plump cartoon pumpkin with deep ribs, warm orange (#E66E14), short curly green stem (#466E1E) with one small leaf, stylized cartoon Roblox game asset, chunky simple shapes, slightly exaggerated proportions, bright saturated Halloween colours, smooth clean surfaces, low poly, single object, centred, no base, no ground, no text
+
+MODEL NAME: JackOLantern
+Prompt: a carved cartoon jack-o-lantern, orange pumpkin (#FF780A), friendly-spooky carved triangle eyes and a toothy grin, hollow face openings so light can shine through, green stem (#3C781E), stylized cartoon Roblox game asset, chunky simple shapes, slightly exaggerated proportions, bright saturated Halloween colours, smooth clean surfaces, low poly, single object, centred, no base, no ground, no text
+
+MODEL NAME: Gravestone
+Prompt: a cartoon tombstone with a rounded top, grey stone (#6E6978), cracked edge, a little moss at the bottom, an engraved cross shape but no letters, slightly tilted, stylized cartoon Roblox game asset, chunky simple shapes, slightly exaggerated proportions, bright saturated Halloween colours, smooth clean surfaces, low poly, single object, centred, no base, no ground, no text
+
+MODEL NAME: DeadTree
+Prompt: a spooky leafless cartoon tree, twisted dark brown trunk (#2D201E), curly crooked branches reaching out like fingers, a knot hole in the trunk, tall and thin, stylized cartoon Roblox game asset, chunky simple shapes, slightly exaggerated proportions, bright saturated Halloween colours, smooth clean surfaces, low poly, single object, centred, no base, no ground, no text
+
+MODEL NAME: LanternPost
+Prompt: a crooked black iron lamp post with a small hanging lantern at the top, glass panes in warm yellow (#FFD25A), spiral iron details, about 10 studs tall, stylized cartoon Roblox game asset, chunky simple shapes, slightly exaggerated proportions, bright saturated Halloween colours, smooth clean surfaces, low poly, single object, centred, no base, no ground, no text
+
+MODEL NAME: SpookyFence
+Prompt: a short section of wonky old wooden picket fence, dark purple-brown wood (#4A3040), pointed tops, one board hanging crooked, straight piece for tiling, stylized cartoon Roblox game asset, chunky simple shapes, slightly exaggerated proportions, bright saturated Halloween colours, smooth clean surfaces, low poly, single object, centred, no base, no ground, no text
+
+=================== HUB (spawn, bases, cauldron) ===================
+
+MODEL NAME: CandyCauldron
+Prompt: a big round black witch cauldron on three short legs, bubbling bright green candy goo (#78E63C) spilling over the rim, a wooden stirring spoon sticking out, candy pieces floating in it, stylized cartoon Roblox game asset, chunky simple shapes, slightly exaggerated proportions, bright saturated Halloween colours, smooth clean surfaces, low poly, single object, centred, no base, no ground, no text
+
+MODEL NAME: CauldronLantern
+Prompt: a small round green glass lantern on a short iron stand, glass in toxic green (#64F064), little iron cage, stylized cartoon Roblox game asset, chunky simple shapes, slightly exaggerated proportions, bright saturated Halloween colours, smooth clean surfaces, low poly, single object, centred, no base, no ground, no text
+
+MODEL NAME: Signpost
+Prompt: a wooden two-arm signpost on a crooked pole, blank arrow-shaped boards in dark orange wood (#B4642D), nails and a small cobweb, no text, stylized cartoon Roblox game asset, chunky simple shapes, slightly exaggerated proportions, bright saturated Halloween colours, smooth clean surfaces, low poly, single object, centred, no base, no ground, no text
+
+MODEL NAME: Pedestal
+Prompt: a round display pedestal for showing loot, dark purple stone base (#3C1E46) with an orange top plate (#FF9628), small studs around the rim, short and wide, stylized cartoon Roblox game asset, chunky simple shapes, slightly exaggerated proportions, bright saturated Halloween colours, smooth clean surfaces, low poly, single object, centred, no base, no ground, no text
+
+MODEL NAME: CandyMarketStall
+Prompt: a Halloween candy market stall, wooden counter with a striped orange and purple awning (#FF7814, #8C3CC8), jars of candy on the counter, small pumpkins at the sides, open front, stylized cartoon Roblox game asset, chunky simple shapes, slightly exaggerated proportions, bright saturated Halloween colours, smooth clean surfaces, low poly, single object, centred, no base, no ground, no text
+
+MODEL NAME: PlotGate
+Prompt: a small spooky archway entrance for a player base, two dark stone pillars with pumpkin caps, an iron arch between them, blank sign board on top, no text, stylized cartoon Roblox game asset, chunky simple shapes, slightly exaggerated proportions, bright saturated Halloween colours, smooth clean surfaces, low poly, single object, centred, no base, no ground, no text
+
+=================== AREA 1: PUMPKIN PATCH (warm orange) ===================
+
+MODEL NAME: HayBale
+Prompt: a rectangular cartoon hay bale, golden straw (#E6BE50), two twine bands around it, straw sticking out at the edges, stylized cartoon Roblox game asset, chunky simple shapes, slightly exaggerated proportions, bright saturated Halloween colours, smooth clean surfaces, low poly, single object, centred, no base, no ground, no text
+
+MODEL NAME: Scarecrow
+Prompt: a goofy Halloween scarecrow on a wooden post, a burlap sack head with a stitched smile, a floppy brown witch hat, a patched plaid shirt (orange and purple) with straw coming out of the sleeves, arms spread out, stylized cartoon Roblox game asset, chunky simple shapes, slightly exaggerated proportions, bright saturated Halloween colours, smooth clean surfaces, low poly, single object, centred, no base, no ground, no text
+
+MODEL NAME: PumpkinVine
+Prompt: a curly green pumpkin vine patch with big flat leaves and two tiny pumpkins, lying flat on the ground, low and wide, stylized cartoon Roblox game asset, chunky simple shapes, slightly exaggerated proportions, bright saturated Halloween colours, smooth clean surfaces, low poly, single object, centred, no base, no ground, no text
+
+MODEL NAME: WoodenCart
+Prompt: an old wooden farm cart with two wheels, loaded with pumpkins, dark wood, one wheel slightly wonky, stylized cartoon Roblox game asset, chunky simple shapes, slightly exaggerated proportions, bright saturated Halloween colours, smooth clean surfaces, low poly, single object, centred, no base, no ground, no text
+
+=================== AREA 2: GRAVEYARD (cold blue) ===================
+
+MODEL NAME: Mausoleum
+Prompt: a small cartoon stone mausoleum crypt, grey-blue stone (#5A6478), a peaked roof with a little skull ornament, a wooden double door with a gap where blue light can glow out, two short columns, cracks and moss, stylized cartoon Roblox game asset, chunky simple shapes, slightly exaggerated proportions, bright saturated Halloween colours, smooth clean surfaces, low poly, single object, centred, no base, no ground, no text
+
+MODEL NAME: CrossGrave
+Prompt: a tilted stone cross grave marker, grey stone (#706C7C), cracked, a little ivy wrapped around it, stylized cartoon Roblox game asset, chunky simple shapes, slightly exaggerated proportions, bright saturated Halloween colours, smooth clean surfaces, low poly, single object, centred, no base, no ground, no text
+
+MODEL NAME: OpenGrave
+Prompt: a cartoon open grave, a rectangular dirt hole with a pile of dirt beside it, a shovel stuck in the pile, a small wooden cross at the head, stylized cartoon Roblox game asset, chunky simple shapes, slightly exaggerated proportions, bright saturated Halloween colours, smooth clean surfaces, low poly, single object, centred, no base, no ground, no text
+
+MODEL NAME: IronGraveFence
+Prompt: a short straight section of black wrought iron cemetery fence with pointy spear tops and curly details, stylized cartoon Roblox game asset, chunky simple shapes, slightly exaggerated proportions, bright saturated Halloween colours, smooth clean surfaces, low poly, single object, centred, no base, no ground, no text
+
+MODEL NAME: CobbleStones
+Prompt: a flat patch of uneven grey-blue cobblestones (#646E82) for a path, low and flat, square tile shape, stylized cartoon Roblox game asset, chunky simple shapes, slightly exaggerated proportions, bright saturated Halloween colours, smooth clean surfaces, low poly, single object, centred, no base, no ground, no text
+
+=================== AREA 3: HAUNTED ORCHARD (violet) ===================
+
+MODEL NAME: GhostAppleTree
+Prompt: a spooky cartoon apple tree with a twisted dark trunk and a round puffy canopy of deep purple leaves (#6E32A0), small glowing pale-green ghost apples (#B4FFB4) with tiny ghost faces hanging in it, stylized cartoon Roblox game asset, chunky simple shapes, slightly exaggerated proportions, bright saturated Halloween colours, smooth clean surfaces, low poly, single object, centred, no base, no ground, no text
+
+MODEL NAME: AppleBasket
+Prompt: a woven wicker basket overflowing with pale green ghost apples that have tiny cute ghost faces, stylized cartoon Roblox game asset, chunky simple shapes, slightly exaggerated proportions, bright saturated Halloween colours, smooth clean surfaces, low poly, single object, centred, no base, no ground, no text
+
+MODEL NAME: OrchardLadder
+Prompt: an old wooden ladder leaning on its own, a few rungs missing, dark wood, stylized cartoon Roblox game asset, chunky simple shapes, slightly exaggerated proportions, bright saturated Halloween colours, smooth clean surfaces, low poly, single object, centred, no base, no ground, no text
+
+MODEL NAME: CrookedFencePost
+Prompt: a single crooked wooden post with a small hanging purple lantern on a hook, stylized cartoon Roblox game asset, chunky simple shapes, slightly exaggerated proportions, bright saturated Halloween colours, smooth clean surfaces, low poly, single object, centred, no base, no ground, no text
+
+=================== AREA 4: CANDY SWAMP (lime) ===================
+
+MODEL NAME: CandyMushroom
+Prompt: a big cartoon mushroom made of candy, a round lime green cap (#8CF03C) with white sugar spots, a cream stem with candy stripes, glossy, stylized cartoon Roblox game asset, chunky simple shapes, slightly exaggerated proportions, bright saturated Halloween colours, smooth clean surfaces, low poly, single object, centred, no base, no ground, no text
+
+MODEL NAME: SwampReeds
+Prompt: a clump of tall swamp reeds and cattails, dark green stalks with brown fuzzy tops, a few bending over, stylized cartoon Roblox game asset, chunky simple shapes, slightly exaggerated proportions, bright saturated Halloween colours, smooth clean surfaces, low poly, single object, centred, no base, no ground, no text
+
+MODEL NAME: Boardwalk
+Prompt: a straight section of old wooden swamp boardwalk, uneven planks on short posts, a little moss, flat and long for tiling, stylized cartoon Roblox game asset, chunky simple shapes, slightly exaggerated proportions, bright saturated Halloween colours, smooth clean surfaces, low poly, single object, centred, no base, no ground, no text
+
+MODEL NAME: SwampLilyPad
+Prompt: a big flat lily pad with a small pink candy flower on it, lime green (#78DC3C), flat, stylized cartoon Roblox game asset, chunky simple shapes, slightly exaggerated proportions, bright saturated Halloween colours, smooth clean surfaces, low poly, single object, centred, no base, no ground, no text
+
+MODEL NAME: GummySlimeRock
+Prompt: a mossy swamp rock covered in dripping lime green gummy slime, glossy slime, stylized cartoon Roblox game asset, chunky simple shapes, slightly exaggerated proportions, bright saturated Halloween colours, smooth clean surfaces, low poly, single object, centred, no base, no ground, no text
+
+=================== AREA 5: THRONE HALL (gold and red) ===================
+
+MODEL NAME: PumpkinThrone
+Prompt: a giant spooky royal throne for a pumpkin king, a tall back shaped like a carved jack-o-lantern, dark purple velvet (#46145A) with gold trim (#FFAA1E), armrests with carved pumpkin ends, pointed spikes on top, sized for a huge character, stylized cartoon Roblox game asset, chunky simple shapes, slightly exaggerated proportions, bright saturated Halloween colours, smooth clean surfaces, low poly, single object, centred, no base, no ground, no text
+
+MODEL NAME: StonePillar
+Prompt: a tall dark stone castle pillar with gold bands (#FFC83C), pumpkin carvings near the top, a square base, stylized cartoon Roblox game asset, chunky simple shapes, slightly exaggerated proportions, bright saturated Halloween colours, smooth clean surfaces, low poly, single object, centred, no base, no ground, no text
+
+MODEL NAME: Brazier
+Prompt: a standing iron fire brazier bowl on three curled legs, filled with orange coals (no flames modelled), gold rim details, stylized cartoon Roblox game asset, chunky simple shapes, slightly exaggerated proportions, bright saturated Halloween colours, smooth clean surfaces, low poly, single object, centred, no base, no ground, no text
+
+MODEL NAME: RoyalBanner
+Prompt: a hanging royal banner on a pole, deep red cloth (#B41E28) with a gold pumpkin-and-crown emblem, a pointed bottom edge with gold fringe, no text, stylized cartoon Roblox game asset, chunky simple shapes, slightly exaggerated proportions, bright saturated Halloween colours, smooth clean surfaces, low poly, single object, centred, no base, no ground, no text
+
+MODEL NAME: RoyalCarpet
+Prompt: a long straight red royal carpet strip with gold edges and small pumpkin patterns, flat on the ground, long piece for tiling, stylized cartoon Roblox game asset, chunky simple shapes, slightly exaggerated proportions, bright saturated Halloween colours, smooth clean surfaces, low poly, single object, centred, no base, no ground, no text
+
+=================== GATES BETWEEN AREAS ===================
+
+MODEL NAME: AreaArchway
+Prompt: a big spooky stone archway for a gate between zones, two thick pillars, carved pumpkins on top of each pillar, a curved arch with an empty sign board in the middle, small hanging lanterns on each side, wide enough for several players, no text, stylized cartoon Roblox game asset, chunky simple shapes, slightly exaggerated proportions, bright saturated Halloween colours, smooth clean surfaces, low poly, single object, centred, no base, no ground, no text
