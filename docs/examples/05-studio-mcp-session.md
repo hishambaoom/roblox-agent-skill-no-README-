@@ -10,7 +10,7 @@ the built-in Studio MCP server + supergateway + a Cloudflare quick tunnel.
 ```
 $ export STUDIO_MCP_URL=https://<words>.trycloudflare.com/mcp
 $ python3 tools/mcp/mcpc.py call list_roblox_studios '{}'
-[{"name":"[🎃 HALLOWEEN] Don't Wake the Pumpkin King!","studio_id":"…","place_id":124463173231636}]
+[{"name":"[🎃 HALLOWEEN] Don't Wake the Pumpkin King!","studio_id":"…","place_id":<place-id>}]
 $ STUDIO_ID=… python3 tools/mcp/mcpc.py call script_grep '{"pattern":"QuestPill","studio_id":"…"}'
 $ STUDIO_ID=… python3 tools/mcp/mcpc.py lua probe_quests.luau Client      # in Play
 {"pill":{"absSize":[212,30],"hoverAbsSize":[236,34]},"rows":3}
