@@ -3,7 +3,7 @@
 # Works in PowerShell 7 (pwsh) and Windows PowerShell 5.1. See docs/windows.md.
 #
 #   $env:ROBLOX_API_KEY = '...'   # Open Cloud key with universe-places:write (NEVER commit it)
-#   $env:UNIVERSE_ID = '10769742054'; $env:PLACE_ID = '124463173231636'   # example values (Pumpkin King, public IDs)
+#   $env:UNIVERSE_ID = '<your-universe-id>'; $env:PLACE_ID = '<your-place-id>'
 #
 # Everything here is also exported to $env: so child processes (Lune, Python, nested scripts) see the same values.
 
