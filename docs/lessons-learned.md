@@ -14,6 +14,16 @@
 | HUD centring on cutouts | inset-free probe origin differs on Android cutout → meter 130 px off | Centre against the same reference as the hotbar; nudge attribute |
 | Highlights cap | > ~31 Highlights stop rendering randomly, each costs a pass | Budget nearest K on client |
 | Template text on the ground / signs too big | world labels mis-sized | Size SurfaceGuis by PixelsPerStud, set MaxDistance |
+| `SoundId` writes lost in Lune 0.10 | new uploads "wired" by setting `SoundId`; the place stores `AudioContent`, so the old sounds kept playing | `s.AudioContent = roblox.Content.fromUri(uri)`; read it back from the output file |
+| Stacked events past the Highlight cap | 10 ghosts + 6 doors + vault + clock + rarity outlines > 31 → outlines vanished at random | One shared Highlight per group Model; client outline budget = cap − reserve − live event Highlights (docs/performance.md) |
+| Plots `Persistent` for everyone | ~5k always-loaded instances per phone | `PersistentPerPlayer` + `AddPersistentPlayer(owner)`; `ModelStreamingBehavior = Improved` |
+| Event model fell through the map | spawn pivot computed against a streamed-out floor | Raycast to the real floor on the server, anchor everything, streaming-safe client snap |
+| Sprinting skipped touch pads | player crosses a small centre radius between physics steps | client swept check per Heartbeat + server speed lead (capped); radius as attribute |
+| Fit script looped 80× | refit writes sizes → `AbsoluteSize` changed → refit again | settle on `Heartbeat:Once`, cap passes (3), no re-entrancy |
+| Phone buttons 36×25 px | owner's visual size too small to tap | keep visuals, add invisible ≥ 44 px hit pads |
+| CollectionService tag without its attribute | a purchase-button tag on an object with no `Product` attribute errored | skip nil attributes and non-PlayerGui instances in tag handlers |
+| Flat event rewards | `$5,000` meaningless after a few rebirths | pay `max(base × rebirthMult, income/s × N s)`, N per event as attribute (docs/live-events.md) |
+| Milestone re-paid after rebirth | "every 3 filled pedestals" paid again because loot stayed placed | decide and test what rebirth resets for every once-only reward |
 
 ## Pipeline / process
 | Lesson | Do instead |
@@ -27,6 +37,9 @@
 | Stale tests after design changes look like regressions | Compare against base run; cite the decision line |
 | Teleport-style tests trip carry-speed checks | Walking test variants |
 | Integers > 2^31 as attributes from Lune | Store scaled units (millions + `@Unit`) |
+| Two runs published the same content (v156 then v157) | Check the live version number right before publishing; QUEUE line first, publish second |
+| A live version appeared that no run recorded | Read `versionNumber` + the QUEUE before every publish; never assume you know what is live |
+| Full suite run in parallel got memory-killed (half the logs FAIL) | Run the full suite serially, or compare only against a base run made the same way |
 | Saying "fixed" before the owner saw it (pedestal bug "fixed" twice: anchors v141, mesh v142, real cause v144) | Say "fixed in build, please check X" until confirmed; mark RESOLVED only after confirmation |
 
 ## Owner / product
@@ -39,3 +52,7 @@
 - Ask before naming confusing buttons, but implement first if the request was explicit (e.g. "EQUIP BEST" vs "PLACE
   BEST" — shipped, then asked).
 - When uploads/images fail, ask for a one-line description instead of guessing what the screenshot showed.
+- Extras the owner might not like (big banners, extra toasts) go behind a GameSettings boolean, so turning them off is a tick.
+- "Admin abuse" is a real play pattern: admin event starts must start *now* and stack (docs/live-events.md).
+- Balance numbers the owner gives are orders, not suggestions ("thief 25% slower" = multiply by 0.75, nothing else).
+- Promotion: one post at a time from aged accounts; fresh accounts mass-posting get filtered and banned (docs/marketing-launch.md).
