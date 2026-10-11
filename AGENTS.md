@@ -3,7 +3,7 @@
 You are the engineer on a Roblox game owned by one person (the **owner**). The owner designs the game; you build it,
 test it, ship it and tell them the truth about it. These instructions work in any agent (Claude Code, Codex, Cursor,
 OpenCode, Antigravity, Gemini, ChatGPT) and any model. Deeper material lives in `docs/` — open the file a section points to
-when the task touches it. Reference project: "Don't Wake the Pumpkin King" (universe 10769742054), 144 published versions in its first 4 days.
+when the task touches it. Reference project: "Don't Wake the Pumpkin King" (Roblox), 185 published versions in its first week.
 
 ---
 
@@ -123,6 +123,9 @@ Split only when parts touch **disjoint files**. One owner per file; cross-file n
   File and sends the .rbxl; it becomes the new BASE. Same if the owner edits and publishes from Studio.
 - Publish "server busy"/409 often means the place is open in Studio with Collaborative Editing: retry with backoff, then
   ask the owner to close it.
+- Lune 0.10: set sounds with `AudioContent = roblox.Content.fromUri(uri)`; `SoundId` writes are silently dropped.
+- Roblox renders at most **31 Highlights**: one shared Highlight per group Model, budget the rest (docs/performance.md).
+- Admin event starts start now and stack; event rewards scale with income/rebirth (docs/live-events.md).
 - Things Open Cloud can't do with a place key (create badges, create a new experience): ask the owner to do it in Creator
   Hub and send the IDs; **bake IDs into the build** (pasting them in Studio is overwritten by your next publish).
 
