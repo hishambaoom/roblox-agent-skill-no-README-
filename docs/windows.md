@@ -81,15 +81,15 @@ $env:NOPUBLISH = '1'; .\tools\rig\go.ps1 v145 open=ShopFrame; Remove-Item Env:NO
 ```
 Persistent (new terminals only; does **not** change the current one):
 ```powershell
-setx UNIVERSE_ID 10769742054
-setx PLACE_ID 124463173231636
+setx UNIVERSE_ID <your-universe-id>
+setx PLACE_ID <your-place-id>
 ```
 **The API key:** `setx` stores it in plain text in your user registry hive. Acceptable on a personal PC; better is a
 git-ignored file you load per session:
 ```powershell
 # .env.ps1 (add it to .gitignore - install.ps1 already ignores .env)
 $env:ROBLOX_API_KEY = '<your Open Cloud key>'      # NEVER commit, paste in chat, or log it
-$env:UNIVERSE_ID = '10769742054'; $env:PLACE_ID = '124463173231636'
+$env:UNIVERSE_ID = '<your-universe-id>'; $env:PLACE_ID = '<your-place-id>'
 ```
 then `. .\.env.ps1` at the start of a session. Add `.env.ps1` to `.gitignore`.
 
