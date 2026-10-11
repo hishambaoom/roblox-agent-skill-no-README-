@@ -81,3 +81,8 @@ hook/src so a clean build reproduces LIVE.
 - `TextScaled` without `TextWrapped` renders at TextSize in the live engine; the sim doesn't render text at all.
 - Keep `Players.MaxPlayers`/server size consistent with plot count; the live Open Cloud setting wins.
 - Never ship place files of other people's games/templates in a public repo.
+- Use Lune **0.10.x** for places/models saved by current Studio (0.8 can fail to parse them). In 0.10, set audio with
+  `Sound.AudioContent = roblox.Content.fromUri("rbxassetid://<id>")`; a `SoundId` write is silently dropped when the file
+  stores `AudioContent`. Always read changed properties back from the output file.
+- Patch scripts: anchor-based, refuse to apply twice, and print one summary line; then a rebase is just `IN=<newer place>`.
+- Chain parallel patches serially onto the newest LIVE file (`v136 = v135 + h + s + m`), test the chain, publish once.
