@@ -3,7 +3,7 @@
 # Run every rig script from your game repo root (the folder that holds tools/ and games/).
 #
 #   export ROBLOX_API_KEY=...   # Open Cloud key with universe-places:write (NEVER commit it)
-#   export UNIVERSE_ID=10769742054 PLACE_ID=124463173231636   # example values (Pumpkin King, public IDs)
+#   export UNIVERSE_ID=<your-universe-id> PLACE_ID=<your-place-id>
 #
 : "${GAME_DIR:=games/my-game}"                 # the game folder: build.luau, build_*.luau hooks, src/, tests/
 : "${LUNE:=tools/lune}"                        # Lune binary used for builds + tests (0.8.9 in the reference project)
