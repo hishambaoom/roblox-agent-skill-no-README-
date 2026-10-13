@@ -9,7 +9,9 @@
 3. The build reads the .rbxm with Lune (**use Lune 0.10.x** for files from recent Studio; 0.8 fails to parse them) and
    swaps each named model in; anything missing keeps the block fallback.
 4. Budgets: small pickups <= ~2k triangles, props <= ~3k, hero props <= ~6k. No glow baked in; the game adds lights.
-5. Scale and orient from the mesh, not guesses: measure the mesh bounds/front face (dump vertices if needed) before placing
+5. Owner-made models via ChatGPT + Blender (shared style block, export spec, tiered-set and fix-pass prompts):
+   `docs/model-prompts.md`.
+6. Scale and orient from the mesh, not guesses: measure the mesh bounds/front face (dump vertices if needed) before placing
    decals or emblems (an emblem landed on the back of a vault mesh until the front was measured as -Z).
 
 ## Character / boss body from AI 3D
