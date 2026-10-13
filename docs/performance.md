@@ -20,6 +20,12 @@ Lune cannot read `CollisionFidelity`; give the owner a one-line command-bar snip
 | 6 | **SurfaceGuis with infinite `MaxDistance`** | 60-120 studs for signs/labels, `PixelsPerStud` sized to the part. | no |
 | 7 | **Low Graphics toggle that did nothing** | see below | no |
 
+### Making `PersistentPerPlayer` safe (what had to change in client scripts)
+Ten client scripts assumed every plot existed on every client. After the switch: find your own plot by attribute
+(`OwnerUserId`) and re-bind on `ChildAdded` (other plots stream in and out), `WaitForChild` with timeouts, never cache
+parts of other plots, mark must-exist models `Atomic`/`Persistent`. Ask for a phone test of: own plot handlers on join,
+other plots streaming, zone gates, memory.
+
 ## Low Graphics that works
 - Client module switches off ParticleEmitter, Fire, Sparkles, Smoke, Beam, Trail, lights, Highlights, `GlobalShadows`,
   Bloom/SunRays/DoF, and takes Atmosphere out of Lighting (it has no `Enabled`). Also catches things spawned later
