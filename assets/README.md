@@ -25,8 +25,8 @@ your own game's art. Swap in your own art for a real game.
 | `prompts/model_prompts_example.txt` | Prompt pack for 30+ pickup models and a boss head: shared style line + per-model hex colours + exact `MODEL NAME`s for the .rbxm swap. | Own text, MIT |
 | `prompts/map_prompts_example.txt` | Prompt pack for map props (scatter decor, landmarks) with triangle budgets. | Own text, MIT |
 | `prompts/event_model_prompts_example.txt` | Prompt pack for event models (door, ghosts, crate, moon, clock). | Own text, MIT |
-| `sfx/meteor_whistle.ogg` | Falling-meteor whistle, 1.6 s. Live in the reference game as Roblox audio asset `81707828537620`. | Original synthesised SFX, MIT |
-| `sfx/meteor_thud.ogg` | Meteor impact thud, 1.2 s. Live as Roblox audio asset `122951492779898`. | Original synthesised SFX, MIT |
+| `sfx/meteor_whistle.ogg` | Falling-meteor whistle, 1.6 s. Uploaded to Roblox as an audio asset (`<AUDIO_ASSET_ID>`) in the reference game. | Original synthesised SFX, MIT |
+| `sfx/meteor_thud.ogg` | Meteor impact thud, 1.2 s. Uploaded as an audio asset (`<AUDIO_ASSET_ID>`). | Original synthesised SFX, MIT |
 | `sfx/crow_caw.ogg` | Ambience crow, 1.8 s. Made but **not used** (the owner chose to skip it): an example of an unused alternate. | Original synthesised SFX, MIT |
 | `ui/` | Studded UI kit: `.rbxm` templates + layout previews. See `ui/README.md`. | Own work (see that README) |
 
