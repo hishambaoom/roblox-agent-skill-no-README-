@@ -28,7 +28,7 @@ your own game's art. Swap in your own art for a real game.
 | `sfx/meteor_whistle.ogg` | Falling-meteor whistle, 1.6 s. Uploaded to Roblox as an audio asset (`<AUDIO_ASSET_ID>`) in the reference game. | Original synthesised SFX, MIT |
 | `sfx/meteor_thud.ogg` | Meteor impact thud, 1.2 s. Uploaded as an audio asset (`<AUDIO_ASSET_ID>`). | Original synthesised SFX, MIT |
 | `sfx/crow_caw.ogg` | Ambience crow, 1.8 s. Made but **not used** (the owner chose to skip it): an example of an unused alternate. | Original synthesised SFX, MIT |
-| `ui/` | Studded UI kit: `.rbxm` templates + layout previews. See `ui/README.md`. | Own work (see that README) |
+| `ui/` | Studded UI kit: `.rbxm` templates, layout previews, and `ui/reference/` (insertable example panel + generator + client + studs tile). See `ui/README.md` and `docs/STUDDED_UI_GUIDE.md`. | Own work (see that README) |
 
 ## How the pieces fit the workflow
 - Icon/thumbnail loop: generate masters -> `make_sizes.py` -> `feed_sheet.py` + personas -> upload 3-5 -> personalization

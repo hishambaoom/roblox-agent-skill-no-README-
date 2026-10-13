@@ -7,6 +7,8 @@ description: "Apply for any Roblox UI request: screenshots from the owner, phone
 
 - "DON'T CHANGE THE DESIGN": phone/fit fixes change size, position, scale, wrap, Phone* attributes only. Never colours,
   fonts, studs, strokes, gradients, art or copy.
+- Exact studded recipe (layer stack, palette, component sizes, text rule, phone fit): `docs/STUDDED_UI_GUIDE.md`;
+  insertable example: `assets/ui/reference/StuddedUI_Reference.rbxmx`.
 - New UI = clone the closest existing styled template from `ReplicatedStorage.UITemplates` and change content.
 - Find elements with `grep -n "<Name>" ui-map.md` before searching the place. Regenerate the map after UI builds.
 - Check PC 1920x1080 and phone 667x375 (`tools/rig/shot.sh <place> <name> open=<Menu>`); look at both PNGs. Watch the

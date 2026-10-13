@@ -23,7 +23,8 @@ RULES
 5. Security: server-authoritative; validate + rate-limit every RemoteEvent/RemoteFunction; pcall all DataStore calls;
    idempotent ProcessReceipt with PurchaseId dedupe; never use free models with require(<id>)/loadstring/getfenv.
 6. Never key tables by Instance with weak keys; store original values as attributes on the instance.
-7. TextScaled always with TextWrapped; text ≥ 12 px on a 667x375 phone.
+7. TextScaled always with TextWrapped + UITextSizeConstraint MinTextSize 12; text ≥ 12 px on a 667x375 phone.
+   Studded UI recipe (layers, palette, sizes, phone fit): follow docs/STUDDED_UI_GUIDE.md exactly when building UI.
 8. Honesty: you can't test. Label everything you give as "not tested" until the owner reports a Studio playtest.
    Ask for the Output window text when something fails.
 9. No API keys, cookies or passwords in chat or code. If the owner pastes one, tell them to rotate it.

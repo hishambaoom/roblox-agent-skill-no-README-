@@ -9,7 +9,10 @@ tycoon taken from the owner's Studio save to six published versions in one day b
 works with Claude Code, Codex CLI, Cursor, OpenCode, Google Antigravity, Gemini CLI and chat-only assistants
 (ChatGPT / Claude projects), on any frontier model.
 
-**New in this update:** swarm builds with a serial integration chain, organize-last with a reference checker that proves
+**New in this update:** a model-agnostic [studded UI guide](docs/STUDDED_UI_GUIDE.md) with exact values plus an
+insertable example panel (`assets/ui/reference/`), a patch-lane / parallel-contract section in
+[docs/workflow.md](docs/workflow.md) with ForgeTax learnings (limited-item shop, single ProcessReceipt router,
+settings + music, streaming-safe cutscenes). Earlier: swarm builds with a serial integration chain, organize-last with a reference checker that proves
 nothing broke, ViewportFrame previews that actually render, a Lune 0.10 gotcha list, a 3-phase anti-cheat, economy and
 event scaling patterns, ChatGPT + Blender model prompt templates, and reusable scripts in `scripts/`.
 
@@ -30,6 +33,26 @@ event scaling patterns, ChatGPT + Blender model prompt templates, and reusable s
   sounds, and launch marketing.
 - **Assets and generators**: thumbnail/icon exporters, a CTR sim, a rebirth-curve designer, prompt packs, original SFX,
   and a studded UI kit (`assets/`).
+
+## Any AI model: plain steps (Claude, GPT, Gemini, local models)
+You don't need a specific agent product. Give the model these files and these steps; a model with no shell can still
+follow them by telling you what to click and paste.
+
+1. **Read the rules first:** [AGENTS.md](AGENTS.md) (rules, loop, report format). Short on context? Read §1 only.
+2. **Pick the doc for the task** from the table in [SKILL.md](SKILL.md). For any UI, read
+   [docs/STUDDED_UI_GUIDE.md](docs/STUDDED_UI_GUIDE.md). It's self-contained: layers, palette, sizes, text rule, phone fit.
+3. **Find what already exists** before building: grep the UI map (`ui-map.md`) or list the place's `StarterGui`. Pick
+   the closest existing panel/button to clone.
+4. **Make the smallest change as real Studio instances.** Either use a Lune patch (`IN=… OUT=… tools/lune10 run apply.luau`,
+   idempotent) or, without a shell, give the exact Studio hierarchy with property values (or a one-time Command Bar
+   snippet run in Edit mode). Runtime scripts only clone / show / fill / tween.
+5. **Check it:** text rule (TextScaled + TextWrapped + Min 12), no runtime `Instance.new` visuals, PC 1920×1080 and phone
+   667×375 screenshots (`tools/rig/shot.sh`), tests that fail on the old build and pass on the new one.
+6. **Ship only when allowed:** publish through Open Cloud with the key in the environment, read back `versionNumber`.
+7. **Report in 3–6 lines:** version, what changed, screenshots, and Verified / Automated-only / Unverified.
+
+Small local models: paste `AGENTS.md` §1 + the one doc you need. The UI guide's §0 and §12 (a ready-made prompt) fit
+in a small context.
 
 ## Quick start (TL;DR)
 1. `git clone` this repo and run `adapters/install.sh` (or `install.ps1`) into your game folder.
@@ -100,12 +123,13 @@ IN=work/x/out.rbxl OUT=work/x/out2.rbxl tools/lune10 run games/mygame/work/myfea
 | Topic | Doc |
 |---|---|
 | Start here: rules, loop, decisions, report format | [AGENTS.md](AGENTS.md), [SKILL.md](SKILL.md) |
-| Fast lane vs gameplay lane | [docs/workflow.md](docs/workflow.md) |
+| Fast lane, gameplay lane, patch lane, parallel contract | [docs/workflow.md](docs/workflow.md) |
 | Everything editable in Studio | [docs/studio-first-rule.md](docs/studio-first-rule.md) |
 | Lune builds and patches | [docs/build-pipeline-lune.md](docs/build-pipeline-lune.md), [docs/lune10-gotchas.md](docs/lune10-gotchas.md) |
 | Tests, publishing, live Studio | [docs/testing.md](docs/testing.md), [docs/publishing-open-cloud.md](docs/publishing-open-cloud.md), [docs/studio-mcp-bridge.md](docs/studio-mcp-bridge.md) |
 | Parallel agents | [docs/subagents.md](docs/subagents.md) (small batches), [docs/swarm-integration.md](docs/swarm-integration.md) (whole game) |
 | Organizing a place safely | [docs/organize-and-refcheck.md](docs/organize-and-refcheck.md) |
+| Studded UI recipe (exact values) + example panel | [docs/STUDDED_UI_GUIDE.md](docs/STUDDED_UI_GUIDE.md), [assets/ui/reference/](assets/ui/reference/) |
 | UI, 3D previews, juice | [docs/ui-conventions.md](docs/ui-conventions.md), [docs/viewport-previews.md](docs/viewport-previews.md), [docs/juice.md](docs/juice.md) |
 | Focus modes, cameras, held tools | [docs/interaction-patterns.md](docs/interaction-patterns.md) |
 | Events, economy, badges, boss variants | [docs/live-events.md](docs/live-events.md), [docs/economy-and-events.md](docs/economy-and-events.md) |
@@ -121,7 +145,8 @@ IN=work/x/out.rbxl OUT=work/x/out2.rbxl tools/lune10 run games/mygame/work/myfea
 AGENTS.md              main instructions: persona, standing rules, loop, decision table, report format  ← start here
 SKILL.md               Agent-Skills entry point (frontmatter) → which doc to open for which task
 docs/
-  workflow.md            fast lane vs gameplay lane          studio-first-rule.md   everything editable in Studio
+  STUDDED_UI_GUIDE.md    exact studded UI recipe (any model) workflow.md            fast/gameplay/patch lane, contract
+  studio-first-rule.md   everything editable in Studio
   build-pipeline-lune.md Lune .rbxl builds and patches        testing.md             rig tests, guard, base comparison
   publishing-open-cloud.md  publish + version checks          studio-mcp-bridge.md   live Studio via MCP + tunnel fixes
   ui-conventions.md      phone fit, text, popups              monetization.md        passes, products, receipts
@@ -154,6 +179,7 @@ assets/                icons, thumbnails, badges, CTR sim, rebirth curves, model
 | "Players lose their bag order on rejoin." | gameplay lane: root cause, saved field + migration, test that fails on base |
 | "Add a meteor shower event I can start from admin." | event playbook: Config, Studio models, scheduler, admin rows that stack ([docs/live-events.md](docs/live-events.md)) |
 | "The game lags on my phone." | read-only perf audit, ranked fixes, owner picks ([docs/performance.md](docs/performance.md)) |
+| "Make a new shop panel in our studded style." | clone the closest panel, recipe from [docs/STUDDED_UI_GUIDE.md](docs/STUDDED_UI_GUIDE.md), PC + phone shots |
 | "Make the cash popup more dopamine." | juice an existing template: pop, count-up, shine, pitch, shake ([docs/juice.md](docs/juice.md)) |
 | "Make new thumbnails." | thumbnail rules + CTR sim ([docs/marketing-launch.md](docs/marketing-launch.md), `assets/ctr_sim/`) |
 | "Are we ready to launch?" | read-only audit, verdict, ordered blockers ([docs/launch-checklist.md](docs/launch-checklist.md)) |

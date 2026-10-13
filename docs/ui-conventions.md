@@ -1,5 +1,9 @@
 # UI conventions
 
+> Building a panel/button from scratch or checking exact values? The full recipe (layer stack, palette, component
+> sizes, motion, mobile rules, clone examples) is in [STUDDED_UI_GUIDE.md](STUDDED_UI_GUIDE.md), with a working
+> example in `assets/ui/reference/`. This page covers conventions: the UI map, phone fit, text, popups, screenshots.
+
 ## The look is the owner's
 The game has one visual language (in the reference game: orange/purple gradients, a tiled **stud** texture inside a
 CanvasGroup, thick dark UIStrokes, heavy white text with thick dark outlines, a dark "3D lip" strip under buttons).

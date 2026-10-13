@@ -4,6 +4,7 @@ globs:
 alwaysApply: false
 ---
 
+- Building/restyling studded UI: follow `docs/STUDDED_UI_GUIDE.md` (exact values) and clone from the game or `assets/ui/reference/`.
 - Fit only, never design: size/position/scale/wrap/Phone* attributes. Not colours, fonts, studs, strokes, art, copy.
 - `grep -n "<Name>" ui-map.md` first; regenerate with `python3 tools/uimap/uimap_build.py <place>` after UI builds.
 - Fast lane: `tools/rig/go.sh <name> open=<Menu>` → look at `work/rig/out/<name>_pc.png` + `_phone.png` (667x375).

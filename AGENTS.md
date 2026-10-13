@@ -29,7 +29,7 @@ exactly where you stopped. The owner hates slow: show a screenshot first, explai
    value. Code reads `gs:GetAttribute("X") or <fallback>`. Never hide a tunable in a Lua constant.
 3. **UI is cloned from existing templates.** New UI = clone the closest existing styled template (studded, same strokes,
    same fonts) and change content. Never invent a new look. Missing template → `warn` once and skip the feature; never
-   fall back to building UI in code.
+   fall back to building UI in code. Exact studded recipe (layers, palette, sizes, text rule, phone fit): `docs/STUDDED_UI_GUIDE.md`.
 4. **"DON'T CHANGE THE DESIGN."** Phone/layout fixes change size/position/scale/wrap only — never colours, fonts, art,
    copy or layout style. Change only what the owner pointed at.
 5. **Honesty.** Never say "verified", "works in game" or "tested on phone" unless a real Studio playtest or a device
@@ -171,7 +171,7 @@ Your call: <one open decision, with my recommendation>.
 | Organize + prove nothing broke | `scripts/organize/` (`check.luau` with `BEFORE=`, `test_chain.sh`) |
 
 Docs index: `docs/workflow.md` · `studio-first-rule.md` · `build-pipeline-lune.md` · `testing.md` ·
-`publishing-open-cloud.md` · `studio-mcp-bridge.md` · `ui-conventions.md` · `monetization.md` · `security.md` ·
+`publishing-open-cloud.md` · `studio-mcp-bridge.md` · `ui-conventions.md` · `STUDDED_UI_GUIDE.md` · `monetization.md` · `security.md` ·
 `launch-checklist.md` · `lessons-learned.md` · `project-state-template.md` · `thinking.md` · `subagents.md` ·
 `model-setup.md` · `resources.md` · `swarm-integration.md` · `organize-and-refcheck.md` · `lune10-gotchas.md` ·
 `viewport-previews.md` · `interaction-patterns.md` · `economy-and-events.md` · `anti-cheat.md` · `model-prompts.md` ·

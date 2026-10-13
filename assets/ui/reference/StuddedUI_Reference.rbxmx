@@ -1,0 +1,4277 @@
+<roblox version="4">
+  <Item class="ScreenGui" referent="0">
+    <Properties>
+      <string name="Name">StuddedUI_Reference</string>
+      <BinaryString name="AttributesSerialize">AgAAAAQAAABOb3RlAo0AAABSZWZlcmVuY2Uga2l0IChkb2NzL1NUVURERURfVUlfR1VJREUubWQpLiBJbnNlcnQgaW50byBTdGFydGVyR3VpLCBwcmVzcyBQbGF5LCBjbGljayBTSE9QLiBDbG9uZSBwaWVjZXMgZnJvbSBoZXJlOyBuZXZlciByZWJ1aWxkIHRoZW0gaW4gY29kZS4KAAAAU2hpbmVFdmVyeQYAAAAAAAAEQA==</BinaryString>
+      <bool name="ResetOnSpawn">false</bool>
+      <token name="ZIndexBehavior">1</token>
+    </Properties>
+    <Item class="Configuration" referent="1">
+      <Properties>
+        <string name="Name">Palette</string>
+        <BinaryString name="AttributesSerialize">IwAAAAwAAABSYXJpdHlDb21tb24PtbQ0P7W0ND+1tDQ/CgAAAFJhcml0eUVwaWMPq6oqP42MjD4AAIA/DwAAAFJhcml0eUxlZ2VuZGFyeQ8AAIA/v74+P/Hw8D0MAAAAUmFyaXR5TXl0aGljDwAAgD/x8HA+8fDwPgoAAABSYXJpdHlSYXJlD/HwcD6NjAw/AACAPw4AAABSYXJpdHlVbmNvbW1vbg+hoKA+3dxcP6GgoD4KAAAAYmx1ZUJvdHRvbQ/x8PA9ycjIPufmZj8KAAAAYmx1ZVN0cm9rZQ+hoCA9oaAgPt3c3D4HAAAAYmx1ZVRvcA+hoKA+tbQ0PwAAgD8LAAAAYnJvd25Cb3R0b20P3dzcPo2MjD6NjAw+CwAAAGJyb3duU3Ryb2tlD6GgID2hoCA+3dzcPggAAABicm93blRvcA+rqio/8fDwPo2MjD4EAAAAY2FyZA/x8HA+/fx8PpGQkD4KAAAAY2FyZFN0cm9rZQ+xsLA9sbCwPeHg4D0KAAAAZ29sZEJvdHRvbQ/s62s/oaAgPwAAAAAKAAAAZ29sZFN0cm9rZQ/d3Nw+8fBwPgAAAAAHAAAAZ29sZFRvcA8AAIA/4uFhP6GgoD4LAAAAZ3JlZW5Cb3R0b20PoaAgPr++Pj/x8PA9CwAAAGdyZWVuU3Ryb2tlD+HgYD2hoKA+oaAgPQgAAABncmVlblRvcA+DggI/AACAP42MjD4MAAAAb3JhbmdlQm90dG9tD+zraz/JyMg+oaAgPQwAAABvcmFuZ2VTdHJva2UPycjIPqGgID4AAAAACQAAAG9yYW5nZVRvcA8AAIA/q6oqP/HwcD4FAAAAcGFuZWwPrawsPrW0ND7R0FA+CwAAAHBhbmVsU3Ryb2tlD+HgYD3h4GA9kZCQPQwAAABwdXJwbGVCb3R0b20Pg4ICP6GgID7n5mY/DAAAAHB1cnBsZVN0cm9rZQ/JyEg+oaAgPcnIyD4JAAAAcHVycGxlVG9wD8nISD/d3Nw+AACAPwkAAAByZWRCb3R0b20Pv74+P/HwcD3x8HA9CQAAAHJlZFN0cm9rZQ+NjIw+AAAAAAAAAAAGAAAAcmVkVG9wDwAAgD+NjIw+jYyMPgQAAABzbG90D+Hg4D3p6Og9iYgIPgoAAABzbG90U3Ryb2tlD42MjD6RkJA+oaCgPgoAAAB0ZXh0U3Ryb2tlD6GgoD2hoKA90dDQPQUAAAB0cmFjaw/JyMg90dDQPfHw8D0=</BinaryString>
+      </Properties>
+    </Item>
+    <Item class="Frame" referent="2">
+      <Properties>
+        <string name="Name">RightButtons</string>
+        <Vector2 name="AnchorPoint">
+          <X>1</X>
+          <Y>0.5</Y>
+        </Vector2>
+        <BinaryString name="AttributesSerialize">AQAAAA0AAABQaG9uZVBvc2l0aW9uCgAAgD/8////zczMPgAAAAA=</BinaryString>
+        <float name="BackgroundTransparency">1</float>
+        <UDim2 name="Position">
+          <XS>1</XS>
+          <XO>-6</XO>
+          <YS>0.5</YS>
+          <YO>0</YO>
+        </UDim2>
+        <UDim2 name="Size">
+          <XS>0</XS>
+          <XO>60</XO>
+          <YS>0</YS>
+          <YO>126</YO>
+        </UDim2>
+      </Properties>
+      <Item class="UIScale" referent="3">
+        <Properties>
+          <string name="Name">DeviceScale</string>
+          <BinaryString name="AttributesSerialize">BAAAAAgAAABNYXhTY2FsZQYzMzMzMzPzPwgAAABNaW5TY2FsZQUAAIA/CAAAAFBjRmFjdG9yBQAAgD8LAAAAVG91Y2hGYWN0b3IGmpmZmZmZ6T8=</BinaryString>
+          <float name="Scale">1</float>
+        </Properties>
+      </Item>
+      <Item class="UIListLayout" referent="4">
+        <Properties>
+          <string name="Name">UIListLayout</string>
+          <token name="FillDirection">1</token>
+          <UDim name="Padding">
+            <S>0</S>
+            <O>6</O>
+          </UDim>
+          <token name="SortOrder">2</token>
+        </Properties>
+      </Item>
+      <Item class="ImageButton" referent="5">
+        <Properties>
+          <string name="Name">ShopButton</string>
+          <Vector2 name="AnchorPoint">
+            <X>0</X>
+            <Y>0</Y>
+          </Vector2>
+          <BinaryString name="AttributesSerialize">AgAAAAUAAABQYW5lbAIMAAAARXhhbXBsZVBhbmVsBQAAAFRoZW1lAgYAAABvcmFuZ2U=</BinaryString>
+          <bool name="AutoButtonColor">false</bool>
+          <Color3 name="BackgroundColor3">
+            <R>1</R>
+            <G>1</G>
+            <B>1</B>
+          </Color3>
+          <float name="BackgroundTransparency">0</float>
+          <int name="BorderSizePixel">0</int>
+          <float name="ImageTransparency">1</float>
+          <int name="LayoutOrder">1</int>
+          <UDim2 name="Position">
+            <XS>0</XS>
+            <XO>0</XO>
+            <YS>0</YS>
+            <YO>0</YO>
+          </UDim2>
+          <token name="ScaleType">0</token>
+          <UDim2 name="Size">
+            <XS>0</XS>
+            <XO>60</XO>
+            <YS>0</YS>
+            <YO>60</YO>
+          </UDim2>
+          <int name="ZIndex">3</int>
+        </Properties>
+        <Item class="UICorner" referent="6">
+          <Properties>
+            <string name="Name">UICorner</string>
+            <UDim name="BottomLeftRadius">
+              <S>0</S>
+              <O>8</O>
+            </UDim>
+            <UDim name="BottomRightRadius">
+              <S>0</S>
+              <O>8</O>
+            </UDim>
+            <UDim name="TopLeftRadius">
+              <S>0</S>
+              <O>8</O>
+            </UDim>
+            <UDim name="TopRightRadius">
+              <S>0</S>
+              <O>8</O>
+            </UDim>
+          </Properties>
+        </Item>
+        <Item class="UIGradient" referent="7">
+          <Properties>
+            <string name="Name">UIGradient</string>
+            <ColorSequence name="Color">0 1 0.6666667 0.23529412 0 1 0.92156863 0.39215687 0.039215688 0 </ColorSequence>
+            <float name="Rotation">90</float>
+          </Properties>
+        </Item>
+        <Item class="UIStroke" referent="8">
+          <Properties>
+            <string name="Name">UIStroke</string>
+            <token name="ApplyStrokeMode">0</token>
+            <Color3 name="Color">
+              <R>0.39215687</R>
+              <G>0.15686275</G>
+              <B>0</B>
+            </Color3>
+            <float name="Thickness">3</float>
+          </Properties>
+        </Item>
+        <Item class="CanvasGroup" referent="9">
+          <Properties>
+            <string name="Name">Studs</string>
+            <float name="BackgroundTransparency">1</float>
+            <int name="BorderSizePixel">0</int>
+            <float name="GroupTransparency">0</float>
+            <UDim2 name="Size">
+              <XS>1</XS>
+              <XO>0</XO>
+              <YS>1</YS>
+              <YO>0</YO>
+            </UDim2>
+            <int name="ZIndex">3</int>
+          </Properties>
+          <Item class="UICorner" referent="10">
+            <Properties>
+              <string name="Name">UICorner</string>
+              <UDim name="BottomLeftRadius">
+                <S>0</S>
+                <O>8</O>
+              </UDim>
+              <UDim name="BottomRightRadius">
+                <S>0</S>
+                <O>8</O>
+              </UDim>
+              <UDim name="TopLeftRadius">
+                <S>0</S>
+                <O>8</O>
+              </UDim>
+              <UDim name="TopRightRadius">
+                <S>0</S>
+                <O>8</O>
+              </UDim>
+            </Properties>
+          </Item>
+          <Item class="ImageLabel" referent="11">
+            <Properties>
+              <string name="Name">STUDS</string>
+              <float name="BackgroundTransparency">1</float>
+              <int name="BorderSizePixel">0</int>
+              <Content name="ImageContent">
+                <uri>rbxassetid://0</uri>
+              </Content>
+              <float name="ImageTransparency">0.5</float>
+              <token name="ScaleType">2</token>
+              <UDim2 name="Size">
+                <XS>1</XS>
+                <XO>0</XO>
+                <YS>1</YS>
+                <YO>0</YO>
+              </UDim2>
+              <UDim2 name="TileSize">
+                <XS>0</XS>
+                <XO>42</XO>
+                <YS>0</YS>
+                <YO>32</YO>
+              </UDim2>
+              <int name="ZIndex">3</int>
+            </Properties>
+          </Item>
+        </Item>
+        <Item class="UIScale" referent="12">
+          <Properties>
+            <string name="Name">Press</string>
+            <float name="Scale">1</float>
+          </Properties>
+        </Item>
+        <Item class="TextLabel" referent="13">
+          <Properties>
+            <string name="Name">Label</string>
+            <Vector2 name="AnchorPoint">
+              <X>0.5</X>
+              <Y>0.5</Y>
+            </Vector2>
+            <float name="BackgroundTransparency">1</float>
+            <int name="BorderSizePixel">0</int>
+            <Font name="FontFace">
+              <Family>
+                <url>rbxasset://fonts/families/FredokaOne.json</url>
+              </Family>
+              <Weight>400</Weight>
+              <Style>Normal</Style>
+            </Font>
+            <UDim2 name="Position">
+              <XS>0.5</XS>
+              <XO>0</XO>
+              <YS>0.8</YS>
+              <YO>0</YO>
+            </UDim2>
+            <UDim2 name="Size">
+              <XS>0.96</XS>
+              <XO>0</XO>
+              <YS>0.3</YS>
+              <YO>0</YO>
+            </UDim2>
+            <string name="Text">Shop</string>
+            <Color3 name="TextColor3">
+              <R>1</R>
+              <G>1</G>
+              <B>1</B>
+            </Color3>
+            <bool name="TextScaled">true</bool>
+            <float name="TextSize">8</float>
+            <bool name="TextWrapped">true</bool>
+            <token name="TextXAlignment">2</token>
+            <int name="ZIndex">5</int>
+          </Properties>
+          <Item class="UITextSizeConstraint" referent="14">
+            <Properties>
+              <string name="Name">UITextSizeConstraint</string>
+              <int name="MaxTextSize">18</int>
+              <int name="MinTextSize">12</int>
+            </Properties>
+          </Item>
+          <Item class="UIStroke" referent="15">
+            <Properties>
+              <string name="Name">UIStroke</string>
+              <token name="ApplyStrokeMode">0</token>
+              <Color3 name="Color">
+                <R>0.39215687</R>
+                <G>0.15686275</G>
+                <B>0</B>
+              </Color3>
+              <float name="Thickness">2.5</float>
+            </Properties>
+          </Item>
+        </Item>
+        <Item class="Frame" referent="16">
+          <Properties>
+            <string name="Name">Dim</string>
+            <Color3 name="BackgroundColor3">
+              <R>0</R>
+              <G>0</G>
+              <B>0</B>
+            </Color3>
+            <float name="BackgroundTransparency">0.5</float>
+            <int name="BorderSizePixel">0</int>
+            <UDim2 name="Size">
+              <XS>1</XS>
+              <XO>0</XO>
+              <YS>1</YS>
+              <YO>0</YO>
+            </UDim2>
+            <bool name="Visible">false</bool>
+            <int name="ZIndex">6</int>
+          </Properties>
+          <Item class="UICorner" referent="17">
+            <Properties>
+              <string name="Name">UICorner</string>
+              <UDim name="BottomLeftRadius">
+                <S>0</S>
+                <O>8</O>
+              </UDim>
+              <UDim name="BottomRightRadius">
+                <S>0</S>
+                <O>8</O>
+              </UDim>
+              <UDim name="TopLeftRadius">
+                <S>0</S>
+                <O>8</O>
+              </UDim>
+              <UDim name="TopRightRadius">
+                <S>0</S>
+                <O>8</O>
+              </UDim>
+            </Properties>
+          </Item>
+        </Item>
+        <Item class="ImageLabel" referent="18">
+          <Properties>
+            <string name="Name">Icon</string>
+            <Vector2 name="AnchorPoint">
+              <X>0.5</X>
+              <Y>0.5</Y>
+            </Vector2>
+            <BinaryString name="AttributesSerialize">AQAAAAQAAABOb3RlAikAAABQdXQgeW91ciBpY29uIGltYWdlIGhlcmUgKFNjYWxlVHlwZSBGaXQpLg==</BinaryString>
+            <float name="BackgroundTransparency">1</float>
+            <UDim2 name="Position">
+              <XS>0.5</XS>
+              <XO>0</XO>
+              <YS>0.33</YS>
+              <YO>0</YO>
+            </UDim2>
+            <token name="ScaleType">3</token>
+            <UDim2 name="Size">
+              <XS>0.58</XS>
+              <XO>0</XO>
+              <YS>0.5</YS>
+              <YO>0</YO>
+            </UDim2>
+            <int name="ZIndex">5</int>
+          </Properties>
+        </Item>
+        <Item class="Frame" referent="19">
+          <Properties>
+            <string name="Name">Badge</string>
+            <Color3 name="BackgroundColor3">
+              <R>0.74509805</R>
+              <G>0.05882353</G>
+              <B>0.05882353</B>
+            </Color3>
+            <int name="BorderSizePixel">0</int>
+            <UDim2 name="Position">
+              <XS>0</XS>
+              <XO>-4</XO>
+              <YS>0</YS>
+              <YO>-4</YO>
+            </UDim2>
+            <UDim2 name="Size">
+              <XS>0</XS>
+              <XO>20</XO>
+              <YS>0</YS>
+              <YO>20</YO>
+            </UDim2>
+            <bool name="Visible">false</bool>
+            <int name="ZIndex">7</int>
+          </Properties>
+          <Item class="UICorner" referent="20">
+            <Properties>
+              <string name="Name">UICorner</string>
+              <UDim name="BottomLeftRadius">
+                <S>0</S>
+                <O>8</O>
+              </UDim>
+              <UDim name="BottomRightRadius">
+                <S>0</S>
+                <O>8</O>
+              </UDim>
+              <UDim name="TopLeftRadius">
+                <S>0</S>
+                <O>8</O>
+              </UDim>
+              <UDim name="TopRightRadius">
+                <S>0</S>
+                <O>8</O>
+              </UDim>
+            </Properties>
+          </Item>
+          <Item class="UIStroke" referent="21">
+            <Properties>
+              <string name="Name">UIStroke</string>
+              <token name="ApplyStrokeMode">0</token>
+              <Color3 name="Color">
+                <R>1</R>
+                <G>1</G>
+                <B>1</B>
+              </Color3>
+              <float name="Thickness">2.5</float>
+            </Properties>
+          </Item>
+          <Item class="CanvasGroup" referent="22">
+            <Properties>
+              <string name="Name">Studs</string>
+              <float name="BackgroundTransparency">1</float>
+              <int name="BorderSizePixel">0</int>
+              <float name="GroupTransparency">0</float>
+              <UDim2 name="Size">
+                <XS>1</XS>
+                <XO>0</XO>
+                <YS>1</YS>
+                <YO>0</YO>
+              </UDim2>
+              <int name="ZIndex">7</int>
+            </Properties>
+            <Item class="UICorner" referent="23">
+              <Properties>
+                <string name="Name">UICorner</string>
+                <UDim name="BottomLeftRadius">
+                  <S>0</S>
+                  <O>8</O>
+                </UDim>
+                <UDim name="BottomRightRadius">
+                  <S>0</S>
+                  <O>8</O>
+                </UDim>
+                <UDim name="TopLeftRadius">
+                  <S>0</S>
+                  <O>8</O>
+                </UDim>
+                <UDim name="TopRightRadius">
+                  <S>0</S>
+                  <O>8</O>
+                </UDim>
+              </Properties>
+            </Item>
+            <Item class="ImageLabel" referent="24">
+              <Properties>
+                <string name="Name">STUDS</string>
+                <float name="BackgroundTransparency">1</float>
+                <int name="BorderSizePixel">0</int>
+                <Content name="ImageContent">
+                  <uri>rbxassetid://0</uri>
+                </Content>
+                <float name="ImageTransparency">0.6</float>
+                <token name="ScaleType">2</token>
+                <UDim2 name="Size">
+                  <XS>1</XS>
+                  <XO>0</XO>
+                  <YS>1</YS>
+                  <YO>0</YO>
+                </UDim2>
+                <UDim2 name="TileSize">
+                  <XS>0</XS>
+                  <XO>28</XO>
+                  <YS>0</YS>
+                  <YO>21</YO>
+                </UDim2>
+                <int name="ZIndex">7</int>
+              </Properties>
+            </Item>
+          </Item>
+          <Item class="UIGradient" referent="25">
+            <Properties>
+              <string name="Name">Shade</string>
+              <ColorSequence name="Color">0 1 1 1 0 1 0.5882353 0.5882353 0.627451 0 </ColorSequence>
+              <float name="Rotation">90</float>
+            </Properties>
+          </Item>
+          <Item class="TextLabel" referent="26">
+            <Properties>
+              <string name="Name">Label</string>
+              <Vector2 name="AnchorPoint">
+                <X>0.5</X>
+                <Y>0.5</Y>
+              </Vector2>
+              <float name="BackgroundTransparency">1</float>
+              <int name="BorderSizePixel">0</int>
+              <Font name="FontFace">
+                <Family>
+                  <url>rbxasset://fonts/families/FredokaOne.json</url>
+                </Family>
+                <Weight>400</Weight>
+                <Style>Normal</Style>
+              </Font>
+              <UDim2 name="Position">
+                <XS>0.5</XS>
+                <XO>0</XO>
+                <YS>0.5</YS>
+                <YO>0</YO>
+              </UDim2>
+              <UDim2 name="Size">
+                <XS>0.8</XS>
+                <XO>0</XO>
+                <YS>0.8</YS>
+                <YO>0</YO>
+              </UDim2>
+              <string name="Text">!</string>
+              <Color3 name="TextColor3">
+                <R>1</R>
+                <G>1</G>
+                <B>1</B>
+              </Color3>
+              <bool name="TextScaled">true</bool>
+              <float name="TextSize">8</float>
+              <bool name="TextWrapped">true</bool>
+              <token name="TextXAlignment">2</token>
+              <int name="ZIndex">8</int>
+            </Properties>
+            <Item class="UITextSizeConstraint" referent="27">
+              <Properties>
+                <string name="Name">UITextSizeConstraint</string>
+                <int name="MaxTextSize">16</int>
+                <int name="MinTextSize">12</int>
+              </Properties>
+            </Item>
+            <Item class="UIStroke" referent="28">
+              <Properties>
+                <string name="Name">UIStroke</string>
+                <token name="ApplyStrokeMode">0</token>
+                <Color3 name="Color">
+                  <R>0.078431375</R>
+                  <G>0.078431375</G>
+                  <B>0.101960786</B>
+                </Color3>
+                <float name="Thickness">2</float>
+              </Properties>
+            </Item>
+          </Item>
+        </Item>
+      </Item>
+      <Item class="ImageButton" referent="29">
+        <Properties>
+          <string name="Name">BagButton</string>
+          <Vector2 name="AnchorPoint">
+            <X>0</X>
+            <Y>0</Y>
+          </Vector2>
+          <BinaryString name="AttributesSerialize">AgAAAAUAAABQYW5lbAIMAAAARXhhbXBsZVBhbmVsBQAAAFRoZW1lAgUAAABicm93bg==</BinaryString>
+          <bool name="AutoButtonColor">false</bool>
+          <Color3 name="BackgroundColor3">
+            <R>1</R>
+            <G>1</G>
+            <B>1</B>
+          </Color3>
+          <float name="BackgroundTransparency">0</float>
+          <int name="BorderSizePixel">0</int>
+          <float name="ImageTransparency">1</float>
+          <int name="LayoutOrder">2</int>
+          <UDim2 name="Position">
+            <XS>0</XS>
+            <XO>0</XO>
+            <YS>0</YS>
+            <YO>0</YO>
+          </UDim2>
+          <token name="ScaleType">0</token>
+          <UDim2 name="Size">
+            <XS>0</XS>
+            <XO>60</XO>
+            <YS>0</YS>
+            <YO>60</YO>
+          </UDim2>
+          <int name="ZIndex">3</int>
+        </Properties>
+        <Item class="UICorner" referent="30">
+          <Properties>
+            <string name="Name">UICorner</string>
+            <UDim name="BottomLeftRadius">
+              <S>0</S>
+              <O>8</O>
+            </UDim>
+            <UDim name="BottomRightRadius">
+              <S>0</S>
+              <O>8</O>
+            </UDim>
+            <UDim name="TopLeftRadius">
+              <S>0</S>
+              <O>8</O>
+            </UDim>
+            <UDim name="TopRightRadius">
+              <S>0</S>
+              <O>8</O>
+            </UDim>
+          </Properties>
+        </Item>
+        <Item class="UIGradient" referent="31">
+          <Properties>
+            <string name="Name">UIGradient</string>
+            <ColorSequence name="Color">0 0.6666667 0.47058824 0.27450982 0 1 0.43137255 0.27450982 0.13725491 0 </ColorSequence>
+            <float name="Rotation">90</float>
+          </Properties>
+        </Item>
+        <Item class="UIStroke" referent="32">
+          <Properties>
+            <string name="Name">UIStroke</string>
+            <token name="ApplyStrokeMode">0</token>
+            <Color3 name="Color">
+              <R>0.039215688</R>
+              <G>0.15686275</G>
+              <B>0.43137255</B>
+            </Color3>
+            <float name="Thickness">3</float>
+          </Properties>
+        </Item>
+        <Item class="CanvasGroup" referent="33">
+          <Properties>
+            <string name="Name">Studs</string>
+            <float name="BackgroundTransparency">1</float>
+            <int name="BorderSizePixel">0</int>
+            <float name="GroupTransparency">0</float>
+            <UDim2 name="Size">
+              <XS>1</XS>
+              <XO>0</XO>
+              <YS>1</YS>
+              <YO>0</YO>
+            </UDim2>
+            <int name="ZIndex">3</int>
+          </Properties>
+          <Item class="UICorner" referent="34">
+            <Properties>
+              <string name="Name">UICorner</string>
+              <UDim name="BottomLeftRadius">
+                <S>0</S>
+                <O>8</O>
+              </UDim>
+              <UDim name="BottomRightRadius">
+                <S>0</S>
+                <O>8</O>
+              </UDim>
+              <UDim name="TopLeftRadius">
+                <S>0</S>
+                <O>8</O>
+              </UDim>
+              <UDim name="TopRightRadius">
+                <S>0</S>
+                <O>8</O>
+              </UDim>
+            </Properties>
+          </Item>
+          <Item class="ImageLabel" referent="35">
+            <Properties>
+              <string name="Name">STUDS</string>
+              <float name="BackgroundTransparency">1</float>
+              <int name="BorderSizePixel">0</int>
+              <Content name="ImageContent">
+                <uri>rbxassetid://0</uri>
+              </Content>
+              <float name="ImageTransparency">0.5</float>
+              <token name="ScaleType">2</token>
+              <UDim2 name="Size">
+                <XS>1</XS>
+                <XO>0</XO>
+                <YS>1</YS>
+                <YO>0</YO>
+              </UDim2>
+              <UDim2 name="TileSize">
+                <XS>0</XS>
+                <XO>42</XO>
+                <YS>0</YS>
+                <YO>32</YO>
+              </UDim2>
+              <int name="ZIndex">3</int>
+            </Properties>
+          </Item>
+        </Item>
+        <Item class="UIScale" referent="36">
+          <Properties>
+            <string name="Name">Press</string>
+            <float name="Scale">1</float>
+          </Properties>
+        </Item>
+        <Item class="TextLabel" referent="37">
+          <Properties>
+            <string name="Name">Label</string>
+            <Vector2 name="AnchorPoint">
+              <X>0.5</X>
+              <Y>0.5</Y>
+            </Vector2>
+            <float name="BackgroundTransparency">1</float>
+            <int name="BorderSizePixel">0</int>
+            <Font name="FontFace">
+              <Family>
+                <url>rbxasset://fonts/families/FredokaOne.json</url>
+              </Family>
+              <Weight>400</Weight>
+              <Style>Normal</Style>
+            </Font>
+            <UDim2 name="Position">
+              <XS>0.5</XS>
+              <XO>0</XO>
+              <YS>0.8</YS>
+              <YO>0</YO>
+            </UDim2>
+            <UDim2 name="Size">
+              <XS>0.96</XS>
+              <XO>0</XO>
+              <YS>0.3</YS>
+              <YO>0</YO>
+            </UDim2>
+            <string name="Text">Bag</string>
+            <Color3 name="TextColor3">
+              <R>1</R>
+              <G>1</G>
+              <B>1</B>
+            </Color3>
+            <bool name="TextScaled">true</bool>
+            <float name="TextSize">8</float>
+            <bool name="TextWrapped">true</bool>
+            <token name="TextXAlignment">2</token>
+            <int name="ZIndex">5</int>
+          </Properties>
+          <Item class="UITextSizeConstraint" referent="38">
+            <Properties>
+              <string name="Name">UITextSizeConstraint</string>
+              <int name="MaxTextSize">18</int>
+              <int name="MinTextSize">12</int>
+            </Properties>
+          </Item>
+          <Item class="UIStroke" referent="39">
+            <Properties>
+              <string name="Name">UIStroke</string>
+              <token name="ApplyStrokeMode">0</token>
+              <Color3 name="Color">
+                <R>0.039215688</R>
+                <G>0.15686275</G>
+                <B>0.43137255</B>
+              </Color3>
+              <float name="Thickness">2.5</float>
+            </Properties>
+          </Item>
+        </Item>
+        <Item class="Frame" referent="40">
+          <Properties>
+            <string name="Name">Dim</string>
+            <Color3 name="BackgroundColor3">
+              <R>0</R>
+              <G>0</G>
+              <B>0</B>
+            </Color3>
+            <float name="BackgroundTransparency">0.5</float>
+            <int name="BorderSizePixel">0</int>
+            <UDim2 name="Size">
+              <XS>1</XS>
+              <XO>0</XO>
+              <YS>1</YS>
+              <YO>0</YO>
+            </UDim2>
+            <bool name="Visible">false</bool>
+            <int name="ZIndex">6</int>
+          </Properties>
+          <Item class="UICorner" referent="41">
+            <Properties>
+              <string name="Name">UICorner</string>
+              <UDim name="BottomLeftRadius">
+                <S>0</S>
+                <O>8</O>
+              </UDim>
+              <UDim name="BottomRightRadius">
+                <S>0</S>
+                <O>8</O>
+              </UDim>
+              <UDim name="TopLeftRadius">
+                <S>0</S>
+                <O>8</O>
+              </UDim>
+              <UDim name="TopRightRadius">
+                <S>0</S>
+                <O>8</O>
+              </UDim>
+            </Properties>
+          </Item>
+        </Item>
+        <Item class="ImageLabel" referent="42">
+          <Properties>
+            <string name="Name">Icon</string>
+            <Vector2 name="AnchorPoint">
+              <X>0.5</X>
+              <Y>0.5</Y>
+            </Vector2>
+            <BinaryString name="AttributesSerialize">AQAAAAQAAABOb3RlAikAAABQdXQgeW91ciBpY29uIGltYWdlIGhlcmUgKFNjYWxlVHlwZSBGaXQpLg==</BinaryString>
+            <float name="BackgroundTransparency">1</float>
+            <UDim2 name="Position">
+              <XS>0.5</XS>
+              <XO>0</XO>
+              <YS>0.33</YS>
+              <YO>0</YO>
+            </UDim2>
+            <token name="ScaleType">3</token>
+            <UDim2 name="Size">
+              <XS>0.58</XS>
+              <XO>0</XO>
+              <YS>0.5</YS>
+              <YO>0</YO>
+            </UDim2>
+            <int name="ZIndex">5</int>
+          </Properties>
+        </Item>
+        <Item class="Frame" referent="43">
+          <Properties>
+            <string name="Name">Badge</string>
+            <Color3 name="BackgroundColor3">
+              <R>0.74509805</R>
+              <G>0.05882353</G>
+              <B>0.05882353</B>
+            </Color3>
+            <int name="BorderSizePixel">0</int>
+            <UDim2 name="Position">
+              <XS>0</XS>
+              <XO>-4</XO>
+              <YS>0</YS>
+              <YO>-4</YO>
+            </UDim2>
+            <UDim2 name="Size">
+              <XS>0</XS>
+              <XO>20</XO>
+              <YS>0</YS>
+              <YO>20</YO>
+            </UDim2>
+            <bool name="Visible">false</bool>
+            <int name="ZIndex">7</int>
+          </Properties>
+          <Item class="UICorner" referent="44">
+            <Properties>
+              <string name="Name">UICorner</string>
+              <UDim name="BottomLeftRadius">
+                <S>0</S>
+                <O>8</O>
+              </UDim>
+              <UDim name="BottomRightRadius">
+                <S>0</S>
+                <O>8</O>
+              </UDim>
+              <UDim name="TopLeftRadius">
+                <S>0</S>
+                <O>8</O>
+              </UDim>
+              <UDim name="TopRightRadius">
+                <S>0</S>
+                <O>8</O>
+              </UDim>
+            </Properties>
+          </Item>
+          <Item class="UIStroke" referent="45">
+            <Properties>
+              <string name="Name">UIStroke</string>
+              <token name="ApplyStrokeMode">0</token>
+              <Color3 name="Color">
+                <R>1</R>
+                <G>1</G>
+                <B>1</B>
+              </Color3>
+              <float name="Thickness">2.5</float>
+            </Properties>
+          </Item>
+          <Item class="CanvasGroup" referent="46">
+            <Properties>
+              <string name="Name">Studs</string>
+              <float name="BackgroundTransparency">1</float>
+              <int name="BorderSizePixel">0</int>
+              <float name="GroupTransparency">0</float>
+              <UDim2 name="Size">
+                <XS>1</XS>
+                <XO>0</XO>
+                <YS>1</YS>
+                <YO>0</YO>
+              </UDim2>
+              <int name="ZIndex">7</int>
+            </Properties>
+            <Item class="UICorner" referent="47">
+              <Properties>
+                <string name="Name">UICorner</string>
+                <UDim name="BottomLeftRadius">
+                  <S>0</S>
+                  <O>8</O>
+                </UDim>
+                <UDim name="BottomRightRadius">
+                  <S>0</S>
+                  <O>8</O>
+                </UDim>
+                <UDim name="TopLeftRadius">
+                  <S>0</S>
+                  <O>8</O>
+                </UDim>
+                <UDim name="TopRightRadius">
+                  <S>0</S>
+                  <O>8</O>
+                </UDim>
+              </Properties>
+            </Item>
+            <Item class="ImageLabel" referent="48">
+              <Properties>
+                <string name="Name">STUDS</string>
+                <float name="BackgroundTransparency">1</float>
+                <int name="BorderSizePixel">0</int>
+                <Content name="ImageContent">
+                  <uri>rbxassetid://0</uri>
+                </Content>
+                <float name="ImageTransparency">0.6</float>
+                <token name="ScaleType">2</token>
+                <UDim2 name="Size">
+                  <XS>1</XS>
+                  <XO>0</XO>
+                  <YS>1</YS>
+                  <YO>0</YO>
+                </UDim2>
+                <UDim2 name="TileSize">
+                  <XS>0</XS>
+                  <XO>28</XO>
+                  <YS>0</YS>
+                  <YO>21</YO>
+                </UDim2>
+                <int name="ZIndex">7</int>
+              </Properties>
+            </Item>
+          </Item>
+          <Item class="UIGradient" referent="49">
+            <Properties>
+              <string name="Name">Shade</string>
+              <ColorSequence name="Color">0 1 1 1 0 1 0.5882353 0.5882353 0.627451 0 </ColorSequence>
+              <float name="Rotation">90</float>
+            </Properties>
+          </Item>
+          <Item class="TextLabel" referent="50">
+            <Properties>
+              <string name="Name">Label</string>
+              <Vector2 name="AnchorPoint">
+                <X>0.5</X>
+                <Y>0.5</Y>
+              </Vector2>
+              <float name="BackgroundTransparency">1</float>
+              <int name="BorderSizePixel">0</int>
+              <Font name="FontFace">
+                <Family>
+                  <url>rbxasset://fonts/families/FredokaOne.json</url>
+                </Family>
+                <Weight>400</Weight>
+                <Style>Normal</Style>
+              </Font>
+              <UDim2 name="Position">
+                <XS>0.5</XS>
+                <XO>0</XO>
+                <YS>0.5</YS>
+                <YO>0</YO>
+              </UDim2>
+              <UDim2 name="Size">
+                <XS>0.8</XS>
+                <XO>0</XO>
+                <YS>0.8</YS>
+                <YO>0</YO>
+              </UDim2>
+              <string name="Text">!</string>
+              <Color3 name="TextColor3">
+                <R>1</R>
+                <G>1</G>
+                <B>1</B>
+              </Color3>
+              <bool name="TextScaled">true</bool>
+              <float name="TextSize">8</float>
+              <bool name="TextWrapped">true</bool>
+              <token name="TextXAlignment">2</token>
+              <int name="ZIndex">8</int>
+            </Properties>
+            <Item class="UITextSizeConstraint" referent="51">
+              <Properties>
+                <string name="Name">UITextSizeConstraint</string>
+                <int name="MaxTextSize">16</int>
+                <int name="MinTextSize">12</int>
+              </Properties>
+            </Item>
+            <Item class="UIStroke" referent="52">
+              <Properties>
+                <string name="Name">UIStroke</string>
+                <token name="ApplyStrokeMode">0</token>
+                <Color3 name="Color">
+                  <R>0.078431375</R>
+                  <G>0.078431375</G>
+                  <B>0.101960786</B>
+                </Color3>
+                <float name="Thickness">2</float>
+              </Properties>
+            </Item>
+          </Item>
+        </Item>
+      </Item>
+    </Item>
+    <Item class="Frame" referent="53">
+      <Properties>
+        <string name="Name">ExamplePanel</string>
+        <Vector2 name="AnchorPoint">
+          <X>0.5</X>
+          <Y>0.5</Y>
+        </Vector2>
+        <BinaryString name="AttributesSerialize">AwAAAAQAAABOb3RlAnwAAABQYW5lbCByZWNpcGU6IGRhcmsgYm9keSAjMkIyRDM0ICsgNHB4ICMwRTBFMTIgc3Ryb2tlICsgc3R1ZHMgdDAuNiArIFNoYWRlOyBUb3AgaGVhZGVyIG92ZXJoYW5ncyAzcHggZWFjaCBzaWRlIGFuZCA2cHggYWJvdmUuDQAAAFBob25lUG9zaXRpb24KAAAAPwAAAAAAAAA/DAAAAAkAAABQaG9uZVNpemUKAAAAAAgCAAAAAAAALAEAAA==</BinaryString>
+        <Color3 name="BackgroundColor3">
+          <R>0.16862746</R>
+          <G>0.1764706</G>
+          <B>0.20392157</B>
+        </Color3>
+        <float name="BackgroundTransparency">0</float>
+        <int name="BorderSizePixel">0</int>
+        <UDim2 name="Position">
+          <XS>0.5</XS>
+          <XO>0</XO>
+          <YS>0.52</YS>
+          <YO>0</YO>
+        </UDim2>
+        <UDim2 name="Size">
+          <XS>0</XS>
+          <XO>520</XO>
+          <YS>0</YS>
+          <YO>340</YO>
+        </UDim2>
+        <bool name="Visible">false</bool>
+        <int name="ZIndex">2</int>
+      </Properties>
+      <Item class="UICorner" referent="54">
+        <Properties>
+          <string name="Name">UICorner</string>
+          <UDim name="BottomLeftRadius">
+            <S>0</S>
+            <O>8</O>
+          </UDim>
+          <UDim name="BottomRightRadius">
+            <S>0</S>
+            <O>8</O>
+          </UDim>
+          <UDim name="TopLeftRadius">
+            <S>0</S>
+            <O>8</O>
+          </UDim>
+          <UDim name="TopRightRadius">
+            <S>0</S>
+            <O>8</O>
+          </UDim>
+        </Properties>
+      </Item>
+      <Item class="UIStroke" referent="55">
+        <Properties>
+          <string name="Name">UIStroke</string>
+          <token name="ApplyStrokeMode">0</token>
+          <Color3 name="Color">
+            <R>0.05490196</R>
+            <G>0.05490196</G>
+            <B>0.07058824</B>
+          </Color3>
+          <float name="Thickness">4</float>
+        </Properties>
+      </Item>
+      <Item class="CanvasGroup" referent="56">
+        <Properties>
+          <string name="Name">Studs</string>
+          <float name="BackgroundTransparency">1</float>
+          <int name="BorderSizePixel">0</int>
+          <float name="GroupTransparency">0</float>
+          <UDim2 name="Size">
+            <XS>1</XS>
+            <XO>0</XO>
+            <YS>1</YS>
+            <YO>0</YO>
+          </UDim2>
+          <int name="ZIndex">2</int>
+        </Properties>
+        <Item class="UICorner" referent="57">
+          <Properties>
+            <string name="Name">UICorner</string>
+            <UDim name="BottomLeftRadius">
+              <S>0</S>
+              <O>8</O>
+            </UDim>
+            <UDim name="BottomRightRadius">
+              <S>0</S>
+              <O>8</O>
+            </UDim>
+            <UDim name="TopLeftRadius">
+              <S>0</S>
+              <O>8</O>
+            </UDim>
+            <UDim name="TopRightRadius">
+              <S>0</S>
+              <O>8</O>
+            </UDim>
+          </Properties>
+        </Item>
+        <Item class="ImageLabel" referent="58">
+          <Properties>
+            <string name="Name">STUDS</string>
+            <float name="BackgroundTransparency">1</float>
+            <int name="BorderSizePixel">0</int>
+            <Content name="ImageContent">
+              <uri>rbxassetid://0</uri>
+            </Content>
+            <float name="ImageTransparency">0.6</float>
+            <token name="ScaleType">2</token>
+            <UDim2 name="Size">
+              <XS>1</XS>
+              <XO>0</XO>
+              <YS>1</YS>
+              <YO>0</YO>
+            </UDim2>
+            <UDim2 name="TileSize">
+              <XS>0</XS>
+              <XO>42</XO>
+              <YS>0</YS>
+              <YO>32</YO>
+            </UDim2>
+            <int name="ZIndex">2</int>
+          </Properties>
+        </Item>
+      </Item>
+      <Item class="UIGradient" referent="59">
+        <Properties>
+          <string name="Name">Shade</string>
+          <ColorSequence name="Color">0 1 1 1 0 1 0.5882353 0.5882353 0.627451 0 </ColorSequence>
+          <float name="Rotation">90</float>
+        </Properties>
+      </Item>
+      <Item class="UIScale" referent="60">
+        <Properties>
+          <string name="Name">DeviceScale</string>
+          <BinaryString name="AttributesSerialize">BAAAAAgAAABNYXhTY2FsZQYzMzMzMzPzPwgAAABNaW5TY2FsZQUAAIA/CAAAAFBjRmFjdG9yBQAAgD8LAAAAVG91Y2hGYWN0b3IGmpmZmZmZ6T8=</BinaryString>
+          <float name="Scale">1</float>
+        </Properties>
+      </Item>
+      <Item class="Frame" referent="61">
+        <Properties>
+          <string name="Name">Top</string>
+          <Vector2 name="AnchorPoint">
+            <X>0.5</X>
+            <Y>0</Y>
+          </Vector2>
+          <Color3 name="BackgroundColor3">
+            <R>1</R>
+            <G>1</G>
+            <B>1</B>
+          </Color3>
+          <int name="BorderSizePixel">0</int>
+          <UDim2 name="Position">
+            <XS>0.5</XS>
+            <XO>0</XO>
+            <YS>0</YS>
+            <YO>-6</YO>
+          </UDim2>
+          <UDim2 name="Size">
+            <XS>1</XS>
+            <XO>6</XO>
+            <YS>0</YS>
+            <YO>44</YO>
+          </UDim2>
+          <int name="ZIndex">6</int>
+        </Properties>
+        <Item class="UICorner" referent="62">
+          <Properties>
+            <string name="Name">UICorner</string>
+            <UDim name="BottomLeftRadius">
+              <S>0</S>
+              <O>8</O>
+            </UDim>
+            <UDim name="BottomRightRadius">
+              <S>0</S>
+              <O>8</O>
+            </UDim>
+            <UDim name="TopLeftRadius">
+              <S>0</S>
+              <O>8</O>
+            </UDim>
+            <UDim name="TopRightRadius">
+              <S>0</S>
+              <O>8</O>
+            </UDim>
+          </Properties>
+        </Item>
+        <Item class="UIGradient" referent="63">
+          <Properties>
+            <string name="Name">UIGradient</string>
+            <ColorSequence name="Color">0 0.50980395 1 0.27450982 0 1 0.15686275 0.74509805 0.11764706 0 </ColorSequence>
+            <float name="Rotation">90</float>
+          </Properties>
+        </Item>
+        <Item class="UIStroke" referent="64">
+          <Properties>
+            <string name="Name">UIStroke</string>
+            <token name="ApplyStrokeMode">0</token>
+            <Color3 name="Color">
+              <R>0.05490196</R>
+              <G>0.3137255</G>
+              <B>0.039215688</B>
+            </Color3>
+            <float name="Thickness">4</float>
+          </Properties>
+        </Item>
+        <Item class="CanvasGroup" referent="65">
+          <Properties>
+            <string name="Name">Studs</string>
+            <float name="BackgroundTransparency">1</float>
+            <int name="BorderSizePixel">0</int>
+            <float name="GroupTransparency">0</float>
+            <UDim2 name="Size">
+              <XS>1</XS>
+              <XO>0</XO>
+              <YS>1</YS>
+              <YO>0</YO>
+            </UDim2>
+            <int name="ZIndex">6</int>
+          </Properties>
+          <Item class="UICorner" referent="66">
+            <Properties>
+              <string name="Name">UICorner</string>
+              <UDim name="BottomLeftRadius">
+                <S>0</S>
+                <O>8</O>
+              </UDim>
+              <UDim name="BottomRightRadius">
+                <S>0</S>
+                <O>8</O>
+              </UDim>
+              <UDim name="TopLeftRadius">
+                <S>0</S>
+                <O>8</O>
+              </UDim>
+              <UDim name="TopRightRadius">
+                <S>0</S>
+                <O>8</O>
+              </UDim>
+            </Properties>
+          </Item>
+          <Item class="ImageLabel" referent="67">
+            <Properties>
+              <string name="Name">STUDS</string>
+              <float name="BackgroundTransparency">1</float>
+              <int name="BorderSizePixel">0</int>
+              <Content name="ImageContent">
+                <uri>rbxassetid://0</uri>
+              </Content>
+              <float name="ImageTransparency">0.5</float>
+              <token name="ScaleType">2</token>
+              <UDim2 name="Size">
+                <XS>1</XS>
+                <XO>0</XO>
+                <YS>1</YS>
+                <YO>0</YO>
+              </UDim2>
+              <UDim2 name="TileSize">
+                <XS>0</XS>
+                <XO>42</XO>
+                <YS>0</YS>
+                <YO>32</YO>
+              </UDim2>
+              <int name="ZIndex">6</int>
+            </Properties>
+          </Item>
+        </Item>
+        <Item class="TextLabel" referent="68">
+          <Properties>
+            <string name="Name">Title</string>
+            <Vector2 name="AnchorPoint">
+              <X>0</X>
+              <Y>0.5</Y>
+            </Vector2>
+            <float name="BackgroundTransparency">1</float>
+            <int name="BorderSizePixel">0</int>
+            <Font name="FontFace">
+              <Family>
+                <url>rbxasset://fonts/families/FredokaOne.json</url>
+              </Family>
+              <Weight>400</Weight>
+              <Style>Normal</Style>
+            </Font>
+            <UDim2 name="Position">
+              <XS>0</XS>
+              <XO>14</XO>
+              <YS>0.5</YS>
+              <YO>0</YO>
+            </UDim2>
+            <UDim2 name="Size">
+              <XS>0.5</XS>
+              <XO>0</XO>
+              <YS>0.8</YS>
+              <YO>0</YO>
+            </UDim2>
+            <string name="Text">Shop</string>
+            <Color3 name="TextColor3">
+              <R>1</R>
+              <G>1</G>
+              <B>1</B>
+            </Color3>
+            <bool name="TextScaled">true</bool>
+            <float name="TextSize">8</float>
+            <bool name="TextWrapped">true</bool>
+            <token name="TextXAlignment">0</token>
+            <int name="ZIndex">8</int>
+          </Properties>
+          <Item class="UITextSizeConstraint" referent="69">
+            <Properties>
+              <string name="Name">UITextSizeConstraint</string>
+              <int name="MaxTextSize">34</int>
+              <int name="MinTextSize">12</int>
+            </Properties>
+          </Item>
+          <Item class="UIStroke" referent="70">
+            <Properties>
+              <string name="Name">UIStroke</string>
+              <token name="ApplyStrokeMode">0</token>
+              <Color3 name="Color">
+                <R>0.078431375</R>
+                <G>0.078431375</G>
+                <B>0.101960786</B>
+              </Color3>
+              <float name="Thickness">3</float>
+            </Properties>
+          </Item>
+        </Item>
+        <Item class="ImageButton" referent="71">
+          <Properties>
+            <string name="Name">Close</string>
+            <Vector2 name="AnchorPoint">
+              <X>1</X>
+              <Y>0.5</Y>
+            </Vector2>
+            <BinaryString name="AttributesSerialize">AQAAAAUAAABUaGVtZQIDAAAAcmVk</BinaryString>
+            <bool name="AutoButtonColor">false</bool>
+            <Color3 name="BackgroundColor3">
+              <R>1</R>
+              <G>1</G>
+              <B>1</B>
+            </Color3>
+            <float name="BackgroundTransparency">0</float>
+            <int name="BorderSizePixel">0</int>
+            <float name="ImageTransparency">1</float>
+            <UDim2 name="Position">
+              <XS>1</XS>
+              <XO>-6</XO>
+              <YS>0.5</YS>
+              <YO>0</YO>
+            </UDim2>
+            <token name="ScaleType">0</token>
+            <UDim2 name="Size">
+              <XS>0</XS>
+              <XO>44</XO>
+              <YS>0</YS>
+              <YO>36</YO>
+            </UDim2>
+            <int name="ZIndex">8</int>
+          </Properties>
+          <Item class="UICorner" referent="72">
+            <Properties>
+              <string name="Name">UICorner</string>
+              <UDim name="BottomLeftRadius">
+                <S>0</S>
+                <O>8</O>
+              </UDim>
+              <UDim name="BottomRightRadius">
+                <S>0</S>
+                <O>8</O>
+              </UDim>
+              <UDim name="TopLeftRadius">
+                <S>0</S>
+                <O>8</O>
+              </UDim>
+              <UDim name="TopRightRadius">
+                <S>0</S>
+                <O>8</O>
+              </UDim>
+            </Properties>
+          </Item>
+          <Item class="UIGradient" referent="73">
+            <Properties>
+              <string name="Name">UIGradient</string>
+              <ColorSequence name="Color">0 1 0.27450982 0.27450982 0 1 0.74509805 0.05882353 0.05882353 0 </ColorSequence>
+              <float name="Rotation">90</float>
+            </Properties>
+          </Item>
+          <Item class="UIStroke" referent="74">
+            <Properties>
+              <string name="Name">UIStroke</string>
+              <token name="ApplyStrokeMode">0</token>
+              <Color3 name="Color">
+                <R>0.27450982</R>
+                <G>0</G>
+                <B>0</B>
+              </Color3>
+              <float name="Thickness">3</float>
+            </Properties>
+          </Item>
+          <Item class="CanvasGroup" referent="75">
+            <Properties>
+              <string name="Name">Studs</string>
+              <float name="BackgroundTransparency">1</float>
+              <int name="BorderSizePixel">0</int>
+              <float name="GroupTransparency">0</float>
+              <UDim2 name="Size">
+                <XS>1</XS>
+                <XO>0</XO>
+                <YS>1</YS>
+                <YO>0</YO>
+              </UDim2>
+              <int name="ZIndex">8</int>
+            </Properties>
+            <Item class="UICorner" referent="76">
+              <Properties>
+                <string name="Name">UICorner</string>
+                <UDim name="BottomLeftRadius">
+                  <S>0</S>
+                  <O>8</O>
+                </UDim>
+                <UDim name="BottomRightRadius">
+                  <S>0</S>
+                  <O>8</O>
+                </UDim>
+                <UDim name="TopLeftRadius">
+                  <S>0</S>
+                  <O>8</O>
+                </UDim>
+                <UDim name="TopRightRadius">
+                  <S>0</S>
+                  <O>8</O>
+                </UDim>
+              </Properties>
+            </Item>
+            <Item class="ImageLabel" referent="77">
+              <Properties>
+                <string name="Name">STUDS</string>
+                <float name="BackgroundTransparency">1</float>
+                <int name="BorderSizePixel">0</int>
+                <Content name="ImageContent">
+                  <uri>rbxassetid://0</uri>
+                </Content>
+                <float name="ImageTransparency">0.5</float>
+                <token name="ScaleType">2</token>
+                <UDim2 name="Size">
+                  <XS>1</XS>
+                  <XO>0</XO>
+                  <YS>1</YS>
+                  <YO>0</YO>
+                </UDim2>
+                <UDim2 name="TileSize">
+                  <XS>0</XS>
+                  <XO>28</XO>
+                  <YS>0</YS>
+                  <YO>21</YO>
+                </UDim2>
+                <int name="ZIndex">8</int>
+              </Properties>
+            </Item>
+          </Item>
+          <Item class="UIScale" referent="78">
+            <Properties>
+              <string name="Name">Press</string>
+              <float name="Scale">1</float>
+            </Properties>
+          </Item>
+          <Item class="TextLabel" referent="79">
+            <Properties>
+              <string name="Name">Label</string>
+              <Vector2 name="AnchorPoint">
+                <X>0.5</X>
+                <Y>0.5</Y>
+              </Vector2>
+              <float name="BackgroundTransparency">1</float>
+              <int name="BorderSizePixel">0</int>
+              <Font name="FontFace">
+                <Family>
+                  <url>rbxasset://fonts/families/FredokaOne.json</url>
+                </Family>
+                <Weight>400</Weight>
+                <Style>Normal</Style>
+              </Font>
+              <UDim2 name="Position">
+                <XS>0.5</XS>
+                <XO>0</XO>
+                <YS>0.5</YS>
+                <YO>0</YO>
+              </UDim2>
+              <UDim2 name="Size">
+                <XS>0.86</XS>
+                <XO>0</XO>
+                <YS>0.72</YS>
+                <YO>0</YO>
+              </UDim2>
+              <string name="Text">X</string>
+              <Color3 name="TextColor3">
+                <R>1</R>
+                <G>1</G>
+                <B>1</B>
+              </Color3>
+              <bool name="TextScaled">true</bool>
+              <float name="TextSize">8</float>
+              <bool name="TextWrapped">true</bool>
+              <token name="TextXAlignment">2</token>
+              <int name="ZIndex">10</int>
+            </Properties>
+            <Item class="UITextSizeConstraint" referent="80">
+              <Properties>
+                <string name="Name">UITextSizeConstraint</string>
+                <int name="MaxTextSize">28</int>
+                <int name="MinTextSize">12</int>
+              </Properties>
+            </Item>
+            <Item class="UIStroke" referent="81">
+              <Properties>
+                <string name="Name">UIStroke</string>
+                <token name="ApplyStrokeMode">0</token>
+                <Color3 name="Color">
+                  <R>0.27450982</R>
+                  <G>0</G>
+                  <B>0</B>
+                </Color3>
+                <float name="Thickness">2.5</float>
+              </Properties>
+            </Item>
+          </Item>
+          <Item class="Frame" referent="82">
+            <Properties>
+              <string name="Name">Dim</string>
+              <Color3 name="BackgroundColor3">
+                <R>0</R>
+                <G>0</G>
+                <B>0</B>
+              </Color3>
+              <float name="BackgroundTransparency">0.5</float>
+              <int name="BorderSizePixel">0</int>
+              <UDim2 name="Size">
+                <XS>1</XS>
+                <XO>0</XO>
+                <YS>1</YS>
+                <YO>0</YO>
+              </UDim2>
+              <bool name="Visible">false</bool>
+              <int name="ZIndex">11</int>
+            </Properties>
+            <Item class="UICorner" referent="83">
+              <Properties>
+                <string name="Name">UICorner</string>
+                <UDim name="BottomLeftRadius">
+                  <S>0</S>
+                  <O>8</O>
+                </UDim>
+                <UDim name="BottomRightRadius">
+                  <S>0</S>
+                  <O>8</O>
+                </UDim>
+                <UDim name="TopLeftRadius">
+                  <S>0</S>
+                  <O>8</O>
+                </UDim>
+                <UDim name="TopRightRadius">
+                  <S>0</S>
+                  <O>8</O>
+                </UDim>
+              </Properties>
+            </Item>
+          </Item>
+        </Item>
+      </Item>
+      <Item class="Frame" referent="84">
+        <Properties>
+          <string name="Name">Body</string>
+          <Vector2 name="AnchorPoint">
+            <X>0.5</X>
+            <Y>0</Y>
+          </Vector2>
+          <BinaryString name="AttributesSerialize">AQAAAAMAAABUYWICBQAAAEl0ZW1z</BinaryString>
+          <float name="BackgroundTransparency">1</float>
+          <UDim2 name="Position">
+            <XS>0.5</XS>
+            <XO>0</XO>
+            <YS>0</YS>
+            <YO>44</YO>
+          </UDim2>
+          <UDim2 name="Size">
+            <XS>1</XS>
+            <XO>-20</XO>
+            <YS>1</YS>
+            <YO>-54</YO>
+          </UDim2>
+          <int name="ZIndex">3</int>
+        </Properties>
+        <Item class="Frame" referent="85">
+          <Properties>
+            <string name="Name">Tabs</string>
+            <float name="BackgroundTransparency">1</float>
+            <UDim2 name="Size">
+              <XS>1</XS>
+              <XO>0</XO>
+              <YS>0</YS>
+              <YO>36</YO>
+            </UDim2>
+            <int name="ZIndex">3</int>
+          </Properties>
+          <Item class="UIListLayout" referent="86">
+            <Properties>
+              <string name="Name">UIListLayout</string>
+              <token name="FillDirection">0</token>
+              <UDim name="Padding">
+                <S>0</S>
+                <O>10</O>
+              </UDim>
+              <token name="SortOrder">2</token>
+            </Properties>
+          </Item>
+          <Item class="ImageButton" referent="87">
+            <Properties>
+              <string name="Name">ItemsTab</string>
+              <Vector2 name="AnchorPoint">
+                <X>0</X>
+                <Y>0</Y>
+              </Vector2>
+              <BinaryString name="AttributesSerialize">AgAAAAMAAABUYWICBQAAAEl0ZW1zBQAAAFRoZW1lAgQAAABibHVl</BinaryString>
+              <bool name="AutoButtonColor">false</bool>
+              <Color3 name="BackgroundColor3">
+                <R>1</R>
+                <G>1</G>
+                <B>1</B>
+              </Color3>
+              <float name="BackgroundTransparency">0</float>
+              <int name="BorderSizePixel">0</int>
+              <float name="ImageTransparency">1</float>
+              <int name="LayoutOrder">1</int>
+              <UDim2 name="Position">
+                <XS>0</XS>
+                <XO>0</XO>
+                <YS>0</YS>
+                <YO>0</YO>
+              </UDim2>
+              <token name="ScaleType">0</token>
+              <UDim2 name="Size">
+                <XS>0</XS>
+                <XO>150</XO>
+                <YS>0</YS>
+                <YO>34</YO>
+              </UDim2>
+              <int name="ZIndex">5</int>
+            </Properties>
+            <Item class="UICorner" referent="88">
+              <Properties>
+                <string name="Name">UICorner</string>
+                <UDim name="BottomLeftRadius">
+                  <S>0</S>
+                  <O>8</O>
+                </UDim>
+                <UDim name="BottomRightRadius">
+                  <S>0</S>
+                  <O>8</O>
+                </UDim>
+                <UDim name="TopLeftRadius">
+                  <S>0</S>
+                  <O>8</O>
+                </UDim>
+                <UDim name="TopRightRadius">
+                  <S>0</S>
+                  <O>8</O>
+                </UDim>
+              </Properties>
+            </Item>
+            <Item class="UIGradient" referent="89">
+              <Properties>
+                <string name="Name">UIGradient</string>
+                <ColorSequence name="Color">0 0.3137255 0.7058824 1 0 1 0.11764706 0.39215687 0.9019608 0 </ColorSequence>
+                <float name="Rotation">90</float>
+              </Properties>
+            </Item>
+            <Item class="UIStroke" referent="90">
+              <Properties>
+                <string name="Name">UIStroke</string>
+                <token name="ApplyStrokeMode">0</token>
+                <Color3 name="Color">
+                  <R>0.039215688</R>
+                  <G>0.15686275</G>
+                  <B>0.43137255</B>
+                </Color3>
+                <float name="Thickness">3</float>
+              </Properties>
+            </Item>
+            <Item class="CanvasGroup" referent="91">
+              <Properties>
+                <string name="Name">Studs</string>
+                <float name="BackgroundTransparency">1</float>
+                <int name="BorderSizePixel">0</int>
+                <float name="GroupTransparency">0</float>
+                <UDim2 name="Size">
+                  <XS>1</XS>
+                  <XO>0</XO>
+                  <YS>1</YS>
+                  <YO>0</YO>
+                </UDim2>
+                <int name="ZIndex">5</int>
+              </Properties>
+              <Item class="UICorner" referent="92">
+                <Properties>
+                  <string name="Name">UICorner</string>
+                  <UDim name="BottomLeftRadius">
+                    <S>0</S>
+                    <O>8</O>
+                  </UDim>
+                  <UDim name="BottomRightRadius">
+                    <S>0</S>
+                    <O>8</O>
+                  </UDim>
+                  <UDim name="TopLeftRadius">
+                    <S>0</S>
+                    <O>8</O>
+                  </UDim>
+                  <UDim name="TopRightRadius">
+                    <S>0</S>
+                    <O>8</O>
+                  </UDim>
+                </Properties>
+              </Item>
+              <Item class="ImageLabel" referent="93">
+                <Properties>
+                  <string name="Name">STUDS</string>
+                  <float name="BackgroundTransparency">1</float>
+                  <int name="BorderSizePixel">0</int>
+                  <Content name="ImageContent">
+                    <uri>rbxassetid://0</uri>
+                  </Content>
+                  <float name="ImageTransparency">0.5</float>
+                  <token name="ScaleType">2</token>
+                  <UDim2 name="Size">
+                    <XS>1</XS>
+                    <XO>0</XO>
+                    <YS>1</YS>
+                    <YO>0</YO>
+                  </UDim2>
+                  <UDim2 name="TileSize">
+                    <XS>0</XS>
+                    <XO>42</XO>
+                    <YS>0</YS>
+                    <YO>32</YO>
+                  </UDim2>
+                  <int name="ZIndex">5</int>
+                </Properties>
+              </Item>
+            </Item>
+            <Item class="UIScale" referent="94">
+              <Properties>
+                <string name="Name">Press</string>
+                <float name="Scale">1</float>
+              </Properties>
+            </Item>
+            <Item class="TextLabel" referent="95">
+              <Properties>
+                <string name="Name">Label</string>
+                <Vector2 name="AnchorPoint">
+                  <X>0.5</X>
+                  <Y>0.5</Y>
+                </Vector2>
+                <float name="BackgroundTransparency">1</float>
+                <int name="BorderSizePixel">0</int>
+                <Font name="FontFace">
+                  <Family>
+                    <url>rbxasset://fonts/families/FredokaOne.json</url>
+                  </Family>
+                  <Weight>400</Weight>
+                  <Style>Normal</Style>
+                </Font>
+                <UDim2 name="Position">
+                  <XS>0.5</XS>
+                  <XO>0</XO>
+                  <YS>0.5</YS>
+                  <YO>0</YO>
+                </UDim2>
+                <UDim2 name="Size">
+                  <XS>0.86</XS>
+                  <XO>0</XO>
+                  <YS>0.72</YS>
+                  <YO>0</YO>
+                </UDim2>
+                <string name="Text">ITEMS</string>
+                <Color3 name="TextColor3">
+                  <R>1</R>
+                  <G>1</G>
+                  <B>1</B>
+                </Color3>
+                <bool name="TextScaled">true</bool>
+                <float name="TextSize">8</float>
+                <bool name="TextWrapped">true</bool>
+                <token name="TextXAlignment">2</token>
+                <int name="ZIndex">7</int>
+              </Properties>
+              <Item class="UITextSizeConstraint" referent="96">
+                <Properties>
+                  <string name="Name">UITextSizeConstraint</string>
+                  <int name="MaxTextSize">26</int>
+                  <int name="MinTextSize">12</int>
+                </Properties>
+              </Item>
+              <Item class="UIStroke" referent="97">
+                <Properties>
+                  <string name="Name">UIStroke</string>
+                  <token name="ApplyStrokeMode">0</token>
+                  <Color3 name="Color">
+                    <R>0.039215688</R>
+                    <G>0.15686275</G>
+                    <B>0.43137255</B>
+                  </Color3>
+                  <float name="Thickness">2.5</float>
+                </Properties>
+              </Item>
+            </Item>
+            <Item class="Frame" referent="98">
+              <Properties>
+                <string name="Name">Dim</string>
+                <Color3 name="BackgroundColor3">
+                  <R>0</R>
+                  <G>0</G>
+                  <B>0</B>
+                </Color3>
+                <float name="BackgroundTransparency">0.5</float>
+                <int name="BorderSizePixel">0</int>
+                <UDim2 name="Size">
+                  <XS>1</XS>
+                  <XO>0</XO>
+                  <YS>1</YS>
+                  <YO>0</YO>
+                </UDim2>
+                <bool name="Visible">false</bool>
+                <int name="ZIndex">8</int>
+              </Properties>
+              <Item class="UICorner" referent="99">
+                <Properties>
+                  <string name="Name">UICorner</string>
+                  <UDim name="BottomLeftRadius">
+                    <S>0</S>
+                    <O>8</O>
+                  </UDim>
+                  <UDim name="BottomRightRadius">
+                    <S>0</S>
+                    <O>8</O>
+                  </UDim>
+                  <UDim name="TopLeftRadius">
+                    <S>0</S>
+                    <O>8</O>
+                  </UDim>
+                  <UDim name="TopRightRadius">
+                    <S>0</S>
+                    <O>8</O>
+                  </UDim>
+                </Properties>
+              </Item>
+            </Item>
+          </Item>
+          <Item class="ImageButton" referent="100">
+            <Properties>
+              <string name="Name">BoostsTab</string>
+              <Vector2 name="AnchorPoint">
+                <X>0</X>
+                <Y>0</Y>
+              </Vector2>
+              <BinaryString name="AttributesSerialize">AgAAAAMAAABUYWICBgAAAEJvb3N0cwUAAABUaGVtZQIEAAAAYmx1ZQ==</BinaryString>
+              <bool name="AutoButtonColor">false</bool>
+              <Color3 name="BackgroundColor3">
+                <R>1</R>
+                <G>1</G>
+                <B>1</B>
+              </Color3>
+              <float name="BackgroundTransparency">0</float>
+              <int name="BorderSizePixel">0</int>
+              <float name="ImageTransparency">1</float>
+              <int name="LayoutOrder">2</int>
+              <UDim2 name="Position">
+                <XS>0</XS>
+                <XO>0</XO>
+                <YS>0</YS>
+                <YO>0</YO>
+              </UDim2>
+              <token name="ScaleType">0</token>
+              <UDim2 name="Size">
+                <XS>0</XS>
+                <XO>150</XO>
+                <YS>0</YS>
+                <YO>34</YO>
+              </UDim2>
+              <int name="ZIndex">5</int>
+            </Properties>
+            <Item class="UICorner" referent="101">
+              <Properties>
+                <string name="Name">UICorner</string>
+                <UDim name="BottomLeftRadius">
+                  <S>0</S>
+                  <O>8</O>
+                </UDim>
+                <UDim name="BottomRightRadius">
+                  <S>0</S>
+                  <O>8</O>
+                </UDim>
+                <UDim name="TopLeftRadius">
+                  <S>0</S>
+                  <O>8</O>
+                </UDim>
+                <UDim name="TopRightRadius">
+                  <S>0</S>
+                  <O>8</O>
+                </UDim>
+              </Properties>
+            </Item>
+            <Item class="UIGradient" referent="102">
+              <Properties>
+                <string name="Name">UIGradient</string>
+                <ColorSequence name="Color">0 0.3137255 0.7058824 1 0 1 0.11764706 0.39215687 0.9019608 0 </ColorSequence>
+                <float name="Rotation">90</float>
+              </Properties>
+            </Item>
+            <Item class="UIStroke" referent="103">
+              <Properties>
+                <string name="Name">UIStroke</string>
+                <token name="ApplyStrokeMode">0</token>
+                <Color3 name="Color">
+                  <R>0.039215688</R>
+                  <G>0.15686275</G>
+                  <B>0.43137255</B>
+                </Color3>
+                <float name="Thickness">3</float>
+              </Properties>
+            </Item>
+            <Item class="CanvasGroup" referent="104">
+              <Properties>
+                <string name="Name">Studs</string>
+                <float name="BackgroundTransparency">1</float>
+                <int name="BorderSizePixel">0</int>
+                <float name="GroupTransparency">0</float>
+                <UDim2 name="Size">
+                  <XS>1</XS>
+                  <XO>0</XO>
+                  <YS>1</YS>
+                  <YO>0</YO>
+                </UDim2>
+                <int name="ZIndex">5</int>
+              </Properties>
+              <Item class="UICorner" referent="105">
+                <Properties>
+                  <string name="Name">UICorner</string>
+                  <UDim name="BottomLeftRadius">
+                    <S>0</S>
+                    <O>8</O>
+                  </UDim>
+                  <UDim name="BottomRightRadius">
+                    <S>0</S>
+                    <O>8</O>
+                  </UDim>
+                  <UDim name="TopLeftRadius">
+                    <S>0</S>
+                    <O>8</O>
+                  </UDim>
+                  <UDim name="TopRightRadius">
+                    <S>0</S>
+                    <O>8</O>
+                  </UDim>
+                </Properties>
+              </Item>
+              <Item class="ImageLabel" referent="106">
+                <Properties>
+                  <string name="Name">STUDS</string>
+                  <float name="BackgroundTransparency">1</float>
+                  <int name="BorderSizePixel">0</int>
+                  <Content name="ImageContent">
+                    <uri>rbxassetid://0</uri>
+                  </Content>
+                  <float name="ImageTransparency">0.5</float>
+                  <token name="ScaleType">2</token>
+                  <UDim2 name="Size">
+                    <XS>1</XS>
+                    <XO>0</XO>
+                    <YS>1</YS>
+                    <YO>0</YO>
+                  </UDim2>
+                  <UDim2 name="TileSize">
+                    <XS>0</XS>
+                    <XO>42</XO>
+                    <YS>0</YS>
+                    <YO>32</YO>
+                  </UDim2>
+                  <int name="ZIndex">5</int>
+                </Properties>
+              </Item>
+            </Item>
+            <Item class="UIScale" referent="107">
+              <Properties>
+                <string name="Name">Press</string>
+                <float name="Scale">1</float>
+              </Properties>
+            </Item>
+            <Item class="TextLabel" referent="108">
+              <Properties>
+                <string name="Name">Label</string>
+                <Vector2 name="AnchorPoint">
+                  <X>0.5</X>
+                  <Y>0.5</Y>
+                </Vector2>
+                <float name="BackgroundTransparency">1</float>
+                <int name="BorderSizePixel">0</int>
+                <Font name="FontFace">
+                  <Family>
+                    <url>rbxasset://fonts/families/FredokaOne.json</url>
+                  </Family>
+                  <Weight>400</Weight>
+                  <Style>Normal</Style>
+                </Font>
+                <UDim2 name="Position">
+                  <XS>0.5</XS>
+                  <XO>0</XO>
+                  <YS>0.5</YS>
+                  <YO>0</YO>
+                </UDim2>
+                <UDim2 name="Size">
+                  <XS>0.86</XS>
+                  <XO>0</XO>
+                  <YS>0.72</YS>
+                  <YO>0</YO>
+                </UDim2>
+                <string name="Text">BOOSTS</string>
+                <Color3 name="TextColor3">
+                  <R>1</R>
+                  <G>1</G>
+                  <B>1</B>
+                </Color3>
+                <bool name="TextScaled">true</bool>
+                <float name="TextSize">8</float>
+                <bool name="TextWrapped">true</bool>
+                <token name="TextXAlignment">2</token>
+                <int name="ZIndex">7</int>
+              </Properties>
+              <Item class="UITextSizeConstraint" referent="109">
+                <Properties>
+                  <string name="Name">UITextSizeConstraint</string>
+                  <int name="MaxTextSize">26</int>
+                  <int name="MinTextSize">12</int>
+                </Properties>
+              </Item>
+              <Item class="UIStroke" referent="110">
+                <Properties>
+                  <string name="Name">UIStroke</string>
+                  <token name="ApplyStrokeMode">0</token>
+                  <Color3 name="Color">
+                    <R>0.039215688</R>
+                    <G>0.15686275</G>
+                    <B>0.43137255</B>
+                  </Color3>
+                  <float name="Thickness">2.5</float>
+                </Properties>
+              </Item>
+            </Item>
+            <Item class="Frame" referent="111">
+              <Properties>
+                <string name="Name">Dim</string>
+                <Color3 name="BackgroundColor3">
+                  <R>0</R>
+                  <G>0</G>
+                  <B>0</B>
+                </Color3>
+                <float name="BackgroundTransparency">0.5</float>
+                <int name="BorderSizePixel">0</int>
+                <UDim2 name="Size">
+                  <XS>1</XS>
+                  <XO>0</XO>
+                  <YS>1</YS>
+                  <YO>0</YO>
+                </UDim2>
+                <bool name="Visible">true</bool>
+                <int name="ZIndex">8</int>
+              </Properties>
+              <Item class="UICorner" referent="112">
+                <Properties>
+                  <string name="Name">UICorner</string>
+                  <UDim name="BottomLeftRadius">
+                    <S>0</S>
+                    <O>8</O>
+                  </UDim>
+                  <UDim name="BottomRightRadius">
+                    <S>0</S>
+                    <O>8</O>
+                  </UDim>
+                  <UDim name="TopLeftRadius">
+                    <S>0</S>
+                    <O>8</O>
+                  </UDim>
+                  <UDim name="TopRightRadius">
+                    <S>0</S>
+                    <O>8</O>
+                  </UDim>
+                </Properties>
+              </Item>
+            </Item>
+          </Item>
+        </Item>
+        <Item class="Frame" referent="113">
+          <Properties>
+            <string name="Name">ItemCard</string>
+            <Vector2 name="AnchorPoint">
+              <X>0</X>
+              <Y>0</Y>
+            </Vector2>
+            <Color3 name="BackgroundColor3">
+              <R>0.23529412</R>
+              <G>0.24705882</G>
+              <B>0.28235295</B>
+            </Color3>
+            <float name="BackgroundTransparency">0</float>
+            <int name="BorderSizePixel">0</int>
+            <UDim2 name="Position">
+              <XS>0</XS>
+              <XO>0</XO>
+              <YS>0</YS>
+              <YO>44</YO>
+            </UDim2>
+            <UDim2 name="Size">
+              <XS>0</XS>
+              <XO>230</XO>
+              <YS>1</YS>
+              <YO>-44</YO>
+            </UDim2>
+            <int name="ZIndex">3</int>
+          </Properties>
+          <Item class="UICorner" referent="114">
+            <Properties>
+              <string name="Name">UICorner</string>
+              <UDim name="BottomLeftRadius">
+                <S>0</S>
+                <O>8</O>
+              </UDim>
+              <UDim name="BottomRightRadius">
+                <S>0</S>
+                <O>8</O>
+              </UDim>
+              <UDim name="TopLeftRadius">
+                <S>0</S>
+                <O>8</O>
+              </UDim>
+              <UDim name="TopRightRadius">
+                <S>0</S>
+                <O>8</O>
+              </UDim>
+            </Properties>
+          </Item>
+          <Item class="UIStroke" referent="115">
+            <Properties>
+              <string name="Name">UIStroke</string>
+              <token name="ApplyStrokeMode">0</token>
+              <Color3 name="Color">
+                <R>0.08627451</R>
+                <G>0.08627451</G>
+                <B>0.10980392</B>
+              </Color3>
+              <float name="Thickness">2.5</float>
+            </Properties>
+          </Item>
+          <Item class="CanvasGroup" referent="116">
+            <Properties>
+              <string name="Name">Studs</string>
+              <float name="BackgroundTransparency">1</float>
+              <int name="BorderSizePixel">0</int>
+              <float name="GroupTransparency">0</float>
+              <UDim2 name="Size">
+                <XS>1</XS>
+                <XO>0</XO>
+                <YS>1</YS>
+                <YO>0</YO>
+              </UDim2>
+              <int name="ZIndex">3</int>
+            </Properties>
+            <Item class="UICorner" referent="117">
+              <Properties>
+                <string name="Name">UICorner</string>
+                <UDim name="BottomLeftRadius">
+                  <S>0</S>
+                  <O>8</O>
+                </UDim>
+                <UDim name="BottomRightRadius">
+                  <S>0</S>
+                  <O>8</O>
+                </UDim>
+                <UDim name="TopLeftRadius">
+                  <S>0</S>
+                  <O>8</O>
+                </UDim>
+                <UDim name="TopRightRadius">
+                  <S>0</S>
+                  <O>8</O>
+                </UDim>
+              </Properties>
+            </Item>
+            <Item class="ImageLabel" referent="118">
+              <Properties>
+                <string name="Name">STUDS</string>
+                <float name="BackgroundTransparency">1</float>
+                <int name="BorderSizePixel">0</int>
+                <Content name="ImageContent">
+                  <uri>rbxassetid://0</uri>
+                </Content>
+                <float name="ImageTransparency">0.6</float>
+                <token name="ScaleType">2</token>
+                <UDim2 name="Size">
+                  <XS>1</XS>
+                  <XO>0</XO>
+                  <YS>1</YS>
+                  <YO>0</YO>
+                </UDim2>
+                <UDim2 name="TileSize">
+                  <XS>0</XS>
+                  <XO>42</XO>
+                  <YS>0</YS>
+                  <YO>32</YO>
+                </UDim2>
+                <int name="ZIndex">3</int>
+              </Properties>
+            </Item>
+          </Item>
+          <Item class="UIGradient" referent="119">
+            <Properties>
+              <string name="Name">Shade</string>
+              <ColorSequence name="Color">0 1 1 1 0 1 0.5882353 0.5882353 0.627451 0 </ColorSequence>
+              <float name="Rotation">90</float>
+            </Properties>
+          </Item>
+          <Item class="Frame" referent="120">
+            <Properties>
+              <string name="Name">Head</string>
+              <Color3 name="BackgroundColor3">
+                <R>1</R>
+                <G>1</G>
+                <B>1</B>
+              </Color3>
+              <int name="BorderSizePixel">0</int>
+              <UDim2 name="Size">
+                <XS>1</XS>
+                <XO>0</XO>
+                <YS>0</YS>
+                <YO>38</YO>
+              </UDim2>
+              <int name="ZIndex">4</int>
+            </Properties>
+            <Item class="UICorner" referent="121">
+              <Properties>
+                <string name="Name">UICorner</string>
+                <UDim name="BottomLeftRadius">
+                  <S>0</S>
+                  <O>8</O>
+                </UDim>
+                <UDim name="BottomRightRadius">
+                  <S>0</S>
+                  <O>8</O>
+                </UDim>
+                <UDim name="TopLeftRadius">
+                  <S>0</S>
+                  <O>8</O>
+                </UDim>
+                <UDim name="TopRightRadius">
+                  <S>0</S>
+                  <O>8</O>
+                </UDim>
+              </Properties>
+            </Item>
+            <Item class="UIGradient" referent="122">
+              <Properties>
+                <string name="Name">UIGradient</string>
+                <ColorSequence name="Color">0 1 0.6666667 0.23529412 0 1 0.92156863 0.39215687 0.039215688 0 </ColorSequence>
+                <float name="Rotation">90</float>
+              </Properties>
+            </Item>
+            <Item class="UIStroke" referent="123">
+              <Properties>
+                <string name="Name">UIStroke</string>
+                <token name="ApplyStrokeMode">0</token>
+                <Color3 name="Color">
+                  <R>0.39215687</R>
+                  <G>0.15686275</G>
+                  <B>0</B>
+                </Color3>
+                <float name="Thickness">2.5</float>
+              </Properties>
+            </Item>
+            <Item class="CanvasGroup" referent="124">
+              <Properties>
+                <string name="Name">Studs</string>
+                <float name="BackgroundTransparency">1</float>
+                <int name="BorderSizePixel">0</int>
+                <float name="GroupTransparency">0</float>
+                <UDim2 name="Size">
+                  <XS>1</XS>
+                  <XO>0</XO>
+                  <YS>1</YS>
+                  <YO>0</YO>
+                </UDim2>
+                <int name="ZIndex">4</int>
+              </Properties>
+              <Item class="UICorner" referent="125">
+                <Properties>
+                  <string name="Name">UICorner</string>
+                  <UDim name="BottomLeftRadius">
+                    <S>0</S>
+                    <O>8</O>
+                  </UDim>
+                  <UDim name="BottomRightRadius">
+                    <S>0</S>
+                    <O>8</O>
+                  </UDim>
+                  <UDim name="TopLeftRadius">
+                    <S>0</S>
+                    <O>8</O>
+                  </UDim>
+                  <UDim name="TopRightRadius">
+                    <S>0</S>
+                    <O>8</O>
+                  </UDim>
+                </Properties>
+              </Item>
+              <Item class="ImageLabel" referent="126">
+                <Properties>
+                  <string name="Name">STUDS</string>
+                  <float name="BackgroundTransparency">1</float>
+                  <int name="BorderSizePixel">0</int>
+                  <Content name="ImageContent">
+                    <uri>rbxassetid://0</uri>
+                  </Content>
+                  <float name="ImageTransparency">0.5</float>
+                  <token name="ScaleType">2</token>
+                  <UDim2 name="Size">
+                    <XS>1</XS>
+                    <XO>0</XO>
+                    <YS>1</YS>
+                    <YO>0</YO>
+                  </UDim2>
+                  <UDim2 name="TileSize">
+                    <XS>0</XS>
+                    <XO>42</XO>
+                    <YS>0</YS>
+                    <YO>32</YO>
+                  </UDim2>
+                  <int name="ZIndex">4</int>
+                </Properties>
+              </Item>
+            </Item>
+            <Item class="TextLabel" referent="127">
+              <Properties>
+                <string name="Name">Title</string>
+                <Vector2 name="AnchorPoint">
+                  <X>0.5</X>
+                  <Y>0.5</Y>
+                </Vector2>
+                <float name="BackgroundTransparency">1</float>
+                <int name="BorderSizePixel">0</int>
+                <Font name="FontFace">
+                  <Family>
+                    <url>rbxasset://fonts/families/FredokaOne.json</url>
+                  </Family>
+                  <Weight>400</Weight>
+                  <Style>Normal</Style>
+                </Font>
+                <UDim2 name="Position">
+                  <XS>0.5</XS>
+                  <XO>0</XO>
+                  <YS>0.5</YS>
+                  <YO>0</YO>
+                </UDim2>
+                <UDim2 name="Size">
+                  <XS>1</XS>
+                  <XO>-12</XO>
+                  <YS>0.78</YS>
+                  <YO>0</YO>
+                </UDim2>
+                <string name="Text">IRON HAMMER</string>
+                <Color3 name="TextColor3">
+                  <R>1</R>
+                  <G>1</G>
+                  <B>1</B>
+                </Color3>
+                <bool name="TextScaled">true</bool>
+                <float name="TextSize">8</float>
+                <bool name="TextWrapped">true</bool>
+                <token name="TextXAlignment">2</token>
+                <int name="ZIndex">6</int>
+              </Properties>
+              <Item class="UITextSizeConstraint" referent="128">
+                <Properties>
+                  <string name="Name">UITextSizeConstraint</string>
+                  <int name="MaxTextSize">26</int>
+                  <int name="MinTextSize">12</int>
+                </Properties>
+              </Item>
+              <Item class="UIStroke" referent="129">
+                <Properties>
+                  <string name="Name">UIStroke</string>
+                  <token name="ApplyStrokeMode">0</token>
+                  <Color3 name="Color">
+                    <R>0.39215687</R>
+                    <G>0.15686275</G>
+                    <B>0</B>
+                  </Color3>
+                  <float name="Thickness">2.5</float>
+                </Properties>
+              </Item>
+            </Item>
+          </Item>
+          <Item class="Frame" referent="130">
+            <Properties>
+              <string name="Name">Stage</string>
+              <Vector2 name="AnchorPoint">
+                <X>0.5</X>
+                <Y>0</Y>
+              </Vector2>
+              <BinaryString name="AttributesSerialize">AQAAAAQAAABOb3RlAlAAAABQdXQgYSBWaWV3cG9ydEZyYW1lIG9yIEltYWdlTGFiZWwgaGVyZSAoM0QgcHJldmlld3M6IGRvY3Mvdmlld3BvcnQtcHJldmlld3MubWQpLg==</BinaryString>
+              <Color3 name="BackgroundColor3">
+                <R>0.10980392</R>
+                <G>0.11372549</G>
+                <B>0.13333334</B>
+              </Color3>
+              <float name="BackgroundTransparency">0</float>
+              <int name="BorderSizePixel">0</int>
+              <UDim2 name="Position">
+                <XS>0.5</XS>
+                <XO>0</XO>
+                <YS>0</YS>
+                <YO>46</YO>
+              </UDim2>
+              <UDim2 name="Size">
+                <XS>1</XS>
+                <XO>-20</XO>
+                <YS>0</YS>
+                <YO>92</YO>
+              </UDim2>
+              <int name="ZIndex">4</int>
+            </Properties>
+            <Item class="UICorner" referent="131">
+              <Properties>
+                <string name="Name">UICorner</string>
+                <UDim name="BottomLeftRadius">
+                  <S>0</S>
+                  <O>8</O>
+                </UDim>
+                <UDim name="BottomRightRadius">
+                  <S>0</S>
+                  <O>8</O>
+                </UDim>
+                <UDim name="TopLeftRadius">
+                  <S>0</S>
+                  <O>8</O>
+                </UDim>
+                <UDim name="TopRightRadius">
+                  <S>0</S>
+                  <O>8</O>
+                </UDim>
+              </Properties>
+            </Item>
+            <Item class="UIStroke" referent="132">
+              <Properties>
+                <string name="Name">UIStroke</string>
+                <token name="ApplyStrokeMode">0</token>
+                <Color3 name="Color">
+                  <R>0.27450982</R>
+                  <G>0.28235295</G>
+                  <B>0.3137255</B>
+                </Color3>
+                <float name="Thickness">2.5</float>
+              </Properties>
+            </Item>
+            <Item class="CanvasGroup" referent="133">
+              <Properties>
+                <string name="Name">Studs</string>
+                <float name="BackgroundTransparency">1</float>
+                <int name="BorderSizePixel">0</int>
+                <float name="GroupTransparency">0</float>
+                <UDim2 name="Size">
+                  <XS>1</XS>
+                  <XO>0</XO>
+                  <YS>1</YS>
+                  <YO>0</YO>
+                </UDim2>
+                <int name="ZIndex">4</int>
+              </Properties>
+              <Item class="UICorner" referent="134">
+                <Properties>
+                  <string name="Name">UICorner</string>
+                  <UDim name="BottomLeftRadius">
+                    <S>0</S>
+                    <O>8</O>
+                  </UDim>
+                  <UDim name="BottomRightRadius">
+                    <S>0</S>
+                    <O>8</O>
+                  </UDim>
+                  <UDim name="TopLeftRadius">
+                    <S>0</S>
+                    <O>8</O>
+                  </UDim>
+                  <UDim name="TopRightRadius">
+                    <S>0</S>
+                    <O>8</O>
+                  </UDim>
+                </Properties>
+              </Item>
+              <Item class="ImageLabel" referent="135">
+                <Properties>
+                  <string name="Name">STUDS</string>
+                  <float name="BackgroundTransparency">1</float>
+                  <int name="BorderSizePixel">0</int>
+                  <Content name="ImageContent">
+                    <uri>rbxassetid://0</uri>
+                  </Content>
+                  <float name="ImageTransparency">0.6</float>
+                  <token name="ScaleType">2</token>
+                  <UDim2 name="Size">
+                    <XS>1</XS>
+                    <XO>0</XO>
+                    <YS>1</YS>
+                    <YO>0</YO>
+                  </UDim2>
+                  <UDim2 name="TileSize">
+                    <XS>0</XS>
+                    <XO>42</XO>
+                    <YS>0</YS>
+                    <YO>32</YO>
+                  </UDim2>
+                  <int name="ZIndex">4</int>
+                </Properties>
+              </Item>
+            </Item>
+            <Item class="UIGradient" referent="136">
+              <Properties>
+                <string name="Name">Shade</string>
+                <ColorSequence name="Color">0 1 1 1 0 1 0.5882353 0.5882353 0.627451 0 </ColorSequence>
+                <float name="Rotation">90</float>
+              </Properties>
+            </Item>
+          </Item>
+          <Item class="TextLabel" referent="137">
+            <Properties>
+              <string name="Name">Line1</string>
+              <Vector2 name="AnchorPoint">
+                <X>0.5</X>
+                <Y>0</Y>
+              </Vector2>
+              <float name="BackgroundTransparency">1</float>
+              <int name="BorderSizePixel">0</int>
+              <Font name="FontFace">
+                <Family>
+                  <url>rbxasset://fonts/families/FredokaOne.json</url>
+                </Family>
+                <Weight>400</Weight>
+                <Style>Normal</Style>
+              </Font>
+              <UDim2 name="Position">
+                <XS>0.5</XS>
+                <XO>0</XO>
+                <YS>0</YS>
+                <YO>144</YO>
+              </UDim2>
+              <UDim2 name="Size">
+                <XS>1</XS>
+                <XO>-12</XO>
+                <YS>0</YS>
+                <YO>24</YO>
+              </UDim2>
+              <string name="Text">Shatter -5%</string>
+              <Color3 name="TextColor3">
+                <R>1</R>
+                <G>1</G>
+                <B>1</B>
+              </Color3>
+              <bool name="TextScaled">true</bool>
+              <float name="TextSize">8</float>
+              <bool name="TextWrapped">true</bool>
+              <token name="TextXAlignment">2</token>
+              <int name="ZIndex">5</int>
+            </Properties>
+            <Item class="UITextSizeConstraint" referent="138">
+              <Properties>
+                <string name="Name">UITextSizeConstraint</string>
+                <int name="MaxTextSize">22</int>
+                <int name="MinTextSize">12</int>
+              </Properties>
+            </Item>
+            <Item class="UIStroke" referent="139">
+              <Properties>
+                <string name="Name">UIStroke</string>
+                <token name="ApplyStrokeMode">0</token>
+                <Color3 name="Color">
+                  <R>0.078431375</R>
+                  <G>0.078431375</G>
+                  <B>0.101960786</B>
+                </Color3>
+                <float name="Thickness">2</float>
+              </Properties>
+            </Item>
+          </Item>
+          <Item class="TextLabel" referent="140">
+            <Properties>
+              <string name="Name">Price</string>
+              <Vector2 name="AnchorPoint">
+                <X>0.5</X>
+                <Y>0</Y>
+              </Vector2>
+              <float name="BackgroundTransparency">1</float>
+              <int name="BorderSizePixel">0</int>
+              <Font name="FontFace">
+                <Family>
+                  <url>rbxasset://fonts/families/FredokaOne.json</url>
+                </Family>
+                <Weight>400</Weight>
+                <Style>Normal</Style>
+              </Font>
+              <UDim2 name="Position">
+                <XS>0.5</XS>
+                <XO>0</XO>
+                <YS>0</YS>
+                <YO>168</YO>
+              </UDim2>
+              <UDim2 name="Size">
+                <XS>1</XS>
+                <XO>-12</XO>
+                <YS>0</YS>
+                <YO>26</YO>
+              </UDim2>
+              <string name="Text">$500</string>
+              <Color3 name="TextColor3">
+                <R>1</R>
+                <G>0.88235295</G>
+                <B>0.3137255</B>
+              </Color3>
+              <bool name="TextScaled">true</bool>
+              <float name="TextSize">8</float>
+              <bool name="TextWrapped">true</bool>
+              <token name="TextXAlignment">2</token>
+              <int name="ZIndex">5</int>
+            </Properties>
+            <Item class="UITextSizeConstraint" referent="141">
+              <Properties>
+                <string name="Name">UITextSizeConstraint</string>
+                <int name="MaxTextSize">24</int>
+                <int name="MinTextSize">12</int>
+              </Properties>
+            </Item>
+            <Item class="UIStroke" referent="142">
+              <Properties>
+                <string name="Name">UIStroke</string>
+                <token name="ApplyStrokeMode">0</token>
+                <Color3 name="Color">
+                  <R>0.078431375</R>
+                  <G>0.078431375</G>
+                  <B>0.101960786</B>
+                </Color3>
+                <float name="Thickness">2.5</float>
+              </Properties>
+            </Item>
+          </Item>
+          <Item class="ImageButton" referent="143">
+            <Properties>
+              <string name="Name">Buy</string>
+              <Vector2 name="AnchorPoint">
+                <X>0.5</X>
+                <Y>1</Y>
+              </Vector2>
+              <BinaryString name="AttributesSerialize">AQAAAAUAAABUaGVtZQIFAAAAZ3JlZW4=</BinaryString>
+              <bool name="AutoButtonColor">false</bool>
+              <Color3 name="BackgroundColor3">
+                <R>1</R>
+                <G>1</G>
+                <B>1</B>
+              </Color3>
+              <float name="BackgroundTransparency">0</float>
+              <int name="BorderSizePixel">0</int>
+              <float name="ImageTransparency">1</float>
+              <UDim2 name="Position">
+                <XS>0.5</XS>
+                <XO>0</XO>
+                <YS>1</YS>
+                <YO>-8</YO>
+              </UDim2>
+              <token name="ScaleType">0</token>
+              <UDim2 name="Size">
+                <XS>1</XS>
+                <XO>-20</XO>
+                <YS>0</YS>
+                <YO>44</YO>
+              </UDim2>
+              <int name="ZIndex">4</int>
+            </Properties>
+            <Item class="UICorner" referent="144">
+              <Properties>
+                <string name="Name">UICorner</string>
+                <UDim name="BottomLeftRadius">
+                  <S>0</S>
+                  <O>8</O>
+                </UDim>
+                <UDim name="BottomRightRadius">
+                  <S>0</S>
+                  <O>8</O>
+                </UDim>
+                <UDim name="TopLeftRadius">
+                  <S>0</S>
+                  <O>8</O>
+                </UDim>
+                <UDim name="TopRightRadius">
+                  <S>0</S>
+                  <O>8</O>
+                </UDim>
+              </Properties>
+            </Item>
+            <Item class="UIGradient" referent="145">
+              <Properties>
+                <string name="Name">UIGradient</string>
+                <ColorSequence name="Color">0 0.50980395 1 0.27450982 0 1 0.15686275 0.74509805 0.11764706 0 </ColorSequence>
+                <float name="Rotation">90</float>
+              </Properties>
+            </Item>
+            <Item class="UIStroke" referent="146">
+              <Properties>
+                <string name="Name">UIStroke</string>
+                <token name="ApplyStrokeMode">0</token>
+                <Color3 name="Color">
+                  <R>0.05490196</R>
+                  <G>0.3137255</G>
+                  <B>0.039215688</B>
+                </Color3>
+                <float name="Thickness">3</float>
+              </Properties>
+            </Item>
+            <Item class="CanvasGroup" referent="147">
+              <Properties>
+                <string name="Name">Studs</string>
+                <float name="BackgroundTransparency">1</float>
+                <int name="BorderSizePixel">0</int>
+                <float name="GroupTransparency">0</float>
+                <UDim2 name="Size">
+                  <XS>1</XS>
+                  <XO>0</XO>
+                  <YS>1</YS>
+                  <YO>0</YO>
+                </UDim2>
+                <int name="ZIndex">4</int>
+              </Properties>
+              <Item class="UICorner" referent="148">
+                <Properties>
+                  <string name="Name">UICorner</string>
+                  <UDim name="BottomLeftRadius">
+                    <S>0</S>
+                    <O>8</O>
+                  </UDim>
+                  <UDim name="BottomRightRadius">
+                    <S>0</S>
+                    <O>8</O>
+                  </UDim>
+                  <UDim name="TopLeftRadius">
+                    <S>0</S>
+                    <O>8</O>
+                  </UDim>
+                  <UDim name="TopRightRadius">
+                    <S>0</S>
+                    <O>8</O>
+                  </UDim>
+                </Properties>
+              </Item>
+              <Item class="ImageLabel" referent="149">
+                <Properties>
+                  <string name="Name">STUDS</string>
+                  <float name="BackgroundTransparency">1</float>
+                  <int name="BorderSizePixel">0</int>
+                  <Content name="ImageContent">
+                    <uri>rbxassetid://0</uri>
+                  </Content>
+                  <float name="ImageTransparency">0.5</float>
+                  <token name="ScaleType">2</token>
+                  <UDim2 name="Size">
+                    <XS>1</XS>
+                    <XO>0</XO>
+                    <YS>1</YS>
+                    <YO>0</YO>
+                  </UDim2>
+                  <UDim2 name="TileSize">
+                    <XS>0</XS>
+                    <XO>42</XO>
+                    <YS>0</YS>
+                    <YO>32</YO>
+                  </UDim2>
+                  <int name="ZIndex">4</int>
+                </Properties>
+              </Item>
+            </Item>
+            <Item class="UIScale" referent="150">
+              <Properties>
+                <string name="Name">Press</string>
+                <float name="Scale">1</float>
+              </Properties>
+            </Item>
+            <Item class="TextLabel" referent="151">
+              <Properties>
+                <string name="Name">Label</string>
+                <Vector2 name="AnchorPoint">
+                  <X>0.5</X>
+                  <Y>0.5</Y>
+                </Vector2>
+                <float name="BackgroundTransparency">1</float>
+                <int name="BorderSizePixel">0</int>
+                <Font name="FontFace">
+                  <Family>
+                    <url>rbxasset://fonts/families/FredokaOne.json</url>
+                  </Family>
+                  <Weight>400</Weight>
+                  <Style>Normal</Style>
+                </Font>
+                <UDim2 name="Position">
+                  <XS>0.5</XS>
+                  <XO>0</XO>
+                  <YS>0.5</YS>
+                  <YO>0</YO>
+                </UDim2>
+                <UDim2 name="Size">
+                  <XS>0.86</XS>
+                  <XO>0</XO>
+                  <YS>0.72</YS>
+                  <YO>0</YO>
+                </UDim2>
+                <string name="Text">BUY</string>
+                <Color3 name="TextColor3">
+                  <R>1</R>
+                  <G>1</G>
+                  <B>1</B>
+                </Color3>
+                <bool name="TextScaled">true</bool>
+                <float name="TextSize">8</float>
+                <bool name="TextWrapped">true</bool>
+                <token name="TextXAlignment">2</token>
+                <int name="ZIndex">6</int>
+              </Properties>
+              <Item class="UITextSizeConstraint" referent="152">
+                <Properties>
+                  <string name="Name">UITextSizeConstraint</string>
+                  <int name="MaxTextSize">28</int>
+                  <int name="MinTextSize">12</int>
+                </Properties>
+              </Item>
+              <Item class="UIStroke" referent="153">
+                <Properties>
+                  <string name="Name">UIStroke</string>
+                  <token name="ApplyStrokeMode">0</token>
+                  <Color3 name="Color">
+                    <R>0.05490196</R>
+                    <G>0.3137255</G>
+                    <B>0.039215688</B>
+                  </Color3>
+                  <float name="Thickness">3</float>
+                </Properties>
+              </Item>
+            </Item>
+            <Item class="Frame" referent="154">
+              <Properties>
+                <string name="Name">Dim</string>
+                <Color3 name="BackgroundColor3">
+                  <R>0</R>
+                  <G>0</G>
+                  <B>0</B>
+                </Color3>
+                <float name="BackgroundTransparency">0.5</float>
+                <int name="BorderSizePixel">0</int>
+                <UDim2 name="Size">
+                  <XS>1</XS>
+                  <XO>0</XO>
+                  <YS>1</YS>
+                  <YO>0</YO>
+                </UDim2>
+                <bool name="Visible">false</bool>
+                <int name="ZIndex">7</int>
+              </Properties>
+              <Item class="UICorner" referent="155">
+                <Properties>
+                  <string name="Name">UICorner</string>
+                  <UDim name="BottomLeftRadius">
+                    <S>0</S>
+                    <O>8</O>
+                  </UDim>
+                  <UDim name="BottomRightRadius">
+                    <S>0</S>
+                    <O>8</O>
+                  </UDim>
+                  <UDim name="TopLeftRadius">
+                    <S>0</S>
+                    <O>8</O>
+                  </UDim>
+                  <UDim name="TopRightRadius">
+                    <S>0</S>
+                    <O>8</O>
+                  </UDim>
+                </Properties>
+              </Item>
+            </Item>
+            <Item class="Frame" referent="156">
+              <Properties>
+                <string name="Name">Shine</string>
+                <Color3 name="BackgroundColor3">
+                  <R>1</R>
+                  <G>1</G>
+                  <B>1</B>
+                </Color3>
+                <float name="BackgroundTransparency">0</float>
+                <int name="BorderSizePixel">0</int>
+                <UDim2 name="Size">
+                  <XS>1</XS>
+                  <XO>0</XO>
+                  <YS>1</YS>
+                  <YO>0</YO>
+                </UDim2>
+                <int name="ZIndex">5</int>
+              </Properties>
+              <Item class="UICorner" referent="157">
+                <Properties>
+                  <string name="Name">UICorner</string>
+                  <UDim name="BottomLeftRadius">
+                    <S>0</S>
+                    <O>8</O>
+                  </UDim>
+                  <UDim name="BottomRightRadius">
+                    <S>0</S>
+                    <O>8</O>
+                  </UDim>
+                  <UDim name="TopLeftRadius">
+                    <S>0</S>
+                    <O>8</O>
+                  </UDim>
+                  <UDim name="TopRightRadius">
+                    <S>0</S>
+                    <O>8</O>
+                  </UDim>
+                </Properties>
+              </Item>
+              <Item class="UIGradient" referent="158">
+                <Properties>
+                  <string name="Name">ShineGradient</string>
+                  <Vector2 name="Offset">
+                    <X>-1</X>
+                    <Y>0</Y>
+                  </Vector2>
+                  <float name="Rotation">20</float>
+                  <NumberSequence name="Transparency">0 1 0 0.42 1 0 0.5 0.45 0 0.58 1 0 1 1 0 </NumberSequence>
+                </Properties>
+              </Item>
+            </Item>
+          </Item>
+        </Item>
+        <Item class="TextLabel" referent="159">
+          <Properties>
+            <string name="Name">Info</string>
+            <Vector2 name="AnchorPoint">
+              <X>0</X>
+              <Y>0</Y>
+            </Vector2>
+            <float name="BackgroundTransparency">1</float>
+            <int name="BorderSizePixel">0</int>
+            <Font name="FontFace">
+              <Family>
+                <url>rbxasset://fonts/families/FredokaOne.json</url>
+              </Family>
+              <Weight>400</Weight>
+              <Style>Normal</Style>
+            </Font>
+            <UDim2 name="Position">
+              <XS>0</XS>
+              <XO>244</XO>
+              <YS>0</YS>
+              <YO>52</YO>
+            </UDim2>
+            <UDim2 name="Size">
+              <XS>0</XS>
+              <XO>246</XO>
+              <YS>0</YS>
+              <YO>60</YO>
+            </UDim2>
+            <string name="Text">Primary = big action (orange/green/purple). Secondary = gold. Danger = red.</string>
+            <Color3 name="TextColor3">
+              <R>0.78431374</R>
+              <G>0.78431374</G>
+              <B>0.8235294</B>
+            </Color3>
+            <bool name="TextScaled">true</bool>
+            <float name="TextSize">8</float>
+            <bool name="TextWrapped">true</bool>
+            <token name="TextXAlignment">2</token>
+            <int name="ZIndex">5</int>
+          </Properties>
+          <Item class="UITextSizeConstraint" referent="160">
+            <Properties>
+              <string name="Name">UITextSizeConstraint</string>
+              <int name="MaxTextSize">18</int>
+              <int name="MinTextSize">12</int>
+            </Properties>
+          </Item>
+          <Item class="UIStroke" referent="161">
+            <Properties>
+              <string name="Name">UIStroke</string>
+              <token name="ApplyStrokeMode">0</token>
+              <Color3 name="Color">
+                <R>0.078431375</R>
+                <G>0.078431375</G>
+                <B>0.101960786</B>
+              </Color3>
+              <float name="Thickness">2</float>
+            </Properties>
+          </Item>
+        </Item>
+        <Item class="ImageButton" referent="162">
+          <Properties>
+            <string name="Name">Secondary</string>
+            <Vector2 name="AnchorPoint">
+              <X>0</X>
+              <Y>1</Y>
+            </Vector2>
+            <BinaryString name="AttributesSerialize">AQAAAAUAAABUaGVtZQIEAAAAZ29sZA==</BinaryString>
+            <bool name="AutoButtonColor">false</bool>
+            <Color3 name="BackgroundColor3">
+              <R>1</R>
+              <G>1</G>
+              <B>1</B>
+            </Color3>
+            <float name="BackgroundTransparency">0</float>
+            <int name="BorderSizePixel">0</int>
+            <float name="ImageTransparency">1</float>
+            <UDim2 name="Position">
+              <XS>0</XS>
+              <XO>244</XO>
+              <YS>1</YS>
+              <YO>-64</YO>
+            </UDim2>
+            <token name="ScaleType">0</token>
+            <UDim2 name="Size">
+              <XS>0</XS>
+              <XO>246</XO>
+              <YS>0</YS>
+              <YO>44</YO>
+            </UDim2>
+            <int name="ZIndex">4</int>
+          </Properties>
+          <Item class="UICorner" referent="163">
+            <Properties>
+              <string name="Name">UICorner</string>
+              <UDim name="BottomLeftRadius">
+                <S>0</S>
+                <O>8</O>
+              </UDim>
+              <UDim name="BottomRightRadius">
+                <S>0</S>
+                <O>8</O>
+              </UDim>
+              <UDim name="TopLeftRadius">
+                <S>0</S>
+                <O>8</O>
+              </UDim>
+              <UDim name="TopRightRadius">
+                <S>0</S>
+                <O>8</O>
+              </UDim>
+            </Properties>
+          </Item>
+          <Item class="UIGradient" referent="164">
+            <Properties>
+              <string name="Name">UIGradient</string>
+              <ColorSequence name="Color">0 1 0.88235295 0.3137255 0 1 0.92156863 0.627451 0 0 </ColorSequence>
+              <float name="Rotation">90</float>
+            </Properties>
+          </Item>
+          <Item class="UIStroke" referent="165">
+            <Properties>
+              <string name="Name">UIStroke</string>
+              <token name="ApplyStrokeMode">0</token>
+              <Color3 name="Color">
+                <R>0.43137255</R>
+                <G>0.23529412</G>
+                <B>0</B>
+              </Color3>
+              <float name="Thickness">3</float>
+            </Properties>
+          </Item>
+          <Item class="CanvasGroup" referent="166">
+            <Properties>
+              <string name="Name">Studs</string>
+              <float name="BackgroundTransparency">1</float>
+              <int name="BorderSizePixel">0</int>
+              <float name="GroupTransparency">0</float>
+              <UDim2 name="Size">
+                <XS>1</XS>
+                <XO>0</XO>
+                <YS>1</YS>
+                <YO>0</YO>
+              </UDim2>
+              <int name="ZIndex">4</int>
+            </Properties>
+            <Item class="UICorner" referent="167">
+              <Properties>
+                <string name="Name">UICorner</string>
+                <UDim name="BottomLeftRadius">
+                  <S>0</S>
+                  <O>8</O>
+                </UDim>
+                <UDim name="BottomRightRadius">
+                  <S>0</S>
+                  <O>8</O>
+                </UDim>
+                <UDim name="TopLeftRadius">
+                  <S>0</S>
+                  <O>8</O>
+                </UDim>
+                <UDim name="TopRightRadius">
+                  <S>0</S>
+                  <O>8</O>
+                </UDim>
+              </Properties>
+            </Item>
+            <Item class="ImageLabel" referent="168">
+              <Properties>
+                <string name="Name">STUDS</string>
+                <float name="BackgroundTransparency">1</float>
+                <int name="BorderSizePixel">0</int>
+                <Content name="ImageContent">
+                  <uri>rbxassetid://0</uri>
+                </Content>
+                <float name="ImageTransparency">0.5</float>
+                <token name="ScaleType">2</token>
+                <UDim2 name="Size">
+                  <XS>1</XS>
+                  <XO>0</XO>
+                  <YS>1</YS>
+                  <YO>0</YO>
+                </UDim2>
+                <UDim2 name="TileSize">
+                  <XS>0</XS>
+                  <XO>42</XO>
+                  <YS>0</YS>
+                  <YO>32</YO>
+                </UDim2>
+                <int name="ZIndex">4</int>
+              </Properties>
+            </Item>
+          </Item>
+          <Item class="UIScale" referent="169">
+            <Properties>
+              <string name="Name">Press</string>
+              <float name="Scale">1</float>
+            </Properties>
+          </Item>
+          <Item class="TextLabel" referent="170">
+            <Properties>
+              <string name="Name">Label</string>
+              <Vector2 name="AnchorPoint">
+                <X>0.5</X>
+                <Y>0.5</Y>
+              </Vector2>
+              <float name="BackgroundTransparency">1</float>
+              <int name="BorderSizePixel">0</int>
+              <Font name="FontFace">
+                <Family>
+                  <url>rbxasset://fonts/families/FredokaOne.json</url>
+                </Family>
+                <Weight>400</Weight>
+                <Style>Normal</Style>
+              </Font>
+              <UDim2 name="Position">
+                <XS>0.5</XS>
+                <XO>0</XO>
+                <YS>0.5</YS>
+                <YO>0</YO>
+              </UDim2>
+              <UDim2 name="Size">
+                <XS>0.86</XS>
+                <XO>0</XO>
+                <YS>0.72</YS>
+                <YO>0</YO>
+              </UDim2>
+              <string name="Text">SELL</string>
+              <Color3 name="TextColor3">
+                <R>1</R>
+                <G>1</G>
+                <B>1</B>
+              </Color3>
+              <bool name="TextScaled">true</bool>
+              <float name="TextSize">8</float>
+              <bool name="TextWrapped">true</bool>
+              <token name="TextXAlignment">2</token>
+              <int name="ZIndex">6</int>
+            </Properties>
+            <Item class="UITextSizeConstraint" referent="171">
+              <Properties>
+                <string name="Name">UITextSizeConstraint</string>
+                <int name="MaxTextSize">26</int>
+                <int name="MinTextSize">12</int>
+              </Properties>
+            </Item>
+            <Item class="UIStroke" referent="172">
+              <Properties>
+                <string name="Name">UIStroke</string>
+                <token name="ApplyStrokeMode">0</token>
+                <Color3 name="Color">
+                  <R>0.43137255</R>
+                  <G>0.23529412</G>
+                  <B>0</B>
+                </Color3>
+                <float name="Thickness">2.5</float>
+              </Properties>
+            </Item>
+          </Item>
+          <Item class="Frame" referent="173">
+            <Properties>
+              <string name="Name">Dim</string>
+              <Color3 name="BackgroundColor3">
+                <R>0</R>
+                <G>0</G>
+                <B>0</B>
+              </Color3>
+              <float name="BackgroundTransparency">0.5</float>
+              <int name="BorderSizePixel">0</int>
+              <UDim2 name="Size">
+                <XS>1</XS>
+                <XO>0</XO>
+                <YS>1</YS>
+                <YO>0</YO>
+              </UDim2>
+              <bool name="Visible">false</bool>
+              <int name="ZIndex">7</int>
+            </Properties>
+            <Item class="UICorner" referent="174">
+              <Properties>
+                <string name="Name">UICorner</string>
+                <UDim name="BottomLeftRadius">
+                  <S>0</S>
+                  <O>8</O>
+                </UDim>
+                <UDim name="BottomRightRadius">
+                  <S>0</S>
+                  <O>8</O>
+                </UDim>
+                <UDim name="TopLeftRadius">
+                  <S>0</S>
+                  <O>8</O>
+                </UDim>
+                <UDim name="TopRightRadius">
+                  <S>0</S>
+                  <O>8</O>
+                </UDim>
+              </Properties>
+            </Item>
+          </Item>
+        </Item>
+        <Item class="ImageButton" referent="175">
+          <Properties>
+            <string name="Name">Primary</string>
+            <Vector2 name="AnchorPoint">
+              <X>0</X>
+              <Y>1</Y>
+            </Vector2>
+            <BinaryString name="AttributesSerialize">AQAAAAUAAABUaGVtZQIGAAAAcHVycGxl</BinaryString>
+            <bool name="AutoButtonColor">false</bool>
+            <Color3 name="BackgroundColor3">
+              <R>1</R>
+              <G>1</G>
+              <B>1</B>
+            </Color3>
+            <float name="BackgroundTransparency">0</float>
+            <int name="BorderSizePixel">0</int>
+            <float name="ImageTransparency">1</float>
+            <UDim2 name="Position">
+              <XS>0</XS>
+              <XO>244</XO>
+              <YS>1</YS>
+              <YO>-6</YO>
+            </UDim2>
+            <token name="ScaleType">0</token>
+            <UDim2 name="Size">
+              <XS>0</XS>
+              <XO>246</XO>
+              <YS>0</YS>
+              <YO>54</YO>
+            </UDim2>
+            <int name="ZIndex">4</int>
+          </Properties>
+          <Item class="UICorner" referent="176">
+            <Properties>
+              <string name="Name">UICorner</string>
+              <UDim name="BottomLeftRadius">
+                <S>0</S>
+                <O>8</O>
+              </UDim>
+              <UDim name="BottomRightRadius">
+                <S>0</S>
+                <O>8</O>
+              </UDim>
+              <UDim name="TopLeftRadius">
+                <S>0</S>
+                <O>8</O>
+              </UDim>
+              <UDim name="TopRightRadius">
+                <S>0</S>
+                <O>8</O>
+              </UDim>
+            </Properties>
+          </Item>
+          <Item class="UIGradient" referent="177">
+            <Properties>
+              <string name="Name">UIGradient</string>
+              <ColorSequence name="Color">0 0.78431374 0.43137255 1 0 1 0.50980395 0.15686275 0.9019608 0 </ColorSequence>
+              <float name="Rotation">90</float>
+            </Properties>
+          </Item>
+          <Item class="UIStroke" referent="178">
+            <Properties>
+              <string name="Name">UIStroke</string>
+              <token name="ApplyStrokeMode">0</token>
+              <Color3 name="Color">
+                <R>0.19607843</R>
+                <G>0.039215688</G>
+                <B>0.39215687</B>
+              </Color3>
+              <float name="Thickness">3</float>
+            </Properties>
+          </Item>
+          <Item class="CanvasGroup" referent="179">
+            <Properties>
+              <string name="Name">Studs</string>
+              <float name="BackgroundTransparency">1</float>
+              <int name="BorderSizePixel">0</int>
+              <float name="GroupTransparency">0</float>
+              <UDim2 name="Size">
+                <XS>1</XS>
+                <XO>0</XO>
+                <YS>1</YS>
+                <YO>0</YO>
+              </UDim2>
+              <int name="ZIndex">4</int>
+            </Properties>
+            <Item class="UICorner" referent="180">
+              <Properties>
+                <string name="Name">UICorner</string>
+                <UDim name="BottomLeftRadius">
+                  <S>0</S>
+                  <O>8</O>
+                </UDim>
+                <UDim name="BottomRightRadius">
+                  <S>0</S>
+                  <O>8</O>
+                </UDim>
+                <UDim name="TopLeftRadius">
+                  <S>0</S>
+                  <O>8</O>
+                </UDim>
+                <UDim name="TopRightRadius">
+                  <S>0</S>
+                  <O>8</O>
+                </UDim>
+              </Properties>
+            </Item>
+            <Item class="ImageLabel" referent="181">
+              <Properties>
+                <string name="Name">STUDS</string>
+                <float name="BackgroundTransparency">1</float>
+                <int name="BorderSizePixel">0</int>
+                <Content name="ImageContent">
+                  <uri>rbxassetid://0</uri>
+                </Content>
+                <float name="ImageTransparency">0.5</float>
+                <token name="ScaleType">2</token>
+                <UDim2 name="Size">
+                  <XS>1</XS>
+                  <XO>0</XO>
+                  <YS>1</YS>
+                  <YO>0</YO>
+                </UDim2>
+                <UDim2 name="TileSize">
+                  <XS>0</XS>
+                  <XO>42</XO>
+                  <YS>0</YS>
+                  <YO>32</YO>
+                </UDim2>
+                <int name="ZIndex">4</int>
+              </Properties>
+            </Item>
+          </Item>
+          <Item class="UIScale" referent="182">
+            <Properties>
+              <string name="Name">Press</string>
+              <float name="Scale">1</float>
+            </Properties>
+          </Item>
+          <Item class="TextLabel" referent="183">
+            <Properties>
+              <string name="Name">Label</string>
+              <Vector2 name="AnchorPoint">
+                <X>0.5</X>
+                <Y>0.5</Y>
+              </Vector2>
+              <float name="BackgroundTransparency">1</float>
+              <int name="BorderSizePixel">0</int>
+              <Font name="FontFace">
+                <Family>
+                  <url>rbxasset://fonts/families/FredokaOne.json</url>
+                </Family>
+                <Weight>400</Weight>
+                <Style>Normal</Style>
+              </Font>
+              <UDim2 name="Position">
+                <XS>0.5</XS>
+                <XO>0</XO>
+                <YS>0.5</YS>
+                <YO>0</YO>
+              </UDim2>
+              <UDim2 name="Size">
+                <XS>0.86</XS>
+                <XO>0</XO>
+                <YS>0.72</YS>
+                <YO>0</YO>
+              </UDim2>
+              <string name="Text">UPGRADE</string>
+              <Color3 name="TextColor3">
+                <R>1</R>
+                <G>1</G>
+                <B>1</B>
+              </Color3>
+              <bool name="TextScaled">true</bool>
+              <float name="TextSize">8</float>
+              <bool name="TextWrapped">true</bool>
+              <token name="TextXAlignment">2</token>
+              <int name="ZIndex">6</int>
+            </Properties>
+            <Item class="UITextSizeConstraint" referent="184">
+              <Properties>
+                <string name="Name">UITextSizeConstraint</string>
+                <int name="MaxTextSize">32</int>
+                <int name="MinTextSize">12</int>
+              </Properties>
+            </Item>
+            <Item class="UIStroke" referent="185">
+              <Properties>
+                <string name="Name">UIStroke</string>
+                <token name="ApplyStrokeMode">0</token>
+                <Color3 name="Color">
+                  <R>0.19607843</R>
+                  <G>0.039215688</G>
+                  <B>0.39215687</B>
+                </Color3>
+                <float name="Thickness">3</float>
+              </Properties>
+            </Item>
+          </Item>
+          <Item class="Frame" referent="186">
+            <Properties>
+              <string name="Name">Dim</string>
+              <Color3 name="BackgroundColor3">
+                <R>0</R>
+                <G>0</G>
+                <B>0</B>
+              </Color3>
+              <float name="BackgroundTransparency">0.5</float>
+              <int name="BorderSizePixel">0</int>
+              <UDim2 name="Size">
+                <XS>1</XS>
+                <XO>0</XO>
+                <YS>1</YS>
+                <YO>0</YO>
+              </UDim2>
+              <bool name="Visible">false</bool>
+              <int name="ZIndex">7</int>
+            </Properties>
+            <Item class="UICorner" referent="187">
+              <Properties>
+                <string name="Name">UICorner</string>
+                <UDim name="BottomLeftRadius">
+                  <S>0</S>
+                  <O>8</O>
+                </UDim>
+                <UDim name="BottomRightRadius">
+                  <S>0</S>
+                  <O>8</O>
+                </UDim>
+                <UDim name="TopLeftRadius">
+                  <S>0</S>
+                  <O>8</O>
+                </UDim>
+                <UDim name="TopRightRadius">
+                  <S>0</S>
+                  <O>8</O>
+                </UDim>
+              </Properties>
+            </Item>
+          </Item>
+          <Item class="Frame" referent="188">
+            <Properties>
+              <string name="Name">Shine</string>
+              <Color3 name="BackgroundColor3">
+                <R>1</R>
+                <G>1</G>
+                <B>1</B>
+              </Color3>
+              <float name="BackgroundTransparency">0</float>
+              <int name="BorderSizePixel">0</int>
+              <UDim2 name="Size">
+                <XS>1</XS>
+                <XO>0</XO>
+                <YS>1</YS>
+                <YO>0</YO>
+              </UDim2>
+              <int name="ZIndex">5</int>
+            </Properties>
+            <Item class="UICorner" referent="189">
+              <Properties>
+                <string name="Name">UICorner</string>
+                <UDim name="BottomLeftRadius">
+                  <S>0</S>
+                  <O>8</O>
+                </UDim>
+                <UDim name="BottomRightRadius">
+                  <S>0</S>
+                  <O>8</O>
+                </UDim>
+                <UDim name="TopLeftRadius">
+                  <S>0</S>
+                  <O>8</O>
+                </UDim>
+                <UDim name="TopRightRadius">
+                  <S>0</S>
+                  <O>8</O>
+                </UDim>
+              </Properties>
+            </Item>
+            <Item class="UIGradient" referent="190">
+              <Properties>
+                <string name="Name">ShineGradient</string>
+                <Vector2 name="Offset">
+                  <X>-1</X>
+                  <Y>0</Y>
+                </Vector2>
+                <float name="Rotation">20</float>
+                <NumberSequence name="Transparency">0 1 0 0.42 1 0 0.5 0.45 0 0.58 1 0 1 1 0 </NumberSequence>
+              </Properties>
+            </Item>
+          </Item>
+        </Item>
+      </Item>
+    </Item>
+    <Item class="Frame" referent="191">
+      <Properties>
+        <string name="Name">Toasts</string>
+        <Vector2 name="AnchorPoint">
+          <X>0.5</X>
+          <Y>1</Y>
+        </Vector2>
+        <BinaryString name="AttributesSerialize">CwAAAAQAAABCbHVlD6GgoD61tDQ/AACAPwQAAABHb2xkDwAAgD/i4WE/oaCgPgUAAABHcmVlbg+DggI/AACAP42MjD4JAAAATWF4VG9hc3RzBQAAAEAGAAAAT3JhbmdlDwAAgD+rqio/8fBwPg0AAABQaG9uZVBvc2l0aW9uCgAAAD8AAAAAAACAP4D///8GAAAAUHVycGxlD8nISD/d3Nw+AACAPwMAAABSZWQPAACAP42MjD6NjIw+EwAAAFJlcGVhdElnbm9yZVNlY29uZHMFAAAAQAcAAABTZWNvbmRzBgAAAAAAAPg/BQAAAFdoaXRlDwAAgD8AAIA/AACAPw==</BinaryString>
+        <float name="BackgroundTransparency">1</float>
+        <UDim2 name="Position">
+          <XS>0.5</XS>
+          <XO>0</XO>
+          <YS>1</YS>
+          <YO>-190</YO>
+        </UDim2>
+        <UDim2 name="Size">
+          <XS>0</XS>
+          <XO>270</XO>
+          <YS>0</YS>
+          <YO>64</YO>
+        </UDim2>
+        <int name="ZIndex">20</int>
+      </Properties>
+      <Item class="UIScale" referent="192">
+        <Properties>
+          <string name="Name">DeviceScale</string>
+          <BinaryString name="AttributesSerialize">BAAAAAgAAABNYXhTY2FsZQYzMzMzMzPzPwgAAABNaW5TY2FsZQUAAIA/CAAAAFBjRmFjdG9yBQAAgD8LAAAAVG91Y2hGYWN0b3IGmpmZmZmZ6T8=</BinaryString>
+          <float name="Scale">1</float>
+        </Properties>
+      </Item>
+      <Item class="UIListLayout" referent="193">
+        <Properties>
+          <string name="Name">UIListLayout</string>
+          <UDim name="Padding">
+            <S>0</S>
+            <O>4</O>
+          </UDim>
+          <token name="SortOrder">2</token>
+          <token name="VerticalAlignment">2</token>
+        </Properties>
+      </Item>
+    </Item>
+    <Item class="Folder" referent="194">
+      <Properties>
+        <string name="Name">Templates</string>
+      </Properties>
+      <Item class="Frame" referent="195">
+        <Properties>
+          <string name="Name">Toast</string>
+          <Vector2 name="AnchorPoint">
+            <X>0</X>
+            <Y>0</Y>
+          </Vector2>
+          <Color3 name="BackgroundColor3">
+            <R>0.16862746</R>
+            <G>0.1764706</G>
+            <B>0.20392157</B>
+          </Color3>
+          <float name="BackgroundTransparency">0</float>
+          <int name="BorderSizePixel">0</int>
+          <UDim2 name="Position">
+            <XS>0</XS>
+            <XO>0</XO>
+            <YS>0</YS>
+            <YO>0</YO>
+          </UDim2>
+          <UDim2 name="Size">
+            <XS>0</XS>
+            <XO>270</XO>
+            <YS>0</YS>
+            <YO>30</YO>
+          </UDim2>
+          <bool name="Visible">false</bool>
+          <int name="ZIndex">20</int>
+        </Properties>
+        <Item class="UICorner" referent="196">
+          <Properties>
+            <string name="Name">UICorner</string>
+            <UDim name="BottomLeftRadius">
+              <S>0</S>
+              <O>8</O>
+            </UDim>
+            <UDim name="BottomRightRadius">
+              <S>0</S>
+              <O>8</O>
+            </UDim>
+            <UDim name="TopLeftRadius">
+              <S>0</S>
+              <O>8</O>
+            </UDim>
+            <UDim name="TopRightRadius">
+              <S>0</S>
+              <O>8</O>
+            </UDim>
+          </Properties>
+        </Item>
+        <Item class="UIStroke" referent="197">
+          <Properties>
+            <string name="Name">UIStroke</string>
+            <token name="ApplyStrokeMode">0</token>
+            <Color3 name="Color">
+              <R>0.15686275</R>
+              <G>0.74509805</G>
+              <B>0.11764706</B>
+            </Color3>
+            <float name="Thickness">3</float>
+          </Properties>
+        </Item>
+        <Item class="CanvasGroup" referent="198">
+          <Properties>
+            <string name="Name">Studs</string>
+            <float name="BackgroundTransparency">1</float>
+            <int name="BorderSizePixel">0</int>
+            <float name="GroupTransparency">0</float>
+            <UDim2 name="Size">
+              <XS>1</XS>
+              <XO>0</XO>
+              <YS>1</YS>
+              <YO>0</YO>
+            </UDim2>
+            <int name="ZIndex">20</int>
+          </Properties>
+          <Item class="UICorner" referent="199">
+            <Properties>
+              <string name="Name">UICorner</string>
+              <UDim name="BottomLeftRadius">
+                <S>0</S>
+                <O>8</O>
+              </UDim>
+              <UDim name="BottomRightRadius">
+                <S>0</S>
+                <O>8</O>
+              </UDim>
+              <UDim name="TopLeftRadius">
+                <S>0</S>
+                <O>8</O>
+              </UDim>
+              <UDim name="TopRightRadius">
+                <S>0</S>
+                <O>8</O>
+              </UDim>
+            </Properties>
+          </Item>
+          <Item class="ImageLabel" referent="200">
+            <Properties>
+              <string name="Name">STUDS</string>
+              <float name="BackgroundTransparency">1</float>
+              <int name="BorderSizePixel">0</int>
+              <Content name="ImageContent">
+                <uri>rbxassetid://0</uri>
+              </Content>
+              <float name="ImageTransparency">0.6</float>
+              <token name="ScaleType">2</token>
+              <UDim2 name="Size">
+                <XS>1</XS>
+                <XO>0</XO>
+                <YS>1</YS>
+                <YO>0</YO>
+              </UDim2>
+              <UDim2 name="TileSize">
+                <XS>0</XS>
+                <XO>28</XO>
+                <YS>0</YS>
+                <YO>21</YO>
+              </UDim2>
+              <int name="ZIndex">20</int>
+            </Properties>
+          </Item>
+        </Item>
+        <Item class="UIGradient" referent="201">
+          <Properties>
+            <string name="Name">Shade</string>
+            <ColorSequence name="Color">0 1 1 1 0 1 0.5882353 0.5882353 0.627451 0 </ColorSequence>
+            <float name="Rotation">90</float>
+          </Properties>
+        </Item>
+        <Item class="UIScale" referent="202">
+          <Properties>
+            <string name="Name">Pop</string>
+            <float name="Scale">1</float>
+          </Properties>
+        </Item>
+        <Item class="TextLabel" referent="203">
+          <Properties>
+            <string name="Name">Label</string>
+            <Vector2 name="AnchorPoint">
+              <X>0.5</X>
+              <Y>0.5</Y>
+            </Vector2>
+            <float name="BackgroundTransparency">1</float>
+            <int name="BorderSizePixel">0</int>
+            <Font name="FontFace">
+              <Family>
+                <url>rbxasset://fonts/families/FredokaOne.json</url>
+              </Family>
+              <Weight>400</Weight>
+              <Style>Normal</Style>
+            </Font>
+            <UDim2 name="Position">
+              <XS>0.5</XS>
+              <XO>0</XO>
+              <YS>0.5</YS>
+              <YO>0</YO>
+            </UDim2>
+            <UDim2 name="Size">
+              <XS>1</XS>
+              <XO>-14</XO>
+              <YS>0.84</YS>
+              <YO>0</YO>
+            </UDim2>
+            <string name="Text">Message</string>
+            <Color3 name="TextColor3">
+              <R>1</R>
+              <G>1</G>
+              <B>1</B>
+            </Color3>
+            <bool name="TextScaled">true</bool>
+            <float name="TextSize">8</float>
+            <bool name="TextWrapped">true</bool>
+            <token name="TextXAlignment">2</token>
+            <int name="ZIndex">22</int>
+          </Properties>
+          <Item class="UITextSizeConstraint" referent="204">
+            <Properties>
+              <string name="Name">UITextSizeConstraint</string>
+              <int name="MaxTextSize">16</int>
+              <int name="MinTextSize">12</int>
+            </Properties>
+          </Item>
+          <Item class="UIStroke" referent="205">
+            <Properties>
+              <string name="Name">UIStroke</string>
+              <token name="ApplyStrokeMode">0</token>
+              <Color3 name="Color">
+                <R>0.078431375</R>
+                <G>0.078431375</G>
+                <B>0.101960786</B>
+              </Color3>
+              <float name="Thickness">2.5</float>
+            </Properties>
+          </Item>
+        </Item>
+      </Item>
+    </Item>
+    <Item class="Frame" referent="206">
+      <Properties>
+        <string name="Name">Tooltip</string>
+        <Vector2 name="AnchorPoint">
+          <X>0</X>
+          <Y>0</Y>
+        </Vector2>
+        <BinaryString name="AttributesSerialize">AQAAAAQAAABOb3RlAmUAAABUb29sdGlwOiBQQyBmb2xsb3dzIHRoZSBtb3VzZSBvbiBob3ZlciwgcGhvbmUgc2hvd3MgbmV4dCB0byB0aGUgdGFwcGVkIGNhcmQ7IGNsYW1wIGluc2lkZSB0aGUgc2NyZWVuLg==</BinaryString>
+        <Color3 name="BackgroundColor3">
+          <R>0.23529412</R>
+          <G>0.24705882</G>
+          <B>0.28235295</B>
+        </Color3>
+        <float name="BackgroundTransparency">0</float>
+        <int name="BorderSizePixel">0</int>
+        <UDim2 name="Position">
+          <XS>0</XS>
+          <XO>0</XO>
+          <YS>0</YS>
+          <YO>0</YO>
+        </UDim2>
+        <UDim2 name="Size">
+          <XS>0</XS>
+          <XO>184</XO>
+          <YS>0</YS>
+          <YO>74</YO>
+        </UDim2>
+        <bool name="Visible">false</bool>
+        <int name="ZIndex">40</int>
+      </Properties>
+      <Item class="UICorner" referent="207">
+        <Properties>
+          <string name="Name">UICorner</string>
+          <UDim name="BottomLeftRadius">
+            <S>0</S>
+            <O>8</O>
+          </UDim>
+          <UDim name="BottomRightRadius">
+            <S>0</S>
+            <O>8</O>
+          </UDim>
+          <UDim name="TopLeftRadius">
+            <S>0</S>
+            <O>8</O>
+          </UDim>
+          <UDim name="TopRightRadius">
+            <S>0</S>
+            <O>8</O>
+          </UDim>
+        </Properties>
+      </Item>
+      <Item class="UIStroke" referent="208">
+        <Properties>
+          <string name="Name">UIStroke</string>
+          <token name="ApplyStrokeMode">0</token>
+          <Color3 name="Color">
+            <R>0.08627451</R>
+            <G>0.08627451</G>
+            <B>0.10980392</B>
+          </Color3>
+          <float name="Thickness">3</float>
+        </Properties>
+      </Item>
+      <Item class="CanvasGroup" referent="209">
+        <Properties>
+          <string name="Name">Studs</string>
+          <float name="BackgroundTransparency">1</float>
+          <int name="BorderSizePixel">0</int>
+          <float name="GroupTransparency">0</float>
+          <UDim2 name="Size">
+            <XS>1</XS>
+            <XO>0</XO>
+            <YS>1</YS>
+            <YO>0</YO>
+          </UDim2>
+          <int name="ZIndex">40</int>
+        </Properties>
+        <Item class="UICorner" referent="210">
+          <Properties>
+            <string name="Name">UICorner</string>
+            <UDim name="BottomLeftRadius">
+              <S>0</S>
+              <O>8</O>
+            </UDim>
+            <UDim name="BottomRightRadius">
+              <S>0</S>
+              <O>8</O>
+            </UDim>
+            <UDim name="TopLeftRadius">
+              <S>0</S>
+              <O>8</O>
+            </UDim>
+            <UDim name="TopRightRadius">
+              <S>0</S>
+              <O>8</O>
+            </UDim>
+          </Properties>
+        </Item>
+        <Item class="ImageLabel" referent="211">
+          <Properties>
+            <string name="Name">STUDS</string>
+            <float name="BackgroundTransparency">1</float>
+            <int name="BorderSizePixel">0</int>
+            <Content name="ImageContent">
+              <uri>rbxassetid://0</uri>
+            </Content>
+            <float name="ImageTransparency">0.6</float>
+            <token name="ScaleType">2</token>
+            <UDim2 name="Size">
+              <XS>1</XS>
+              <XO>0</XO>
+              <YS>1</YS>
+              <YO>0</YO>
+            </UDim2>
+            <UDim2 name="TileSize">
+              <XS>0</XS>
+              <XO>42</XO>
+              <YS>0</YS>
+              <YO>32</YO>
+            </UDim2>
+            <int name="ZIndex">40</int>
+          </Properties>
+        </Item>
+      </Item>
+      <Item class="UIGradient" referent="212">
+        <Properties>
+          <string name="Name">Shade</string>
+          <ColorSequence name="Color">0 1 1 1 0 1 0.5882353 0.5882353 0.627451 0 </ColorSequence>
+          <float name="Rotation">90</float>
+        </Properties>
+      </Item>
+      <Item class="UIScale" referent="213">
+        <Properties>
+          <string name="Name">DeviceScale</string>
+          <BinaryString name="AttributesSerialize">BAAAAAgAAABNYXhTY2FsZQYzMzMzMzPzPwgAAABNaW5TY2FsZQUAAIA/CAAAAFBjRmFjdG9yBQAAgD8LAAAAVG91Y2hGYWN0b3IGmpmZmZmZ6T8=</BinaryString>
+          <float name="Scale">1</float>
+        </Properties>
+      </Item>
+      <Item class="TextLabel" referent="214">
+        <Properties>
+          <string name="Name">NameLabel</string>
+          <Vector2 name="AnchorPoint">
+            <X>0.5</X>
+            <Y>0</Y>
+          </Vector2>
+          <float name="BackgroundTransparency">1</float>
+          <int name="BorderSizePixel">0</int>
+          <Font name="FontFace">
+            <Family>
+              <url>rbxasset://fonts/families/FredokaOne.json</url>
+            </Family>
+            <Weight>400</Weight>
+            <Style>Normal</Style>
+          </Font>
+          <UDim2 name="Position">
+            <XS>0.5</XS>
+            <XO>0</XO>
+            <YS>0</YS>
+            <YO>6</YO>
+          </UDim2>
+          <UDim2 name="Size">
+            <XS>1</XS>
+            <XO>-10</XO>
+            <YS>0</YS>
+            <YO>20</YO>
+          </UDim2>
+          <string name="Text">Galaxy</string>
+          <Color3 name="TextColor3">
+            <R>1</R>
+            <G>1</G>
+            <B>1</B>
+          </Color3>
+          <bool name="TextScaled">true</bool>
+          <float name="TextSize">8</float>
+          <bool name="TextWrapped">true</bool>
+          <token name="TextXAlignment">2</token>
+          <int name="ZIndex">43</int>
+        </Properties>
+        <Item class="UITextSizeConstraint" referent="215">
+          <Properties>
+            <string name="Name">UITextSizeConstraint</string>
+            <int name="MaxTextSize">18</int>
+            <int name="MinTextSize">12</int>
+          </Properties>
+        </Item>
+        <Item class="UIStroke" referent="216">
+          <Properties>
+            <string name="Name">UIStroke</string>
+            <token name="ApplyStrokeMode">0</token>
+            <Color3 name="Color">
+              <R>0.078431375</R>
+              <G>0.078431375</G>
+              <B>0.101960786</B>
+            </Color3>
+            <float name="Thickness">2.5</float>
+          </Properties>
+        </Item>
+      </Item>
+      <Item class="TextLabel" referent="217">
+        <Properties>
+          <string name="Name">RarityLabel</string>
+          <Vector2 name="AnchorPoint">
+            <X>0.5</X>
+            <Y>0</Y>
+          </Vector2>
+          <float name="BackgroundTransparency">1</float>
+          <int name="BorderSizePixel">0</int>
+          <Font name="FontFace">
+            <Family>
+              <url>rbxasset://fonts/families/FredokaOne.json</url>
+            </Family>
+            <Weight>400</Weight>
+            <Style>Normal</Style>
+          </Font>
+          <UDim2 name="Position">
+            <XS>0.5</XS>
+            <XO>0</XO>
+            <YS>0</YS>
+            <YO>28</YO>
+          </UDim2>
+          <UDim2 name="Size">
+            <XS>1</XS>
+            <XO>-10</XO>
+            <YS>0</YS>
+            <YO>16</YO>
+          </UDim2>
+          <string name="Text">+12 Epic</string>
+          <Color3 name="TextColor3">
+            <R>0.6666667</R>
+            <G>0.27450982</G>
+            <B>1</B>
+          </Color3>
+          <bool name="TextScaled">true</bool>
+          <float name="TextSize">8</float>
+          <bool name="TextWrapped">true</bool>
+          <token name="TextXAlignment">2</token>
+          <int name="ZIndex">43</int>
+        </Properties>
+        <Item class="UITextSizeConstraint" referent="218">
+          <Properties>
+            <string name="Name">UITextSizeConstraint</string>
+            <int name="MaxTextSize">14</int>
+            <int name="MinTextSize">12</int>
+          </Properties>
+        </Item>
+        <Item class="UIStroke" referent="219">
+          <Properties>
+            <string name="Name">UIStroke</string>
+            <token name="ApplyStrokeMode">0</token>
+            <Color3 name="Color">
+              <R>0.078431375</R>
+              <G>0.078431375</G>
+              <B>0.101960786</B>
+            </Color3>
+            <float name="Thickness">2</float>
+          </Properties>
+        </Item>
+      </Item>
+      <Item class="TextLabel" referent="220">
+        <Properties>
+          <string name="Name">ValueLabel</string>
+          <Vector2 name="AnchorPoint">
+            <X>0.5</X>
+            <Y>0</Y>
+          </Vector2>
+          <float name="BackgroundTransparency">1</float>
+          <int name="BorderSizePixel">0</int>
+          <Font name="FontFace">
+            <Family>
+              <url>rbxasset://fonts/families/FredokaOne.json</url>
+            </Family>
+            <Weight>400</Weight>
+            <Style>Normal</Style>
+          </Font>
+          <UDim2 name="Position">
+            <XS>0.5</XS>
+            <XO>0</XO>
+            <YS>0</YS>
+            <YO>48</YO>
+          </UDim2>
+          <UDim2 name="Size">
+            <XS>1</XS>
+            <XO>-10</XO>
+            <YS>0</YS>
+            <YO>18</YO>
+          </UDim2>
+          <string name="Text">Sell $25K</string>
+          <Color3 name="TextColor3">
+            <R>1</R>
+            <G>0.8392157</G>
+            <B>0.27450982</B>
+          </Color3>
+          <bool name="TextScaled">true</bool>
+          <float name="TextSize">8</float>
+          <bool name="TextWrapped">true</bool>
+          <token name="TextXAlignment">2</token>
+          <int name="ZIndex">43</int>
+        </Properties>
+        <Item class="UITextSizeConstraint" referent="221">
+          <Properties>
+            <string name="Name">UITextSizeConstraint</string>
+            <int name="MaxTextSize">16</int>
+            <int name="MinTextSize">12</int>
+          </Properties>
+        </Item>
+        <Item class="UIStroke" referent="222">
+          <Properties>
+            <string name="Name">UIStroke</string>
+            <token name="ApplyStrokeMode">0</token>
+            <Color3 name="Color">
+              <R>0.078431375</R>
+              <G>0.078431375</G>
+              <B>0.101960786</B>
+            </Color3>
+            <float name="Thickness">2</float>
+          </Properties>
+        </Item>
+      </Item>
+    </Item>
+    <Item class="LocalScript" referent="223">
+      <Properties>
+        <string name="Name">StuddedUIClient</string>
+        <BinaryString name="AttributesSerialize">AQAAAAoAAABIb3ZlclNjYWxlBqRwPQrXo/A/</BinaryString>
+        <string name="Source"><![CDATA[--!nocheck
+--[[
+  StuddedUIClient — reference LocalScript for the studded UI kit (docs/STUDDED_UI_GUIDE.md).
+  Lives inside the ScreenGui (StarterGui.StuddedUI_Reference), so script.Parent is the player's copy.
+
+  What a UI script MAY do: clone templates, show/hide (Visible/Enabled), fill Text/Image, tween Scale/Position/
+  Transparency/Offset, read attributes. What it must NOT do: Instance.new any visual, or write Size/colours/Font/
+  TextSize/stroke/corner on Studio instances — except through attributes the owner can see (PhoneSize, Palette…).
+  This is the same logic the shipped game's ForgeUIClient uses, cut down to the parts every studded UI needs.
+]]
+local Players = game:GetService("Players")
+local TweenService = game:GetService("TweenService")
+local UIS = game:GetService("UserInputService")
+
+local gui = script.Parent
+local Templates = gui:WaitForChild("Templates")
+local Toasts = gui:WaitForChild("Toasts")
+
+local TI_FAST = TweenInfo.new(0.12, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
+local TI_POP = TweenInfo.new(0.22, Enum.EasingStyle.Back, Enum.EasingDirection.Out)
+local function tween(o, info, goal) local t = TweenService:Create(o, info, goal); t:Play(); return t end
+local function attr(name, default) local v = script:GetAttribute(name); if typeof(v) == typeof(default) then return v end; return default end
+
+---------------------------------------------------------------- 1. device scale + Phone* attributes
+-- Phone = touch without keyboard, or a short viewport side < 500 px. Reference sizes: PC 1920x1080, phone 667x375.
+local function isPhone()
+	local cam = workspace.CurrentCamera
+	local vp = cam and cam.ViewportSize or Vector2.new(1920, 1080)
+	return (UIS.TouchEnabled and not UIS.KeyboardEnabled) or math.min(vp.X, vp.Y) < 500, vp
+end
+local function applyScale()
+	local phone, vp = isPhone()
+	local alpha = math.clamp((vp.Y - 320) / (1080 - 320), 0, 1)
+	for _, d in ipairs(gui:GetDescendants()) do
+		if d:IsA("UIScale") and d.Name == "DeviceScale" then
+			-- Scale = lerp(MinScale, MaxScale, viewport height) * (TouchFactor on phone | PcFactor on PC)
+			local mn, mx = d:GetAttribute("MinScale") or 1, d:GetAttribute("MaxScale") or 1
+			local f = phone and (d:GetAttribute("TouchFactor") or 0.7) or (d:GetAttribute("PcFactor") or 1)
+			d.Scale = (mn + (mx - mn) * alpha) * f
+			d:SetAttribute("Base", d.Scale)
+		elseif d:IsA("GuiObject") then
+			-- PhoneSize / PhonePosition / PhoneAnchorPoint swap in on phones; the PC value is remembered in Pc<Prop>
+			for _, p in ipairs({ "Size", "Position", "AnchorPoint" }) do
+				local v = d:GetAttribute("Phone" .. p)
+				if v ~= nil then
+					if d:GetAttribute("Pc" .. p) == nil then d:SetAttribute("Pc" .. p, d[p]) end
+					d[p] = phone and v or d:GetAttribute("Pc" .. p)
+				end
+			end
+		end
+	end
+end
+applyScale()
+if workspace.CurrentCamera then workspace.CurrentCamera:GetPropertyChangedSignal("ViewportSize"):Connect(applyScale) end
+
+---------------------------------------------------------------- 2. button feel (the Press UIScale)
+local function press(btn, fn)
+	local s = btn:FindFirstChild("Press")
+	if s then
+		local hover = false
+		btn.MouseEnter:Connect(function() hover = true; tween(s, TI_FAST, { Scale = attr("HoverScale", 1.04) }) end)
+		btn.MouseButton1Down:Connect(function() tween(s, TI_FAST, { Scale = 0.88 }) end)
+		btn.MouseButton1Up:Connect(function() tween(s, TI_POP, { Scale = hover and attr("HoverScale", 1.04) or 1 }) end)
+		btn.MouseLeave:Connect(function() hover = false; tween(s, TI_FAST, { Scale = 1 }) end)
+	end
+	btn.Activated:Connect(fn)
+end
+local function setDim(btn, on) local d = btn:FindFirstChild("Dim"); if d then d.Visible = on end end
+
+---------------------------------------------------------------- 3. panels: one open at a time, pop in, slide out
+local PANELS = {}
+for _, c in ipairs(gui:GetChildren()) do
+	if c:IsA("Frame") and c:FindFirstChild("Top") and c:FindFirstChild("Body") then PANELS[c.Name] = c end
+end
+local basePos = {}
+for _, p in pairs(PANELS) do basePos[p] = p.Position end
+local function hidePanel(p)
+	if not p.Visible then return end
+	local ds = p:FindFirstChild("DeviceScale")
+	if ds then tween(ds, TI_FAST, { Scale = (ds:GetAttribute("Base") or ds.Scale) * 0.85 }) end
+	local t = tween(p, TI_FAST, { Position = p.Position + UDim2.fromOffset(0, 30) })
+	t.Completed:Connect(function()
+		p.Visible = false; p.Position = basePos[p]
+		if ds then ds.Scale = ds:GetAttribute("Base") or ds.Scale end
+	end)
+end
+local function openPanel(name)
+	local p = PANELS[name]
+	if not p then return end
+	if p.Visible then hidePanel(p); return end
+	for n, o in pairs(PANELS) do if n ~= name then o.Visible = false end end
+	basePos[p] = p.Position -- picks up PhonePosition after applyScale
+	p.Visible = true
+	p.Position = basePos[p] + UDim2.fromOffset(0, 40)
+	tween(p, TI_POP, { Position = basePos[p] })
+	local ds = p:FindFirstChild("DeviceScale")
+	if ds then local base = ds:GetAttribute("Base") or ds.Scale; ds.Scale = base * 0.85; tween(ds, TI_POP, { Scale = base }) end
+end
+for _, col in ipairs({ gui:FindFirstChild("RightButtons"), gui:FindFirstChild("LeftButtons") }) do
+	for _, b in ipairs(col and col:GetChildren() or {}) do
+		if b:IsA("GuiButton") and b:GetAttribute("Panel") then press(b, function() openPanel(b:GetAttribute("Panel")) end) end
+	end
+end
+for _, p in pairs(PANELS) do
+	local close = p.Top:FindFirstChild("Close")
+	if close then press(close, function() hidePanel(p) end) end
+end
+
+---------------------------------------------------------------- 4. tabs: Dim on every tab except the active one
+for _, p in pairs(PANELS) do
+	local tabs = p.Body:FindFirstChild("Tabs")
+	if tabs then
+		local function setTab(name)
+			p.Body:SetAttribute("Tab", name)
+			for _, t in ipairs(tabs:GetChildren()) do if t:IsA("GuiButton") then setDim(t, t:GetAttribute("Tab") ~= name) end end
+		end
+		for _, t in ipairs(tabs:GetChildren()) do
+			if t:IsA("GuiButton") and t:GetAttribute("Tab") then press(t, function() setTab(t:GetAttribute("Tab")) end) end
+		end
+	end
+end
+
+---------------------------------------------------------------- 5. toasts: clone the template, dedupe, cap, pop
+local toastN, lastToast = 0, {}
+local function toast(msg, colorName)
+	msg = tostring(msg)
+	local now = os.clock()
+	local prev = lastToast[msg]
+	if prev and now - prev < (Toasts:GetAttribute("RepeatIgnoreSeconds") or 2) then return end
+	lastToast[msg] = now
+	local tpl = Templates:FindFirstChild("Toast")
+	if not tpl then warn("[StuddedUI] Templates.Toast missing"); return end -- missing template = loud skip, never rebuild in code
+	local t = tpl:Clone()
+	toastN += 1
+	t.Name = "Toast" .. toastN; t.LayoutOrder = toastN
+	t.Label.Text = msg
+	local c = Toasts:GetAttribute(colorName or "White") or Toasts:GetAttribute("White")
+	if typeof(c) == "Color3" then -- colour comes from an attribute the owner can edit
+		local s = t:FindFirstChildOfClass("UIStroke"); if s then s.Color = c end
+		t.Label.TextColor3 = c
+	end
+	t.Visible = true
+	t.Parent = Toasts
+	local pop = t:FindFirstChild("Pop")
+	if pop then pop.Scale = 0.6; tween(pop, TI_POP, { Scale = 1 }) end
+	local list = {}
+	for _, ch in ipairs(Toasts:GetChildren()) do if ch:IsA("GuiObject") then table.insert(list, ch) end end
+	table.sort(list, function(a, b) return a.LayoutOrder < b.LayoutOrder end)
+	for k = 1, #list - (Toasts:GetAttribute("MaxToasts") or 2) do list[k]:Destroy() end
+	task.delay(Toasts:GetAttribute("Seconds") or 1.5, function()
+		if t.Parent and pop then tween(pop, TI_FAST, { Scale = 0 }); task.wait(0.15) end
+		t:Destroy()
+	end)
+end
+
+---------------------------------------------------------------- 6. tooltip: hover on PC, tap on phone, clamped
+local tip = gui:FindFirstChild("Tooltip")
+local function showTip(near)
+	if not tip then return end
+	local vp = workspace.CurrentCamera.ViewportSize
+	local pos = isPhone() and (near.AbsolutePosition + Vector2.new(near.AbsoluteSize.X + 8, 0)) or (UIS:GetMouseLocation() + Vector2.new(16, -20))
+	local size = tip.AbsoluteSize
+	pos = Vector2.new(math.clamp(pos.X, 4, vp.X - size.X - 4), math.clamp(pos.Y, 4, vp.Y - size.Y - 4))
+	tip.Position = UDim2.fromOffset(pos.X, pos.Y)
+	tip.Visible = true
+end
+
+---------------------------------------------------------------- 7. shine sweep (ScreenGui@ShineEvery, 0 = off)
+task.spawn(function()
+	while gui.Parent do
+		local every = gui:GetAttribute("ShineEvery") or 2.5
+		if every <= 0 then task.wait(1) else
+			for _, g in ipairs(gui:GetDescendants()) do
+				if g.Name == "ShineGradient" and g:IsA("UIGradient") and g.Parent.Parent.Visible then
+					g.Offset = Vector2.new(-1, 0)
+					tween(g, TweenInfo.new(0.6, Enum.EasingStyle.Quad, Enum.EasingDirection.InOut), { Offset = Vector2.new(1, 0) })
+				end
+			end
+			task.wait(every)
+		end
+	end
+end)
+
+---------------------------------------------------------------- demo wiring for the example panel
+local panel = PANELS.ExamplePanel
+if panel then
+	local card = panel.Body:FindFirstChild("ItemCard")
+	if card then
+		press(card.Buy, function() toast("Bought Iron Hammer!", "Green") end)
+		card.MouseEnter:Connect(function() if not isPhone() then showTip(card) end end)
+		card.MouseLeave:Connect(function() if tip then tip.Visible = false end end)
+		card.InputBegan:Connect(function(io)
+			if io.UserInputType == Enum.UserInputType.Touch then if tip and tip.Visible then tip.Visible = false else showTip(card) end end
+		end)
+	end
+	press(panel.Body.Secondary, function() toast("Sold for $25K", "Gold") end)
+	press(panel.Body.Primary, function() toast("Not enough cash", "Red") end)
+end
+]]></string>
+      </Properties>
+    </Item>
+  </Item>
+</roblox>

@@ -22,6 +22,18 @@ Reusable Halloween "studded" UI from *Don't Wake the Pumpkin King*: orange/purpl
 
 Insert: Studio > right-click the parent > **Insert from File...** > pick the `.rbxm`.
 
+## reference/ (start here if you are an AI or new to the style)
+
+| File | What it is |
+|---|---|
+| `StuddedUI_Reference.rbxmx` | A complete ScreenGui: side button column, panel (green header, red X, blue tabs, card with orange head + 3D stage + green BUY, gold secondary, purple primary), toast container + template, tooltip, `Palette` attributes, and a working `StuddedUIClient` LocalScript. Insert into **StarterGui** and press Play. |
+| `build_reference.luau` | The Lune generator that writes the `.rbxmx`; the whole recipe as readable code. `STUDS_ID=<id> tools/lune10 run assets/ui/reference/build_reference.luau` bakes your studs texture. |
+| `StuddedUIClient.luau` | Reference runtime script: DeviceScale + Phone* attributes, press feel, panel open/close pop, tabs, toasts, tooltip, shine. No `Instance.new`. |
+| `studs_tile.png` | 168×128 transparent one-stud tile (original). Upload it as an image and use its ID for every `STUDS` ImageLabel. |
+
+The `.rbxmx` ships with `rbxassetid://0` as the studs image (the repo keeps asset IDs as placeholders), so studs are
+blank until you set your own. Exact values and rules: [docs/STUDDED_UI_GUIDE.md](../../docs/STUDDED_UI_GUIDE.md).
+
 ## previews/ (PNG)
 
 `*_pc.png` (1920x1080) and `*_phone.png` (667x375) layout previews of the HUD, Store, Rebirth, Daily and Inventory menus, plus crops (`crop_menu_buttons`, `crop_store_pass_cards_sale_pills`, `crop_side_offer_cards`, `crop_sale_banner`). They are **approximate renders** from the repo's offline rig (geometry and colours from the place file; icons and 3D are grey placeholders), not Studio screenshots.

@@ -3,7 +3,7 @@ name: roblox-dev
 description: Build, test, screenshot and publish Roblox games the owner can fully edit in Studio. Use for any Roblox/Luau task - UI tweaks, phone layout fixes, gameplay systems, economy, monetization, DataStores, Lune .rbxl builds, Open Cloud publishing, Studio MCP checks, bug sweeps and launch readiness.
 license: MIT
 metadata:
-  version: "1.2"
+  version: "1.3"
   origin: "Don't Wake the Pumpkin King and ForgeTax (Roblox), Oct 2026"
 ---
 
@@ -16,8 +16,9 @@ Then open only the doc the task needs:
 |---|---|
 | Any change at all | `docs/workflow.md` (fast lane vs gameplay lane, worked examples) |
 | Anything visible, any new UI/model/effect | `docs/studio-first-rule.md`, `docs/ui-conventions.md` |
+| Building or restyling studded UI (panels, buttons, tabs, toasts, tooltips) | `docs/STUDDED_UI_GUIDE.md` (exact recipe), `assets/ui/reference/` (working example) |
 | Building the place file | `docs/build-pipeline-lune.md`, `docs/lune10-gotchas.md` |
-| Patching a place with Lune (apply.luau IN/OUT) | `docs/lune10-gotchas.md`, `scripts/apply-template.luau` |
+| Patching a place with Lune (apply.luau IN/OUT) | `docs/workflow.md` (patch lane), `docs/lune10-gotchas.md`, `scripts/apply-template.luau` |
 | Writing / running tests | `docs/testing.md` |
 | Shipping | `docs/publishing-open-cloud.md` |
 | Talking to a live Studio | `docs/studio-mcp-bridge.md` |
