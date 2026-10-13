@@ -40,6 +40,9 @@ midnight hour, mystery pumpkin, random-event rotation) without breaking the Stud
 - **Tests that pin old design break on purpose.** When the owner changes an event rule, mark the old asserts as expected
   failures in the report (cite the decision line) instead of "fixing" the game back.
 
+More: income-scaled reward formulas, one merged event pill, boss variants and badge wiring are in
+`docs/economy-and-events.md`.
+
 ## Event checklist
 1. Config attributes baked, default = code value.
 2. Models/FX/UI are Studio instances; event works with the owner's mesh swapped in (no hard-coded sizes).
