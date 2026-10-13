@@ -86,3 +86,6 @@ hook/src so a clean build reproduces LIVE.
   stores `AudioContent`. Always read changed properties back from the output file.
 - Patch scripts: anchor-based, refuse to apply twice, and print one summary line; then a rebase is just `IN=<newer place>`.
 - Chain parallel patches serially onto the newest LIVE file (`v136 = v135 + h + s + m`), test the chain, publish once.
+- Full list of Lune 0.10 traps (wrong `CFrame.lookAt`, unsaved `Attachment.Position` / `IgnoreGuiInset` /
+  `ViewportFrame.CurrentCamera`, identity `WeldConstraint` offsets, int32 attributes, `--` in one-line tables) and the
+  idempotent `apply.luau` shape: `docs/lune10-gotchas.md`, template `scripts/apply-template.luau`.
