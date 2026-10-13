@@ -1,5 +1,8 @@
 # Splitting work across parallel agents (with a verifier)
 
+> Building a whole new game with many agents? See `docs/swarm-integration.md` (contract of shared names, serial
+> integration chain, organize last) and `scripts/swarm/CONTRACT.template.md`.
+
 Parallel agents are how big batches ship in an hour instead of a day — and how builds get silently undone. These rules
 are what made it work on the reference game (batches of 2–6 workers, one verifier, one publish).
 
