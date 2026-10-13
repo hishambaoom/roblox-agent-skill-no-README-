@@ -41,6 +41,9 @@ text-heavy chase lost. It is a sanity check, not data: the real number is PTR in
 - Badge icons are shown in a **circle**: design full-bleed circular art (512x512) with nothing important in the corners.
   New icons can sit in moderation for a while.
 - Good early set: Welcome, First <core action>, Survived <boss>, First Rebirth, Found a Mythic; one limited-time event badge.
+- The free quota can run out mid-set: create the rest the next day and leave their IDs at 0 (off) meanwhile.
+- Wiring: IDs as `IntValue`s or string attributes (Lune truncates big number attributes), counters saved even while an ID
+  is 0, retro awards on join, awards fired from one signal after gameplay Fx. Details: `docs/economy-and-events.md`.
 
 ## Promotion: what failed and what to do instead
 - **Fresh accounts posting the same link fast get filtered, locked, then banned.** A new Reddit account (1 karma) posting
