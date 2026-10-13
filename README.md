@@ -3,9 +3,15 @@
 **A drop-in skill that lets any AI coding agent build, test, screenshot and publish a Roblox game that the owner can
 still fully edit in Studio.**
 
-It is the rulebook, scripts and worked examples behind *Don't Wake the Pumpkin King*, a Roblox game built with AI agents
-and shipped through 185 published versions in its first week. It works with Claude Code, Codex CLI, Cursor, OpenCode,
-Google Antigravity, Gemini CLI and chat-only assistants (ChatGPT / Claude projects), on any frontier model.
+It is the rulebook, scripts and worked examples behind two Roblox games built with AI agents: *Don't Wake the Pumpkin
+King* (190+ published versions: events, boss variants, badges, anti-cheat) and *ForgeTax* (a forging
+tycoon taken from the owner's Studio save to six published versions in one day by a swarm of 20+ parallel agents). It
+works with Claude Code, Codex CLI, Cursor, OpenCode, Google Antigravity, Gemini CLI and chat-only assistants
+(ChatGPT / Claude projects), on any frontier model.
+
+**New in this update:** swarm builds with a serial integration chain, organize-last with a reference checker that proves
+nothing broke, ViewportFrame previews that actually render, a Lune 0.10 gotcha list, a 3-phase anti-cheat, economy and
+event scaling patterns, ChatGPT + Blender model prompt templates, and reusable scripts in `scripts/`.
 
 ## What it gives your agent
 - **Owner-first rules.** Everything visible is a real, editable Studio instance (scripts only clone, show, fill and
@@ -15,13 +21,23 @@ Google Antigravity, Gemini CLI and chat-only assistants (ChatGPT / Claude projec
   (~2 s), renders PC + phone screenshots (~1 s), runs guard tests (~3 s) and publishes through Open Cloud only if they pass.
 - **A gameplay lane.** Tests that must fail on the base build, full-suite comparison against base, parallel workers plus
   an independent verifier.
+- **Swarm builds.** A contract of shared names, one `apply.luau` per agent chained serially onto the owner's save, organize
+  last, a regression harness that proves the organize pass changed only paths.
 - **Lessons from real bugs**: weak Instance-keyed tables, `TextScaled` without `TextWrapped`, Lune meshes that don't
-  render, `SoundId` writes silently dropped in Lune 0.10, the 31-Highlight cap, Studio edits wiped by pipeline publishes…
-- **Playbooks** for live events, mobile performance, reward "juice", AI-made models and sounds, and launch marketing.
+  render, `SoundId` writes silently dropped in Lune 0.10, Lune's wrong `CFrame.lookAt`, cameras that never replicate
+  (blank viewports), Deferred signals racing the client, the 31-Highlight cap, Studio edits wiped by pipeline publishes…
+- **Playbooks** for live events, economy scaling, anti-cheat, mobile performance, reward "juice", AI-made models and
+  sounds, and launch marketing.
 - **Assets and generators**: thumbnail/icon exporters, a CTR sim, a rebirth-curve designer, prompt packs, original SFX,
   and a studded UI kit (`assets/`).
 
-## Quick start
+## Quick start (TL;DR)
+1. `git clone` this repo and run `adapters/install.sh` (or `install.ps1`) into your game folder.
+2. Put Lune 0.10 at `tools/lune10`; tell your agent to read `AGENTS.md`.
+3. Ask for a change. The agent builds with Lune, tests, screenshots, and publishes only when you set the Open Cloud env.
+4. Big feature or new game? Have it write a contract (`scripts/swarm/CONTRACT.template.md`) and chain agent patches
+   (`scripts/apply-template.luau`), organize last ([docs/swarm-integration.md](docs/swarm-integration.md)).
+
 
 ### 1. Install into your game repo (30 seconds)
 ```bash
@@ -63,7 +79,14 @@ $env:DRY_RUN = '1'; .\tools\rig\go.ps1 t2 example_feature_test; Remove-Item Env:
 Then point `GAME_DIR` at your own game folder (its `build.luau`, hooks and tests), copy `tools/rig/dump.example.luau`
 to `tools/rig/dump.luau` and adapt its boot section to your client scripts, and set the publish env vars.
 
-### 4. Which file each agent reads
+### 4. Patch an existing place (no build.luau needed)
+```bash
+cp scripts/apply-template.luau games/mygame/work/myfeature/apply.luau        # edit scope + MARK
+IN=place.rbxl OUT=work/x/out.rbxl tools/lune10 run games/mygame/work/myfeature/apply.luau
+IN=work/x/out.rbxl OUT=work/x/out2.rbxl tools/lune10 run games/mygame/work/myfeature/apply.luau   # must report 0 changes
+```
+
+### 5. Which file each agent reads
 | Agent | Reads | Setup |
 |---|---|---|
 | Claude Code | `CLAUDE.md` (`@AGENTS.md`), `.claude/skills/roblox-dev/`, `.claude/agents/*`, `.mcp.json` | docs/model-setup.md |
@@ -72,6 +95,26 @@ to `tools/rig/dump.luau` and adapt its boot section to your client scripts, and 
 | Cursor | `AGENTS.md`, `.cursor/rules/*.mdc` | docs/model-setup.md |
 | OpenCode | `AGENTS.md`, `opencode.json` | docs/model-setup.md |
 | Chat-only (ChatGPT, Claude.ai, Gems) | paste `adapters/chat-only/system-prompt.md`, upload `AGENTS.md` + `docs/` | docs/model-setup.md |
+
+## Doc index
+| Topic | Doc |
+|---|---|
+| Start here: rules, loop, decisions, report format | [AGENTS.md](AGENTS.md), [SKILL.md](SKILL.md) |
+| Fast lane vs gameplay lane | [docs/workflow.md](docs/workflow.md) |
+| Everything editable in Studio | [docs/studio-first-rule.md](docs/studio-first-rule.md) |
+| Lune builds and patches | [docs/build-pipeline-lune.md](docs/build-pipeline-lune.md), [docs/lune10-gotchas.md](docs/lune10-gotchas.md) |
+| Tests, publishing, live Studio | [docs/testing.md](docs/testing.md), [docs/publishing-open-cloud.md](docs/publishing-open-cloud.md), [docs/studio-mcp-bridge.md](docs/studio-mcp-bridge.md) |
+| Parallel agents | [docs/subagents.md](docs/subagents.md) (small batches), [docs/swarm-integration.md](docs/swarm-integration.md) (whole game) |
+| Organizing a place safely | [docs/organize-and-refcheck.md](docs/organize-and-refcheck.md) |
+| UI, 3D previews, juice | [docs/ui-conventions.md](docs/ui-conventions.md), [docs/viewport-previews.md](docs/viewport-previews.md), [docs/juice.md](docs/juice.md) |
+| Focus modes, cameras, held tools | [docs/interaction-patterns.md](docs/interaction-patterns.md) |
+| Events, economy, badges, boss variants | [docs/live-events.md](docs/live-events.md), [docs/economy-and-events.md](docs/economy-and-events.md) |
+| Security and anti-cheat | [docs/security.md](docs/security.md), [docs/anti-cheat.md](docs/anti-cheat.md) |
+| Performance on phones | [docs/performance.md](docs/performance.md) |
+| Models, prompts, audio | [docs/models-and-audio.md](docs/models-and-audio.md), [docs/model-prompts.md](docs/model-prompts.md) |
+| Money and launch | [docs/monetization.md](docs/monetization.md), [docs/marketing-launch.md](docs/marketing-launch.md), [docs/launch-checklist.md](docs/launch-checklist.md) |
+| Every bug that cost a build | [docs/lessons-learned.md](docs/lessons-learned.md) |
+| Agent setup, Windows, references | [docs/model-setup.md](docs/model-setup.md), [docs/windows.md](docs/windows.md), [docs/resources.md](docs/resources.md) |
 
 ## Folder map
 ```
@@ -86,8 +129,14 @@ docs/
   juice.md               reward feedback ("dopamine")          models-and-audio.md    prompt packs, AI rigs, AudioContent
   marketing-launch.md    discovery, thumbnails, badges, promo security.md            remotes, data, free models
   launch-checklist.md    readiness audit                      lessons-learned.md     every bug that cost a build
+  swarm-integration.md   contract + serial chain for 20 agents organize-and-refcheck.md  organize last, prove it
+  lune10-gotchas.md      Lune 0.10 traps, idempotent apply    viewport-previews.md   3D UI previews that render
+  interaction-patterns.md focus mode, cameras, held tools     economy-and-events.md  income-scaled rewards, variants, badges
+  anti-cheat.md          3-phase server anti-cheat            model-prompts.md       ChatGPT + Blender prompt templates
   subagents.md thinking.md project-state-template.md model-setup.md windows.md resources.md
   examples/              5 worked sessions: request → plan → commands → output → report
+scripts/               apply-template.luau, organize/ (template, refcheck, check, reverse, test_chain.sh),
+                       viewport/ (preview client), swarm/ (contract template) — scripts/README.md
 adapters/              claude-code/ codex/ antigravity/ cursor/ opencode/ chat-only/ + install.sh / install.ps1
 tools/rig/             go, shot, fast, run_all, compare_runs, publish, prices, retention, config (.sh + .ps1 twins),
                        render.py (screenshot renderer), dump.example.luau (layout dumper)
@@ -124,11 +173,16 @@ Full transcripts: [docs/examples/](docs/examples/).
 | `list_roblox_studios` is empty | enable "Studio as MCP server" in Assistant → Manage MCP Servers, reopen the place |
 | Promo posts silently removed, account locked | fresh accounts mass-posting get filtered: one post at a time from aged accounts ([docs/marketing-launch.md](docs/marketing-launch.md)) |
 | PowerShell won't run the scripts | execution policy and env-var notes in [docs/windows.md](docs/windows.md) |
+| 3D previews in UI cards are blank | cameras don't replicate: make the camera on the client ([docs/viewport-previews.md](docs/viewport-previews.md)) |
+| Lune-built camera/stand faces the wrong way | Lune's `CFrame.lookAt` is wrong: use `CFrame.fromMatrix` ([docs/lune10-gotchas.md](docs/lune10-gotchas.md)) |
+| Client effect fires before the object exists | Deferred signals: `task.defer` the `FireAllClients` after the server builds it |
+| Welded parts snap to the centre in Studio | Lune-written `WeldConstraint`s have identity offsets: use classic `Weld`s with `C0` |
+| Organizing the place broke scripts | organize in transactional groups + refcheck ([docs/organize-and-refcheck.md](docs/organize-and-refcheck.md)) |
 More: [docs/lessons-learned.md](docs/lessons-learned.md).
 
 ## Safety
-No secrets, keys, account details, emails or place files are in this repo. Keys live in your environment only. Example
-Roblox asset IDs (sounds) belong to the reference game and are listed for illustration.
+No secrets, keys, account details, emails or place files are in this repo. Keys live in your environment only.
+Experience, place, badge and asset IDs are written as placeholders (`<UNIVERSE_ID>`, `<BADGE_ID>`); use your own.
 
 ## License
 MIT, see [LICENSE](LICENSE). Asset licensing per file: [assets/README.md](assets/README.md).
