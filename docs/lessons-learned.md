@@ -24,6 +24,18 @@
 | CollectionService tag without its attribute | a purchase-button tag on an object with no `Product` attribute errored | skip nil attributes and non-PlayerGui instances in tag handlers |
 | Flat event rewards | `$5,000` meaningless after a few rebirths | pay `max(base × rebirthMult, income/s × N s)`, N per event as attribute (docs/live-events.md) |
 | Milestone re-paid after rebirth | "every 3 filled pedestals" paid again because loot stayed placed | decide and test what rebirth resets for every once-only reward |
+| `--` comment inside a one-line table in a gsub patch | commented out the rest of the table; broke a balance module (caught by its test) | notes on their own line or `--[[ ]]` (docs/lune10-gotchas.md) |
+| Blank 3D previews in UI cards | the Camera saved in each ViewportFrame never reached the client (UI copied server → PlayerGui) | client makes `ClientCam` per viewport (docs/viewport-previews.md) |
+| Lune `CFrame.lookAt` | cameras/stands built in Lune faced the wrong way | `CFrame.fromMatrix`; check camera feel in Studio |
+| Deferred signals | an Fx remote reached clients before the server-side handler built the object it described | `task.defer` the `FireAllClients` |
+| Sword sank into the anvil after the first hit | a bounce tween returned to the raw anchor pivot, undoing another script's lift | store `RestPivot` when placing; every tween returns there (docs/interaction-patterns.md) |
+| Hammer head in the middle of the handle | Lune-written `WeldConstraint`s have identity offsets; Studio snaps parts together | classic `Weld`s with explicit `C0`, pivot at the grip, size baked |
+| Function called before its `local function` line | nil call inside a ChildAdded handler, silent; the feature never ran | forward-declare; tests that exercise the connection |
+| Badge IDs wrong after a Lune build | number attributes over 2^31 truncated | IDs as string attributes or `IntValue` |
+| Stale ban cache | player unbanned on another server kept getting kicked | re-read the ban store on join; cache only on read failure (docs/anti-cheat.md) |
+| Hold check bypass | one real prompt hold let later instant `fireproximityprompt` calls pass | consume the hold record on success |
+| High-ping noclip false positive | frozen phone reappeared round a wall corner = "through the wall" | skip the wall test on the first sample after a high-ping freeze |
+| Lists saved longer than the new cap | old servers saved 5 daily quests after the cap dropped | trim on load in a fixed priority (claimed, started, rest) |
 
 ## Pipeline / process
 | Lesson | Do instead |
@@ -41,6 +53,10 @@
 | A live version appeared that no run recorded | Read `versionNumber` + the QUEUE before every publish; never assume you know what is live |
 | Full suite run in parallel got memory-killed (half the logs FAIL) | Run the full suite serially, or compare only against a base run made the same way |
 | Saying "fixed" before the owner saw it (pedestal bug "fixed" twice: anchors v141, mesh v142, real cause v144) | Say "fixed in build, please check X" until confirmed; mark RESOLVED only after confirmation |
+| 20+ agents on one new game | Contract of shared names, serial chain onto the owner's save, one integrator publishes (docs/swarm-integration.md) |
+| Organizing the place broke script paths | Organize LAST, in transactional groups checked by refcheck; reverse + test_chain prove it (docs/organize-and-refcheck.md) |
+| Older agent tests flagged newer agents' legit changes ("Workspace changed") | Narrow exempt lists; run those tests with IN = the place right before the newer agent |
+| Two agents put the same data in two places (boss Secret loot) | The contract names one owner per path; the merger picks one and records it |
 
 ## Owner / product
 - The owner's design is final: *"no dont make the king more forgiving or slower! or fewer trips"* — an agent had added
