@@ -24,6 +24,7 @@ one gate (`IsAdmin` = configured user IDs + owner), rate-limited, Studio-only de
 ## Movement / exploit guards
 Speed budgets for carrying (teleport/fly → loot returned), no flight gear while carrying stolen loot, server checks
 distance for prompts. Note: a teleport-based test can trip your own speed check — write tests that walk.
+Full design (flags → enforcement → bans, false positives, admin tools): `docs/anti-cheat.md`.
 
 ## Data (never lose progress)
 - ProfileStore (session-locked) or a careful DataStore wrapper. All calls in `pcall` with retry; kick on load failure
