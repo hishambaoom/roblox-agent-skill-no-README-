@@ -14,7 +14,7 @@ place. Regenerate after every UI build (`python3 tools/uimap/uimap_build.py <pla
 
 Format (real lines):
 ```
-- `LeftButtons.ShopButton` [ImageButton] — **STORE — reference button; all 7 share: face img Fit + gradient + CanvasGroup>STUDS + Name label + 3D shadow strip** · bg #FFFFFF · img 99254050060562 Fit · corner 0,8 · stroke 3 #612C00 · grad #FF7300 r90 · CanvasGroup>STUDS: studs 109343709323318 ts 0.08,0,0.25,0 t0.5 · label[Name] GothamSSm/Heavy #FFFFFF +stroke 2.5 #5A2900 · @{Menu=ShopFrame Type=Menu}
+- `LeftButtons.ShopButton` [ImageButton] — **STORE — reference button; all 7 share: face img Fit + gradient + CanvasGroup>STUDS + Name label + 3D shadow strip** · bg #FFFFFF · img <IMAGE_ASSET_ID> Fit · corner 0,8 · stroke 3 #612C00 · grad #FF7300 r90 · CanvasGroup>STUDS: studs <IMAGE_ASSET_ID> ts 0.08,0,0.25,0 t0.5 · label[Name] GothamSSm/Heavy #FFFFFF +stroke 2.5 #5A2900 · @{Menu=ShopFrame Type=Menu}
   - `UITemplates.SideCard.ItemName` [TextLabel] stroke[Orange] 3.47 #5A2900 · text GothamSSm/Heavy #FFFFFF "NAME" · @{PhoneSize=0.96,0,0.42,0 PhoneTextWrapped=true}
 ```
 Legend: `bg #hex/tN` background/transparency · `img id [ScaleType]` · `grad[Name] a→b rDeg` (`,off` disabled) ·
