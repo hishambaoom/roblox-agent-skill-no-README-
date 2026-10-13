@@ -124,6 +124,8 @@ Split only when parts touch **disjoint files**. One owner per file; cross-file n
 - Publish "server busy"/409 often means the place is open in Studio with Collaborative Editing: retry with backoff, then
   ask the owner to close it.
 - Lune 0.10: set sounds with `AudioContent = roblox.Content.fromUri(uri)`; `SoundId` writes are silently dropped.
+  Lune's `CFrame.lookAt` is wrong (use `CFrame.fromMatrix`); read every changed property back (docs/lune10-gotchas.md).
+- Places with Deferred signals: `task.defer` client Fx fires that describe something the server just built.
 - Roblox renders at most **31 Highlights**: one shared Highlight per group Model, budget the rest (docs/performance.md).
 - Admin event starts start now and stack; event rewards scale with income/rebirth (docs/live-events.md).
 - Things Open Cloud can't do with a place key (create badges, create a new experience): ask the owner to do it in Creator
@@ -165,8 +167,12 @@ Your call: <one open decision, with my recommendation>.
 | UI map | `python3 tools/uimap/uimap_build.py <place>` |
 | Studio (live) | Studio MCP (`execute_luau`, `get_console_output`, `start_stop_play`…) or `tools/mcp/mcpc.py` over a tunnel |
 | Keep disk tidy | `tools/rig/retention.sh` (newest + 3 older builds) |
+| Patch a place (one agent, idempotent) | `IN=<place> OUT=<out> tools/lune10 run <agent>/apply.luau` (template `scripts/apply-template.luau`) |
+| Organize + prove nothing broke | `scripts/organize/` (`check.luau` with `BEFORE=`, `test_chain.sh`) |
 
 Docs index: `docs/workflow.md` · `studio-first-rule.md` · `build-pipeline-lune.md` · `testing.md` ·
 `publishing-open-cloud.md` · `studio-mcp-bridge.md` · `ui-conventions.md` · `monetization.md` · `security.md` ·
 `launch-checklist.md` · `lessons-learned.md` · `project-state-template.md` · `thinking.md` · `subagents.md` ·
-`model-setup.md` · `resources.md` · `examples/`.
+`model-setup.md` · `resources.md` · `swarm-integration.md` · `organize-and-refcheck.md` · `lune10-gotchas.md` ·
+`viewport-previews.md` · `interaction-patterns.md` · `economy-and-events.md` · `anti-cheat.md` · `model-prompts.md` ·
+`examples/`.
