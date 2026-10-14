@@ -9,7 +9,9 @@ tycoon taken from the owner's Studio save to six published versions in one day b
 works with Claude Code, Codex CLI, Cursor, OpenCode, Google Antigravity, Gemini CLI and chat-only assistants
 (ChatGPT / Claude projects), on any frontier model.
 
-**New (ForgeTax v22-v25):** [model import pipeline](docs/model-import-pipeline.md), [VFX pack rules + budgets](docs/vfx-packs.md),
+**New:** a 39-icon UI pack ([assets/icons/pumpkin-king-pack](assets/icons/pumpkin-king-pack)) and insertable model packs from both games ([assets/models](assets/models/README.md)).
+
+**Earlier (ForgeTax v22-v25):** [model import pipeline](docs/model-import-pipeline.md), [VFX pack rules + budgets](docs/vfx-packs.md),
 [core-loop QoL](docs/forging-qol.md), [economy pacing sims](docs/economy-simulation.md) and [limited items](docs/limited-items.md).
 
 **Previous update:** a model-agnostic [studded UI guide](docs/STUDDED_UI_GUIDE.md) with exact values plus an

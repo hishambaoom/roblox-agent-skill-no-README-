@@ -2,7 +2,8 @@
 
 Reusable assets, examples and small generators the workflow uses. Everything here was made for the reference game
 (*Don't Wake the Pumpkin King*) by its owner and his AI agents: original art, original sounds, our own scripts.
-No third-party audio, images or place files. Binaries are kept few and small (all < 100 KB).
+Binaries: small examples plus two bigger packs, the 39-icon pack (`icons/pumpkin-king-pack/`) and the model packs
+(`models/`, see `models/README.md`). `models/vfx-pack/` is the only part not made by the owner (see its license note).
 
 **License:** scripts and text files are MIT (repo `LICENSE`). Images and sounds are the repo owner's own work, also
 released under MIT so you can study and remix them; please don't present the Pumpkin King character or branding as
@@ -12,6 +13,8 @@ your own game's art. Swap in your own art for a real game.
 
 | Path | What it is / what for | Source & license |
 |---|---|---|
+| `icons/pumpkin-king-pack/` | 39 transparent 512x512 UI icons in 4 batches (menu buttons, accept/decline, cash, rarity, boosts...) + `icon_manifest.csv` (what each is for) and `README.txt`. Upload to Roblox as Decals/Images, then set `Image` on the studded buttons. | Own AI-generated art, MIT |
+| `models/` | Insertable `.rbxm` model packs: Pumpkin King (King variants, loot, map, events, vault), ForgeTax (hammers, furnaces, Dragon Shop, event pack), VFX pack. Details: `models/README.md`. | Own models, MIT; VFX pack third-party |
 | `icons/icon_example_256.jpg` | Example game icon following the thumbnail rules (one hero + one huge boss, teal vs orange, no text). Downscaled from the 1024 master. | Own AI-generated art, MIT |
 | `thumbnails/thumb_example_sneak_640x360.jpg` | Example 16:9 thumbnail: sneaking past the sleeping boss, a `99%` meter as the only text. Won the CTR sim. | Own AI-generated art, MIT |
 | `thumbnails/thumb_example_chase_640x360.jpg` | Example 16:9 thumbnail: diagonal chase. Did worse in the CTR sim; kept as a contrast. | Own AI-generated art, MIT |
