@@ -175,4 +175,5 @@ Docs index: `docs/workflow.md` · `studio-first-rule.md` · `build-pipeline-lune
 `launch-checklist.md` · `lessons-learned.md` · `project-state-template.md` · `thinking.md` · `subagents.md` ·
 `model-setup.md` · `resources.md` · `swarm-integration.md` · `organize-and-refcheck.md` · `lune10-gotchas.md` ·
 `viewport-previews.md` · `interaction-patterns.md` · `economy-and-events.md` · `anti-cheat.md` · `model-prompts.md` ·
+`model-import-pipeline.md` · `vfx-packs.md` · `forging-qol.md` · `economy-simulation.md` · `limited-items.md` ·
 `examples/`.
