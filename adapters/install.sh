@@ -1,9 +1,9 @@
 #!/bin/bash
 # Install the skill into a Roblox game repo.
 # usage: bash adapters/install.sh <target repo> [claude] [codex] [antigravity] [cursor] [opencode] [all]
-#   Always copies: AGENTS.md, SKILL.md, docs/ (as docs/ - skill doc names are unique), tools/rig, tools/uimap, tools/mcp,
-#   tools/example-game (reference only). Never overwrites an existing file unless FORCE=1.
-#   Lune binaries are NOT shipped: put lune (0.8.x) at <target>/tools/lune and lune 0.10.x at <target>/tools/lune10.
+#   Always copies: AGENTS.md, SKILL.md, INSTALL_FOR_AGENTS.md, docs/, tools/, scripts/, assets/. Never overwrites an
+#   existing file unless FORCE=1. Then downloads Lune 0.8.9 -> tools/lune and 0.10.5 -> tools/lune10 (tools/get-lune.sh);
+#   NO_LUNE=1 skips that. Native Windows: use install.ps1.
 set -e
 SRC=$(cd "$(dirname "$0")/.." && pwd)
 DST=${1:?usage: install.sh <target repo> [claude|codex|antigravity|cursor|opencode|all]}; shift
@@ -17,7 +17,10 @@ echo "core:"
 cp_safe "$SRC/AGENTS.md" "$DST/AGENTS.md"
 cp_safe "$SRC/SKILL.md" "$DST/SKILL.md"
 copy_tree "$SRC/docs" "$DST/docs"
+cp_safe "$SRC/INSTALL_FOR_AGENTS.md" "$DST/INSTALL_FOR_AGENTS.md"
 copy_tree "$SRC/tools" "$DST/tools"
+copy_tree "$SRC/scripts" "$DST/scripts"
+copy_tree "$SRC/assets" "$DST/assets"
 chmod +x "$DST"/tools/rig/*.sh 2>/dev/null || true
 want(){ for a in "${TARGETS[@]}"; do [ "$a" = "$1" ] || [ "$a" = all ] && return 0; done; return 1; }
 TARGETS=("$@")
@@ -30,4 +33,5 @@ if want opencode; then echo "opencode:"; cp_safe "$SRC/adapters/opencode/opencod
 [ -f "$DST/QUEUE.md" ] || { printf '# QUEUE (version log) - format: docs/project-state-template.md\n' > "$DST/QUEUE.md"; echo "  + QUEUE.md"; }
 [ -f "$DST/PROJECT.md" ] || { printf '# Project brief - template: docs/project-state-template.md\n' > "$DST/PROJECT.md"; echo "  + PROJECT.md"; }
 grep -qs '^\.env$' "$DST/.gitignore" || { printf '.env\nwork/x/\nwork/rig/out/\n*.rbxl.log.txt\n' >> "$DST/.gitignore"; echo "  + .gitignore entries"; }
-echo "done. Next: put Lune in tools/, export ROBLOX_API_KEY UNIVERSE_ID PLACE_ID, read docs/model-setup.md"
+if [ "${NO_LUNE:-0}" != 1 ]; then bash "$SRC/tools/get-lune.sh" "$DST" || echo "  lune download failed - run tools/get-lune.sh later (needs internet)"; fi
+echo "done. Next: export ROBLOX_API_KEY UNIVERSE_ID PLACE_ID (only to publish), read docs/model-setup.md"

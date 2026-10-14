@@ -58,8 +58,8 @@ Small local models: paste `AGENTS.md` §1 + the one doc you need. The UI guide's
 in a small context.
 
 ## Quick start (TL;DR)
-1. `git clone` this repo and run `adapters/install.sh` (or `install.ps1`) into your game folder.
-2. Put Lune 0.10 at `tools/lune10`; tell your agent to read `AGENTS.md`.
+1. Easiest: tell your agent *"Install the Roblox skill from https://github.com/hishambaoom/roblox-agent-skill-no-README- into this folder by following its INSTALL_FOR_AGENTS.md"*. Or `git clone` this repo and run `adapters/install.ps1` (Windows) or `install.sh` into your game folder.
+2. The installer downloads Lune (0.8.9 + 0.10.5) into `tools/` for you; tell your agent to read `AGENTS.md`.
 3. Ask for a change. The agent builds with Lune, tests, screenshots, and publishes only when you set the Open Cloud env.
 4. Big feature or new game? Have it write a contract (`scripts/swarm/CONTRACT.template.md`) and chain agent patches
    (`scripts/apply-template.luau`), organize last ([docs/swarm-integration.md](docs/swarm-integration.md)).
@@ -75,12 +75,15 @@ Windows (PowerShell 7 or 5.1):
 git clone https://github.com/hishambaoom/roblox-agent-skill-no-README- $HOME\roblox-agent-skill
 & $HOME\roblox-agent-skill\adapters\install.ps1 C:\path\to\your-game claude codex antigravity cursor opencode
 ```
-The installer copies `AGENTS.md`, `SKILL.md`, `docs/`, `tools/` and the adapters you name (never overwrites unless
-`FORCE=1`), and creates `QUEUE.md` / `PROJECT.md` stubs and `.gitignore` entries.
+The installer copies `AGENTS.md`, `SKILL.md`, `docs/`, `tools/`, `scripts/`, `assets/` and the adapters you name (never
+overwrites unless `FORCE=1`), downloads Lune 0.8.9 + 0.10.5 into `tools/` (`NO_LUNE=1` skips; `tools/get-lune.ps1` /
+`get-lune.sh` re-runs it), and creates `QUEUE.md` / `PROJECT.md` stubs and `.gitignore` entries.
+On Windows, if scripts are blocked: `powershell -ExecutionPolicy Bypass -File $HOME\roblox-agent-skill\adapters\install.ps1 . codex`.
+Agents can follow [INSTALL_FOR_AGENTS.md](INSTALL_FOR_AGENTS.md) step by step.
 
 ### 2. Requirements
 - Lune: `tools/lune` (0.8.x) and `tools/lune10` (0.10.x, needed for files saved by current Studio);
-  on Windows `tools\lune.exe` / `tools\lune10.exe`. https://github.com/lune-org/lune/releases
+  on Windows `tools\lune.exe` / `tools\lune10.exe`. The installer fetches both (`tools/get-lune.ps1`).
 - bash **or** PowerShell (native Windows: [docs/windows.md](docs/windows.md)) · Python 3 + Pillow (screenshots)
 - Publishing: an Open Cloud API key with `universe-places:write` in `ROBLOX_API_KEY`, plus `UNIVERSE_ID` and `PLACE_ID`
   in your environment (never in files).

@@ -40,7 +40,7 @@ The scripts look for Python in this order: `$env:PYTHON` (a full path, if you se
 PATH (the Microsoft Store stub that only opens the Store is detected and skipped) → `py -3`.
 
 ### Lune
-Download from https://github.com/lune-org/lune/releases:
+The installer does this for you (`tools\get-lune.ps1`, also handles ARM PCs and Unblock-File). Manual way: download from https://github.com/lune-org/lune/releases:
 - `lune-0.8.9-windows-x86_64.zip` → unzip → put `lune.exe` at `tools\lune.exe` in your game repo (builds + tests;
   the reference project used 0.8.9).
 - a 0.10.x zip (`lune-0.10.x-windows-x86_64.zip`, or `-aarch64` on ARM PCs) → rename to `tools\lune10.exe` (for
