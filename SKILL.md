@@ -30,6 +30,11 @@ Then open only the doc the task needs:
 | Timed / admin events, event rewards | `docs/live-events.md`, `docs/economy-and-events.md` |
 | Economy numbers, boss variants, badges wiring | `docs/economy-and-events.md` |
 | 3D model previews in UI | `docs/viewport-previews.md` |
+| Importing the owner's .rbxm models (held/display copies, rigs, motion attrs, save migration) | `docs/model-import-pipeline.md` |
+| Particles, beams, trails from a VFX pack; FX budgets, Low graphics | `docs/vfx-packs.md` |
+| Core-loop QoL (hold to act, stop-at, confirm risky step, stay in mode on fail, bag tools) | `docs/forging-qol.md` |
+| Price / tier / drop changes: pacing sim before publishing | `docs/economy-simulation.md`, `assets/curves/pacing_sim.py` |
+| Limited items for cash or Robux (perks, pedestals, receipts) | `docs/limited-items.md` |
 | Station focus mode, cameras, held tools, animation bugs | `docs/interaction-patterns.md` |
 | Lag, phones, Highlights, streaming, Low Graphics | `docs/performance.md` |
 | "Make it feel better / more dopamine" | `docs/juice.md` |
