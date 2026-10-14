@@ -9,7 +9,10 @@ tycoon taken from the owner's Studio save to six published versions in one day b
 works with Claude Code, Codex CLI, Cursor, OpenCode, Google Antigravity, Gemini CLI and chat-only assistants
 (ChatGPT / Claude projects), on any frontier model.
 
-**New in this update:** a model-agnostic [studded UI guide](docs/STUDDED_UI_GUIDE.md) with exact values plus an
+**New (ForgeTax v22-v25):** [model import pipeline](docs/model-import-pipeline.md), [VFX pack rules + budgets](docs/vfx-packs.md),
+[core-loop QoL](docs/forging-qol.md), [economy pacing sims](docs/economy-simulation.md) and [limited items](docs/limited-items.md).
+
+**Previous update:** a model-agnostic [studded UI guide](docs/STUDDED_UI_GUIDE.md) with exact values plus an
 insertable example panel (`assets/ui/reference/`), a patch-lane / parallel-contract section in
 [docs/workflow.md](docs/workflow.md) with ForgeTax learnings (limited-item shop, single ProcessReceipt router,
 settings + music, streaming-safe cutscenes). Earlier: swarm builds with a serial integration chain, organize-last with a reference checker that proves
@@ -137,6 +140,8 @@ IN=work/x/out.rbxl OUT=work/x/out2.rbxl tools/lune10 run games/mygame/work/myfea
 | Performance on phones | [docs/performance.md](docs/performance.md) |
 | Models, prompts, audio | [docs/models-and-audio.md](docs/models-and-audio.md), [docs/model-prompts.md](docs/model-prompts.md) |
 | Money and launch | [docs/monetization.md](docs/monetization.md), [docs/marketing-launch.md](docs/marketing-launch.md), [docs/launch-checklist.md](docs/launch-checklist.md) |
+| Model imports, VFX packs, core-loop QoL | [docs/model-import-pipeline.md](docs/model-import-pipeline.md), [docs/vfx-packs.md](docs/vfx-packs.md), [docs/forging-qol.md](docs/forging-qol.md) |
+| Economy sims, limited items | [docs/economy-simulation.md](docs/economy-simulation.md), [docs/limited-items.md](docs/limited-items.md) |
 | Every bug that cost a build | [docs/lessons-learned.md](docs/lessons-learned.md) |
 | Agent setup, Windows, references | [docs/model-setup.md](docs/model-setup.md), [docs/windows.md](docs/windows.md), [docs/resources.md](docs/resources.md) |
 
@@ -158,6 +163,9 @@ docs/
   lune10-gotchas.md      Lune 0.10 traps, idempotent apply    viewport-previews.md   3D UI previews that render
   interaction-patterns.md focus mode, cameras, held tools     economy-and-events.md  income-scaled rewards, variants, badges
   anti-cheat.md          3-phase server anti-cheat            model-prompts.md       ChatGPT + Blender prompt templates
+  model-import-pipeline.md  owner .rbxm -> held/display/preview vfx-packs.md           pack FX, budgets, Low gfx
+  forging-qol.md         hold/stop-at/confirm/bag tools       economy-simulation.md  Monte Carlo pacing before publish
+  limited-items.md       cash/Robux limiteds, pedestals
   subagents.md thinking.md project-state-template.md model-setup.md windows.md resources.md
   examples/              5 worked sessions: request → plan → commands → output → report
 scripts/               apply-template.luau, organize/ (template, refcheck, check, reverse, test_chain.sh),
