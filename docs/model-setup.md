@@ -39,7 +39,8 @@ CLAUDE.md                              # contains "@AGENTS.md" (import) + Claude
 .claude/agents/roblox-implementer.md   # parallel worker (owns a disjoint file set, never publishes)
 .claude/agents/roblox-verifier.md      # independent verifier (Read/Grep/Glob/Bash only)
 .claude/agents/roblox-ui-fixer.md      # fast-lane UI fit fixer ("don't change the design")
-.mcp.json                              # Roblox_Studio MCP (Windows path; edit for macOS)
+.mcp.json                              # Roblox_Studio MCP, written by the installer (Windows or macOS path)
+.claude/settings.json                  # enables Roblox_Studio + pre-allows read-only MCP tools
 ```
 Steps:
 1. `bash adapters/install.sh <repo> claude` (or copy the files above to the repo root).

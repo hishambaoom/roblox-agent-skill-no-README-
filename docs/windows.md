@@ -149,7 +149,7 @@ Studio's built-in MCP server (Assistant → ⋯ → *Manage MCP Servers* → *En
 through `%LOCALAPPDATA%\Roblox\mcp.bat` (PowerShell: `"$env:LOCALAPPDATA\Roblox\mcp.bat"`; check it exists with
 `Test-Path "$env:LOCALAPPDATA\Roblox\mcp.bat"`).
 - Agent on the same PC (Claude Code, Codex CLI, Cursor, Gemini CLI): stdio command `cmd.exe /c
-  %LOCALAPPDATA%\Roblox\mcp.bat` — already in `adapters/claude-code/.mcp.json` and
+  %LOCALAPPDATA%\Roblox\mcp.bat` — already in `adapters/claude-code/mcp/mcp.windows.json` (the installer writes it as `.mcp.json`) and
   `adapters/codex/config.toml.example`. Studio's *Quick connect* buttons can set this up for supported agents.
 - Agent elsewhere (cloud): wrap it as HTTP and tunnel it (docs/studio-mcp-bridge.md):
   ```powershell

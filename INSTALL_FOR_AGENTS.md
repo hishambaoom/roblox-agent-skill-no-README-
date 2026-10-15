@@ -5,7 +5,8 @@ This file is written for the agent. The owner pastes one line, the agent does th
 ## The line the owner pastes
 
 > Install the Roblox skill from https://github.com/hishambaoom/roblox-agent-skill-no-README- into this folder by
-> following its INSTALL_FOR_AGENTS.md, then use it for all Roblox work here.
+> following its INSTALL_FOR_AGENTS.md (I use <Claude Code / Codex>), connect Roblox Studio's MCP server, then use it
+> for all Roblox work here.
 
 ## Steps for the agent
 
@@ -42,6 +43,23 @@ bash ~/roblox-agent-skill/adapters/install.sh . codex
 python3 -m pip install pillow
 ./tools/lune --version && ./tools/lune10 --version
 ```
+
+### Claude Code
+- Install with the `claude` target: `...\install.ps1 . claude` (Windows) or `bash .../install.sh . claude`.
+  That copies `CLAUDE.md`, `.claude/skills/roblox-dev`, `.claude/agents/*`, `.claude/settings.json` and writes
+  `.mcp.json` with the `Roblox_Studio` server (merged into an existing `.mcp.json`, never replaced).
+- If you prefer the CLI instead of the file (project scope, same result):
+  Windows `claude mcp add --scope project Roblox_Studio -- cmd.exe /c "%LOCALAPPDATA%\Roblox\mcp.bat"`
+  macOS `claude mcp add --scope project Roblox_Studio -- /Applications/RobloxStudio.app/Contents/MacOS/StudioMCP`
+- Then: owner restarts Claude Code, approves the `Roblox_Studio` server if asked, and you check with `claude mcp list`
+  (or `/mcp`) and a `list_roblox_studios` call.
+
+### Roblox Studio MCP (all agents)
+1. Owner: open the place in Roblox Studio (latest version) → Assistant → `…` → **Manage MCP Servers** → turn on
+   **Enable Studio as MCP server**. (Quick connect there can also register Claude Code / Codex / Cursor in one click.)
+2. Agent: call `list_roblox_studios`; the owner's place should be listed. Pass its `studio_id` on every call.
+3. Green indicator in Studio's MCP panel = connected. Nothing listed → restart Studio and the agent.
+4. Work rules: docs/studio-mcp-bridge.md (MCP edits the owner's open file; owner saves + publishes from Studio).
 
 ### Codex extras (optional)
 - Merge `~/roblox-agent-skill/adapters/codex/config.toml.example` into `%USERPROFILE%\.codex\config.toml`

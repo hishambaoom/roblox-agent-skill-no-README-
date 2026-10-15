@@ -24,7 +24,21 @@ copy_tree "$SRC/assets" "$DST/assets"
 chmod +x "$DST"/tools/rig/*.sh 2>/dev/null || true
 want(){ for a in "${TARGETS[@]}"; do [ "$a" = "$1" ] || [ "$a" = all ] && return 0; done; return 1; }
 TARGETS=("$@")
-if want claude; then echo "claude code:"; copy_tree "$SRC/adapters/claude-code" "$DST"; fi
+if want claude; then echo "claude code:"
+  cp_safe "$SRC/adapters/claude-code/CLAUDE.md" "$DST/CLAUDE.md"
+  copy_tree "$SRC/adapters/claude-code/.claude" "$DST/.claude"
+  # Studio MCP for Claude Code: project .mcp.json (merged into an existing one, never replaced)
+  case "$(uname -s)" in Darwin) MCPJ="$SRC/adapters/claude-code/mcp/mcp.macos.json";; *) MCPJ="$SRC/adapters/claude-code/mcp/mcp.windows.json";; esac
+  if [ ! -f "$DST/.mcp.json" ]; then cp "$MCPJ" "$DST/.mcp.json"; echo "  + $DST/.mcp.json (Roblox_Studio)"
+  elif command -v python3 >/dev/null; then python3 - "$DST/.mcp.json" "$MCPJ" <<'PY'
+import json,sys
+d=json.load(open(sys.argv[1])); n=json.load(open(sys.argv[2]))
+s=d.setdefault("mcpServers",{})
+if "Roblox_Studio" in s: print("  skip (exists) Roblox_Studio in .mcp.json")
+else: s["Roblox_Studio"]=n["mcpServers"]["Roblox_Studio"]; json.dump(d,open(sys.argv[1],"w"),indent=2); print("  + Roblox_Studio merged into .mcp.json")
+PY
+  else echo "  .mcp.json exists: add the Roblox_Studio entry from adapters/claude-code/mcp/ by hand"; fi
+fi
 if want codex; then echo "codex:"; copy_tree "$SRC/adapters/codex/.agents" "$DST/.agents"
   echo "  (merge adapters/codex/config.toml.example into ~/.codex/config.toml yourself)"; fi
 if want antigravity; then echo "antigravity:"; copy_tree "$SRC/adapters/antigravity/.agents" "$DST/.agents"; fi

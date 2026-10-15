@@ -120,7 +120,7 @@ IN=work/x/out.rbxl OUT=work/x/out2.rbxl tools/lune10 run games/mygame/work/myfea
 ### 5. Which file each agent reads
 | Agent | Reads | Setup |
 |---|---|---|
-| Claude Code | `CLAUDE.md` (`@AGENTS.md`), `.claude/skills/roblox-dev/`, `.claude/agents/*`, `.mcp.json` | docs/model-setup.md |
+| Claude Code | `CLAUDE.md` (`@AGENTS.md`), `.claude/skills/roblox-dev/`, `.claude/agents/*`, `.claude/settings.json`, `.mcp.json` (Studio MCP) | INSTALL_FOR_AGENTS.md |
 | Codex CLI | `AGENTS.md`, `.agents/skills/roblox-dev/`, `~/.codex/config.toml` | docs/model-setup.md |
 | Antigravity | `AGENTS.md`, `.agents/rules/*.md`, `.agents/skills/`, `.agents/workflows/` | docs/model-setup.md |
 | Cursor | `AGENTS.md`, `.cursor/rules/*.mdc` | docs/model-setup.md |

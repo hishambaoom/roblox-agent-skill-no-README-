@@ -32,7 +32,27 @@ Copy-Tree (Join-Path $SRC 'tools') (Join-Path $DST 'tools')
 Copy-Tree (Join-Path $SRC 'scripts') (Join-Path $DST 'scripts')
 Copy-Tree (Join-Path $SRC 'assets') (Join-Path $DST 'assets')
 $A = Join-Path $SRC 'adapters'
-if (Test-Want 'claude') { Write-Output 'claude code:'; Copy-Tree (Join-Path $A 'claude-code') $DST }
+if (Test-Want 'claude') {
+    Write-Output 'claude code:'
+    $C = Join-Path $A 'claude-code'
+    Copy-Safe (Join-Path $C 'CLAUDE.md') (Join-Path $DST 'CLAUDE.md')
+    Copy-Tree (Join-Path $C '.claude') (Join-Path $DST '.claude')
+    # Studio MCP for Claude Code: project .mcp.json (merged into an existing one, never replaced)
+    $onMac = ($PSVersionTable.PSVersion.Major -ge 6) -and $IsMacOS
+    $mj = Join-Path (Join-Path $C 'mcp') ($(if ($onMac) { 'mcp.macos.json' } else { 'mcp.windows.json' }))
+    $dj = Join-Path $DST '.mcp.json'
+    if (-not (Test-Path -LiteralPath $dj)) { Copy-Item -LiteralPath $mj -Destination $dj; Write-Output "  + $dj (Roblox_Studio)" }
+    else {
+        $d = Get-Content -LiteralPath $dj -Raw | ConvertFrom-Json
+        $n = Get-Content -LiteralPath $mj -Raw | ConvertFrom-Json
+        if (-not $d.mcpServers) { $d | Add-Member -NotePropertyName mcpServers -NotePropertyValue ([pscustomobject]@{}) }
+        if ($d.mcpServers.PSObject.Properties.Name -contains 'Roblox_Studio') { Write-Output '  skip (exists) Roblox_Studio in .mcp.json' }
+        else {
+            $d.mcpServers | Add-Member -NotePropertyName Roblox_Studio -NotePropertyValue $n.mcpServers.Roblox_Studio
+            [IO.File]::WriteAllText($dj, ($d | ConvertTo-Json -Depth 10)); Write-Output '  + Roblox_Studio merged into .mcp.json'
+        }
+    }
+}
 if (Test-Want 'codex') {
     Write-Output 'codex:'; Copy-Tree (Join-Path (Join-Path $A 'codex') '.agents') (Join-Path $DST '.agents')
     Write-Output '  (merge adapters\codex\config.toml.example into %USERPROFILE%\.codex\config.toml yourself)'
